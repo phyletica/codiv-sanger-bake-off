@@ -55,7 +55,7 @@ def main_cli():
 
     args = parser.parse_args()
 
-    for config_path in project_util.sim_configs_to_use_iter(args.sim_dir):
+    for config_path in project_util.simcoevolity_config_iter(args.sim_dir):
         for i in range(args.number_of_runs):
             write_qsub(config_path = config_path,
                     run_number = i + 1,

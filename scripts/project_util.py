@@ -19,22 +19,18 @@ PY_ENV_ACTIVATE_PATH = os.path.join(PROJECT_DIR, 'pyenv/bin/activate')
 
 # Project regular expressions
 SIMCOEVOLITY_CONFIG_NAME_PATTERN_STR = (
-        r"simcoevolity-sim-(?P<sim_num>\d+)-config.yml")
-SIMCOEVOLITY_CONFIG_NAME_PATTERN = re.compile(
-        r"^" + SIMCOEVOLITY_CONFIG_NAME_PATTERN_STR + r"$")
-
-SIM_CONFIG_TO_USE_PATTERN_STR = (
+        # r"simcoevolity-sim-(?P<sim_num>\d+)-config.yml")
         r"(?P<var_only>var-only-)?"
-        r"(?P<config_name>pairs-\S+)"
+        r"(?P<config_name>\S+)"
         r"-sim-(?P<sim_num>\d+)"
         r"-config.yml")
-SIM_CONFIG_TO_USE_PATTERN = re.compile(
-        r"^" + SIM_CONFIG_TO_USE_PATTERN_STR + r"$")
+SIMCOEVOLITY_CONFIG_NAME_PATTERN = re.compile(
+        r"^" + SIMCOEVOLITY_CONFIG_NAME_PATTERN_STR + r"$")
 
 SIM_STATE_LOG_PATTERN_STR = (
         r"run-(?P<run_num>\d+)-"
         r"(?P<var_only>var-only-)?"
-        r"(?P<config_name>pairs-\S+)"
+        r"(?P<config_name>\S+)"
         r"-sim-(?P<sim_num>\d+)"
         r"-config-state-run-(?P<dummy_run_num>\d+).log")
 SIM_STATE_LOG_PATTERN = re.compile(
@@ -135,12 +131,6 @@ def simcoevolity_config_iter(sim_directory = None):
     if sim_directory is None:
         sim_directory = SIM_DIR
     for path in file_path_iter(sim_directory, SIMCOEVOLITY_CONFIG_NAME_PATTERN):
-        yield path
-
-def sim_configs_to_use_iter(sim_directory = None):
-    if sim_directory is None:
-        sim_directory = SIM_DIR
-    for path in file_path_iter(sim_directory, SIM_CONFIG_TO_USE_PATTERN):
         yield path
 
 def batch_dir_iter(directory = None):
