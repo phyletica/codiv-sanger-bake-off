@@ -8,11 +8,14 @@ import argparse
 # Project paths
 SCRIPT_DIR = os.path.abspath(os.path.dirname(__file__))
 PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
-SIM_DIR = os.path.join(PROJECT_DIR, 'ecoevolity-simulations')
-CONFIG_DIR = os.path.join(PROJECT_DIR, 'ecoevolity-configs')
+SIM_DIR = os.path.join(PROJECT_DIR, 'simulations')
+CONFIG_DIR = os.path.join(PROJECT_DIR, 'configs')
 BIN_DIR = os.path.join(PROJECT_DIR, 'bin')
 RESULTS_DIR = os.path.join(PROJECT_DIR, 'results')
 PLOT_DIR = os.path.join(RESULTS_DIR, 'plots')
+SCRIPTS_DIR = os.path.join(PROJECT_DIR, 'scripts')
+SIMCO_SCRIPTS_DIR = os.path.join(SCRIPTS_DIR, 'simcoevolity-scripts')
+PY_ENV_ACTIVATE_PATH = os.path.join(PROJECT_DIR, 'pyenv/bin/activate')
 
 # Project regular expressions
 SIMCOEVOLITY_CONFIG_NAME_PATTERN_STR = (
@@ -46,11 +49,12 @@ BATCH_DIR_ENDING_PATTERN = re.compile(
 
 def get_pbs_header(pbs_script_path,
         exe_name = "ecoevolity",
-        exe_var_name = "exe_path"):
+        exe_var_name = "exe_path",
+        py_env = None):
     script_dir = os.path.dirname(pbs_script_path)
     relative_project_dir = os.path.relpath(PROJECT_DIR,
             script_dir)
-    return  """#! /bin/bash
+    h = """#! /bin/bash
 
 set -e
 
@@ -64,7 +68,6 @@ then
 else
     cd "$( dirname "\${{BASH_SOURCE[0]}}" )"
 fi
-
 
 project_dir="{rel_project_dir}"
 {exe_var_name}="${{project_dir}}/bin/{exe_name}"
@@ -84,6 +87,17 @@ source "${{project_dir}}/modules-to-load.sh" >/dev/null 2>&1 || echo "    No mod
         exe_name = exe_name,
         exe_var_name = exe_var_name,
         )
+    if py_env:
+        h += """if [ ! -f "${{project_dir}}/{py_env}/bin/activate" ]
+then
+    echo "ERROR: Python environment \\"${{project_dir}}/{py_env}\\" does not exist."
+    echo "       You probably need to run the project setup script."
+    exit 1
+fi
+source "${{project_dir}}/{py_env}/bin/activate"
+
+""".format(py_env = py_env)
+    return h
 
 def file_path_iter(directory, regex_pattern, include_match = False):
     for dir_path, dir_names, file_names in os.walk(directory):
