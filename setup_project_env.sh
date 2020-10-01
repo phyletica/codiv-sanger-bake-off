@@ -25,6 +25,8 @@ pip2 install wheel
 pip2 install -r python-requirements-abc.txt
 deactivate
 
+module unload python/2.7.15 >/dev/null 2>&1 || \
+
 echo "Creating Python 3 virtual environment for everything else..."
 # Python 3 is needed to setup the python environment, but the module is not
 # needed once it is setup
