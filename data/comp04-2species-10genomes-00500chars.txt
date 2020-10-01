@@ -1,0 +1,6 @@
+---
+markers_are_dominant: false
+population_labels: [c4sp1, c4sp2]
+allele_count_patterns:
+    - [[1, 10], [1, 10]]
+pattern_weights: [500]
