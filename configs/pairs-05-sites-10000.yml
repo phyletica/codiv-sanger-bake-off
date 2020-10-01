@@ -58,12 +58,12 @@ global_comparison_settings:
 
 comparisons:
 - comparison:
-    path: "../data/comp01-2species-20genomes-10000chars.txt"
+    path: "../data/comp01-2species-10genomes-10000chars.txt"
 - comparison:
-    path: "../data/comp02-2species-20genomes-10000chars.txt"
+    path: "../data/comp02-2species-10genomes-10000chars.txt"
 - comparison:
-    path: "../data/comp03-2species-20genomes-10000chars.txt"
+    path: "../data/comp03-2species-10genomes-10000chars.txt"
 - comparison:
-    path: "../data/comp04-2species-20genomes-10000chars.txt"
+    path: "../data/comp04-2species-10genomes-10000chars.txt"
 - comparison:
-    path: "../data/comp05-2species-20genomes-10000chars.txt"
+    path: "../data/comp05-2species-10genomes-10000chars.txt"
