@@ -11,6 +11,8 @@ then
     cd $PBS_O_WORKDIR
 fi
 
+project_dir=".."
+
 if [ ! -f "${project_dir}/pyenv/bin/activate" ]
 then
     echo "ERROR: Python environment \"${project_dir}/pyenv\" does not exist."
