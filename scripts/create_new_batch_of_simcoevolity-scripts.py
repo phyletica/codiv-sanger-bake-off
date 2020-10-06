@@ -48,7 +48,8 @@ def write_simcoevolity_script(out_dir,
         config_path,
         batch_id_string,
         number_of_reps,
-        locus_size):
+        locus_size,
+        fixed_config_prefixes):
     script_path, sim_name = get_script_path(out_dir, config_path,
             batch_id_string, locus_size)
     script_dir = os.path.dirname(script_path)
@@ -57,6 +58,13 @@ def write_simcoevolity_script(out_dir,
     relative_config_path = os.path.relpath(
             config_path,
             script_dir)
+    relative_prior_config_path = relative_config_path
+    for fixed_prefix in fixed_config_prefixes:
+        if sim_name.startswith(fixed_prefix):
+            relative_prior_config_path = os.path.join(
+                    os.path.dirname(relative_prior_config_path),
+                    os.path.basename(relative_prior_config_path)[len(fixed_prefix):]
+                    )
     batch_dir = os.path.join(project_util.SIM_DIR,
             sim_name,
             "batch-{0}".format(batch_id_string))
@@ -80,16 +88,22 @@ def write_simcoevolity_script(out_dir,
                 "number_of_reps={number_of_reps}\n"
                 "locus_size={locus_size}\n"
                 "config_path=\"{relative_config_path}\"\n"
+                "prior_config_path=\"{relative_prior_config_path}\"\n"
                 "output_dir=\"{relative_batch_dir}\"\n"
                 "qsub_set_up_script_path=\"{qsub_script}\"\n"
                 "mkdir -p \"$output_dir\"\n\n"
-                "\"$exe_path\" --seed=\"$rng_seed\" -n \"$number_of_reps\" "
-                "-l \"$locus_size\" -o \"$output_dir\" \"$config_path\" "
+                "\"$exe_path\" --seed=\"$rng_seed\" "
+                "-n \"$number_of_reps\" "
+                "-p \"$prior_config_path\" "
+                "-l \"$locus_size\" "
+                "-o \"$output_dir\" "
+                "\"$config_path\" "
                 "&& \"$qsub_set_up_script_path\" \"$output_dir\"\n".format(
                     seed = batch_id_string,
                     number_of_reps = number_of_reps,
                     locus_size = locus_size,
                     relative_config_path = relative_config_path,
+                    relative_prior_config_path = relative_prior_config_path,
                     relative_batch_dir = relative_batch_dir,
                     qsub_script = relative_qsub_script))
     sys.stdout.write("Script written to '{0}'\n".format(script_path))
@@ -137,6 +151,8 @@ def main_cli():
     batch_num = rng.randint(1, max_random_int)
     batch_num_str = str(batch_num).zfill(max_num_digits)
 
+    fixed_config_prefixes = ("fixed-independent-", "fixed-simultaneous-")
+
     out_dir = project_util.SIMCO_SCRIPTS_DIR
     if not os.path.exists(out_dir):
         os.makedirs(out_dir)
@@ -145,7 +161,6 @@ def main_cli():
     for config_path in args.config_paths:
         n_existing_sims = number_of_existing_sims(out_dir, config_path,
                 args.locus_size)
-        print(n_existing_sims)
         if n_existing_sims >= args.max_number_of_reps:
             sys.stdout.write(
                     "No additional simulation replicates needed for \'{0}\'... "
@@ -164,7 +179,8 @@ def main_cli():
 
         write_simcoevolity_script(out_dir, config_path, batch_num_str,
                 number_of_reps =  args.number_of_reps,
-                locus_size = args.locus_size)
+                locus_size = args.locus_size,
+                fixed_config_prefixes = fixed_config_prefixes)
         num_sim_scripts_created += 1
 
     if num_sim_scripts_created < 1:
