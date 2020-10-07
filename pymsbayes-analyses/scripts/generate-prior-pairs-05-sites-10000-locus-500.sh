@@ -1,10 +1,25 @@
 #! /bin/bash
 
+set -e
+
 if [ -n "$PBS_JOBNAME" ]
 then
-    source ${PBS_O_HOME}/.bash_profile
+    if [ -f "${PBS_O_HOME}/.bashrc" ]
+    then
+        source "${PBS_O_HOME}/.bashrc"
+    fi
     cd $PBS_O_WORKDIR
 fi
+
+project_dir="../.."
+
+if [ ! -f "${project_dir}/pyenv-abc/bin/activate" ]
+then
+    echo "ERROR: Python environment \"${project_dir}/pyenv-abc\" does not exist."
+    echo "       You probably need to run the project setup script."
+    exit 1
+fi
+source "${project_dir}/pyenv-abc/bin/activate"
 
 nsites="10000"
 npairs="05"
