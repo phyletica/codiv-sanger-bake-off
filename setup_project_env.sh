@@ -18,6 +18,10 @@ module load python/2.7.15 >/dev/null 2>&1 || \
     echo "Using system's Python 2 to setup virtual environment"
 
 pip2 install virtualenv
+if [ -e "${HOME}/.local/bin/virtualenv" ]
+then
+    export PATH="${PATH}:${HOME}/.local/bin"
+fi
 virtualenv pyenv-abc
 source pyenv-abc/bin/activate
 pip2 install --upgrade pip
