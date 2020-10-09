@@ -27,7 +27,7 @@ locus_length="500"
 
 reps=1000
 nprocs=8
-nprior=500000
+nprior=1000000
 batch_size=12500
 nsums=100000
 npost=2000

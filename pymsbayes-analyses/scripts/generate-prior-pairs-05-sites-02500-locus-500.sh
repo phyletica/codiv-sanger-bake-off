@@ -26,8 +26,8 @@ npairs="05"
 locus_length="500"
 
 nprocs=8
-nprior=500000
-batch_size=6250
+nprior=1000000
+batch_size=12500
 nsums=100000
 seed=1384268
 
