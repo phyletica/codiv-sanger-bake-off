@@ -11,15 +11,15 @@ then
     cd $PBS_O_WORKDIR
 fi
 
-project_dir="../.."
+pymsbayes_dir=".."
 
-if [ ! -f "${project_dir}/pyenv-abc/bin/activate" ]
+if [ ! -f "${pymsbayes_dir}/pyenv-abc/bin/activate" ]
 then
-    echo "ERROR: Python environment \"${project_dir}/pyenv-abc\" does not exist."
+    echo "ERROR: Python environment \"${pymsbayes_dir}/pyenv-abc\" does not exist."
     echo "       You probably need to run the project setup script."
     exit 1
 fi
-source "${project_dir}/pyenv-abc/bin/activate"
+source "${pymsbayes_dir}/pyenv-abc/bin/activate"
 
 nsites="10000"
 npairs="05"
