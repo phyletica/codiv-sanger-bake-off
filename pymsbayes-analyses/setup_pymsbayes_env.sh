@@ -17,7 +17,7 @@ virtualenv pyenv-abc
 source pyenv-abc/bin/activate
 pip2 install --upgrade pip
 pip2 install wheel
-pip2 install -r python-requirements-abc.txt
+pip2 install -r abc-python-requirements.txt
 deactivate
 
 module unload python/2.7.15 >/dev/null 2>&1
