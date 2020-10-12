@@ -21,14 +21,14 @@ python3 -m venv pyenv
 source pyenv/bin/activate
 pip3 install --no-cache-dir --upgrade pip
 pip3 install --no-cache-dir wheel
-pip3 install --no-cache-dir --disable-pip-version-check -r python-requirements.txt
+pip3 install --no-cache-dir --use-feature=2020-resolver -r python-requirements.txt
 
 echo "Cloning, building, and installing ecoevolity..."
 git clone https://github.com/phyletica/ecoevolity.git
 (
     cd ecoevolity
     git checkout -b testing "$ecoevolity_commit"
-    ./build.sh --prefix "$project_dir"
+    ./build.sh --static --prefix "$project_dir"
     echo "    Commit $ecoevolity_commit of ecoevolity successfully built and installed"
     cd ..
 )
