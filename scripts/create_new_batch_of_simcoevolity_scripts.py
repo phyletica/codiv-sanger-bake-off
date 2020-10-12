@@ -119,12 +119,12 @@ def main_cli():
             help = ('Path to ecoevolity config file.'))
     parser.add_argument('-n', '--number-of-reps',
             action = 'store',
-            default = 10,
+            default = 20,
             type = project_util.arg_is_positive_int,
             help = ('Number of simulation replicates for the new batch.'))
     parser.add_argument('-m', '--max-number-of-reps',
             action = 'store',
-            default = 500,
+            default = 1000,
             type = project_util.arg_is_positive_int,
             help = ('Maximum number of simulation replicates across all '
                     'batches.'))
