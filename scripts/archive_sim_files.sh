@@ -64,6 +64,8 @@ do
 
     (
         cd "$batch_dir"
+        # Set compression level for xz
+        export XZ_OPT=-9
         for p in *.sh.o*; do if [ -e "$p" ]; then
             echo "Removing PBS output files..."
             rm *.sh.o*
@@ -71,37 +73,37 @@ do
         fi; done
         for p in *qsub.sh; do if [ -e "$p" ]; then
             echo "Archiving and removing qsub scripts..."
-            tar czf sim-files-qsub-scripts.tar.gz *qsub.sh && rm *qsub.sh
+            tar cJf sim-files-qsub-scripts.tar.xz *qsub.sh && rm *qsub.sh
             break
         fi; done
         for p in *.yml; do if [ -e "$p" ]; then
             echo "Archiving and removing config files..."
-            tar czf sim-files-configs.tar.gz *.yml && rm *.yml
+            tar cJf sim-files-configs.tar.xz *.yml && rm *.yml
             break
         fi; done
         for p in *chars.txt; do if [ -e "$p" ]; then
             echo "Archiving and removing data files..."
-            tar czf sim-files-data.tar.gz *chars.txt && rm *chars.txt
+            tar cJf sim-files-data.tar.xz *chars.txt && rm *chars.txt
             break
         fi; done
         for p in run-?-*operator*.log; do if [ -e "$p" ]; then
             echo "Archiving and removing ecoevolity operator logs..."
-            tar czf sim-files-op-logs.tar.gz run-?-*operator*.log && rm run-?-*operator*.log
+            tar cJf sim-files-op-logs.tar.xz run-?-*operator*.log && rm run-?-*operator*.log
             break
         fi; done
         for p in run-?-*state*.log; do if [ -e "$p" ]; then
             echo "Archiving and removing ecoevolity state logs..."
-            tar czf sim-files-state-logs.tar.gz run-?-*state*.log && rm run-?-*state*.log
+            tar cJf sim-files-state-logs.tar.xz run-?-*state*.log && rm run-?-*state*.log
             break
         fi; done
         for p in run-?-*.out; do if [ -e "$p" ]; then
             echo "Archiving and removing ecoevolity stdout files..."
-            tar czf sim-files-stdout.tar.gz run-?-*.out && rm run-?-*.out
+            tar cJf sim-files-stdout.tar.xz run-?-*.out && rm run-?-*.out
             break
         fi; done
         for p in simcoevolity-sim-*-true-values.txt; do if [ -e "$p" ]; then
             echo "Archiving and removing files with true values..."
-            tar czf sim-files-true-values.tar.gz simcoevolity-sim-*-true-values.txt && rm simcoevolity-sim-*-true-values.txt
+            tar cJf sim-files-true-values.tar.xz simcoevolity-sim-*-true-values.txt && rm simcoevolity-sim-*-true-values.txt
             break
         fi; done
     )
