@@ -1,2 +1,0 @@
-configobj==5.0.6
-git+https://github.com/joaks1/PyMsBayes.git@master

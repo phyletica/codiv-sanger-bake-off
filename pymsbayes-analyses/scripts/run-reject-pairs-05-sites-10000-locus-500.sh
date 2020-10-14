@@ -11,15 +11,13 @@ then
     cd $PBS_O_WORKDIR
 fi
 
-pymsbayes_dir=".."
-
-if [ ! -f "${pymsbayes_dir}/pyenv-abc/bin/activate" ]
+if [ ! -f "${WORKON_HOME}/codiv-bakeoff/bin/activate" ]
 then
-    echo "ERROR: Python environment \"${pymsbayes_dir}/pyenv-abc\" does not exist."
-    echo "       You probably need to run the project setup script."
+    echo "ERROR: Python environment \"codiv-bakeoff\" does not exist."
+    echo "       You probably need to run the pymsbayes setup script."
     exit 1
 fi
-source "${pymsbayes_dir}/pyenv-abc/bin/activate"
+source "${WORKON_HOME}/codiv-bakeoff/bin/activate"
 
 nsites="10000"
 npairs="05"
