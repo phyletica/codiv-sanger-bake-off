@@ -16,6 +16,7 @@ PLOT_DIR = os.path.join(RESULTS_DIR, 'plots')
 SCRIPTS_DIR = os.path.join(PROJECT_DIR, 'scripts')
 SIMCO_SCRIPTS_DIR = os.path.join(SCRIPTS_DIR, 'simcoevolity-scripts')
 PY_ENV_ACTIVATE_PATH = os.path.join(PROJECT_DIR, 'pyenv/bin/activate')
+PYMSBAYES_DIR = os.path.join(PROJECT_DIR, "pymsbayes-analyses")
 
 # Project regular expressions
 SIMCOEVOLITY_CONFIG_NAME_PATTERN_STR = (
