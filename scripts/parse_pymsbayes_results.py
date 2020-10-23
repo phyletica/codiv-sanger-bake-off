@@ -245,7 +245,7 @@ def main_cli(argv = sys.argv):
                 "m1",
                 "d1-m1-s1-1000000-posterior-sample.txt.gz")
         out_path = os.path.join(base_results_dir,
-                "results-{0}.csv".format(results_dir_name))
+                "results-{0}.tsv".format(results_dir_name))
         parse_msbayes_results(
                 sim_posterior_path = sim_posterior_path,
                 out_path = out_path)
