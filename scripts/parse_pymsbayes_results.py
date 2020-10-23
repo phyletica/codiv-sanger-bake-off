@@ -2,6 +2,7 @@
 
 import sys
 import os
+import math
 import tarfile
 import re
 import glob
@@ -88,7 +89,7 @@ def parse_msbayes_results(sim_posterior_path,
     true_values = pycoevolity.parsing.get_dict_from_spreadsheets(
             [true_path],
             sep = '\t')
-    nsims = len(true_values.values()[0])
+    nsims = len(true_values["PRI.Psi"])
     assert (nsims == number_of_sims)
     for sim_idx in range(nsims):
         posterior_path = os.path.join(sim_dir,
@@ -123,27 +124,24 @@ def parse_msbayes_results(sim_posterior_path,
         true_nevents = int(true_values["PRI.Psi"][sim_idx])
         true_div_times = []
         for pair_idx in range(number_of_pairs):
-            time_key = "PRI.t.{0}".format(i + 1)
-            true_div_times.append(float(true_values[time_key][sample_idx]))
-        true_model = pycoevolity.partition.standardize_partition(true_div_times)
+            time_key = "PRI.t.{0}".format(pair_idx + 1)
+            true_div_times.append(float(true_values[time_key][sim_idx]))
+        true_model, model_dict= pycoevolity.partition.standardize_partition(
+                true_div_times)
 
         nevent_samples = tuple(int(x) for x in posterior["PRI.Psi"])
         div_model_samples = []
-        div_set_partitions = []
         for sample_idx in range(len(nevent_samples)):
-            true_div_times = []
             div_times = []
             for pair_idx in range(number_of_pairs):
-                time_key = "PRI.t.{0}".format(i + 1)
+                time_key = "PRI.t.{0}".format(pair_idx + 1)
                 div_times.append(float(posterior[time_key][sample_idx]))
-                true_div_times.append(float(true_values[time_key][sample_idx]))
-            div_model = pycoevolity.partition.standardize_partition(div_times)
-            true_model = pycoevolity.partition.standardize_partition(true_div_times)
-            set_part = pycoevolity.partition.SetPartition.get_from_indices(div_model)
-            assert set_part.as_indices() == div_model
-            assert len(set(div_model)) == nevents[sample_idx]
+            div_model, div_dict = pycoevolity.partition.standardize_partition(
+                    div_times)
+            assert len(set(div_model)) == nevent_samples[sample_idx]
             div_model_samples.append(div_model)
-            div_set_partitions.append(set_part)
+        div_set_partitions = pycoevolity.partition.SetPartitionCollection.get_from_indices(
+                div_model_samples)
 
         posterior_model_summary = pycoevolity.posterior.PosteriorModelSummary(
                 nevent_samples = nevent_samples,
@@ -240,8 +238,7 @@ def main_cli(argv = sys.argv):
                     members = posterior_files(tar))
             tar.close()
         sim_posterior_path = os.path.join(
-                results_dir
-                "dpp-msbayes",
+                results_dir,
                 "pymsbayes-results",
                 "pymsbayes-output",
                 "d1",
