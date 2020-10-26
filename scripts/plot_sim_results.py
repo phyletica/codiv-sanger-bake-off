@@ -492,6 +492,251 @@ def plot_ess_versus_error(
     _LOG.info("Plots written to {0!r}\n".format(plot_path))
 
 
+def generate_violin_plots(
+        parameters,
+        results_grid,
+        comparison_labels,
+        comparison_colors = None,
+        column_labels = None,
+        plot_width = 1.9,
+        plot_height = 1.8,
+        pad_left = 0.1,
+        pad_right = 0.98,
+        pad_bottom = 0.12,
+        pad_top = 0.92,
+        y_label = None,
+        y_label_size = 18.0,
+        x_tick_rotation = None,
+        force_shared_y_range = True,
+        force_shared_spines = True,
+        show_means = True,
+        show_sample_sizes = False,
+        plot_file_prefix = None):
+    if force_shared_spines:
+        force_shared_y_range = True
+    num_comparisons = len(results_grid)
+    assert len(comparison_labels) == num_comparisons
+    num_plots = len(results_grid[0])
+    if column_labels:
+        assert len(column_labels) == num_plots
+    for r in results_grid:
+        assert len(r) == num_plots
+    if comparison_colors:
+        assert len(comparison_colors) == num_comparisons
+
+    ncols = num_plots
+    nrows = 1
+
+    # Very inefficient, but parsing all results to get min/max for parameter
+    y_min = float('inf')
+    y_max = float('-inf')
+    for comparison_index, results_grid_row in enumerate(results_grid):
+        for column_index, results in enumerate(results_grid_row):
+            for parameter_str in parameters:
+                y_min = min(y_min,
+                        min(float(x) for x in results[parameter_str]))
+                y_max = max(y_max,
+                        max(float(x) for x in results[parameter_str]))
+    buff = 0.05
+    y_buffer = math.fabs(y_max - y_min) * buff
+    y_axis_min = y_min - y_buffer
+    y_axis_max = y_max + y_buffer
+    if show_sample_sizes:
+        y_axis_min = y_min - (2 * y_buffer)
+    if show_means:
+        y_axis_max = y_max + (2 * y_buffer)
+
+    plt.close('all')
+    w = plot_width
+    h = plot_height
+    fig_width = (ncols * w)
+    fig_height = (nrows * h)
+    fig = plt.figure(figsize = (fig_width, fig_height))
+    if force_shared_spines:
+        gs = gridspec.GridSpec(nrows, ncols,
+                wspace = 0.0,
+                hspace = 0.0)
+    else:
+        gs = gridspec.GridSpec(nrows, ncols)
+
+    for plot_idx in range(num_plots):
+        ax = plt.subplot(gs[0, plot_idx])
+        values = []
+        for comparison_idx in range(num_comparisons):
+            values.append([float(x) for x in results_grid[comparison_idx][plot_idx][parameter_str]])
+        sample_sizes = [len(vals) for vals in values]
+
+        positions = range(1, num_comparisons + 1)
+        v = ax.violinplot(values,
+                positions = positions,
+                vert = True,
+                widths = 0.9,
+                showmeans = False,
+                showextrema = False,
+                showmedians = False,
+                points = 100,
+                bw_method = None,
+                )
+
+        using_colors = False
+        colors = ["gray"] * num_comparisons
+        if comparison_colors:
+            colors = comparison_colors
+            using_colors = True
+        for i in range(len(v["bodies"])):
+            v["bodies"][i].set_alpha(1)
+            v["bodies"][i].set_facecolor(colors[i])
+            v["bodies"][i].set_edgecolor(colors[i])
+
+        means = []
+        ci_lower = []
+        ci_upper = []
+        for sample in values:
+            summary = pycoevolity.stats.get_summary(sample)
+            means.append(summary["mean"])
+            ci_lower.append(summary["qi_95"][0])
+            ci_upper.append(summary["qi_95"][1])
+        ax.vlines(positions, ci_lower, ci_upper,
+                colors = "black",
+                linestyle = "solid",
+                zorder = 100)
+        ax.scatter(positions, ci_lower,
+                marker = "_",
+                color = "black",
+                s = 120,
+                zorder = 200,
+                )
+        ax.scatter(positions, ci_upper,
+                marker = "_",
+                color = "black",
+                s = 120,
+                zorder = 200,
+                )
+        ax.scatter(positions, means,
+                marker = ".",
+                color = "white",
+                s = 50,
+                zorder = 300,
+                )
+
+        ax.xaxis.set_ticks(range(1, len(comparison_labels) + 1))
+        xtick_labels = [item for item in ax.get_xticklabels()]
+        assert(len(xtick_labels) == len(comparison_labels))
+        for i in range(len(xtick_labels)):
+            xtick_labels[i].set_text(comparison_labels[i])
+        ax.set_xticklabels(xtick_labels)
+
+        if force_shared_y_range:
+            ax.set_ylim(y_axis_min, y_axis_max)
+        else:
+            y_mn = min(min(x) for x in values)
+            y_mx = max(max(x) for x in values)
+            y_buf = math.fabs(y_mx - y_mn) * buff
+            y_ax_mn = y_mn - y_buf
+            y_ax_mx = y_mx + y_buf
+            if show_sample_sizes:
+                y_ax_mn = y_mn - (y_buf * 2)
+            if show_means:
+                y_ax_mx = y_mx + (y_buf * 2)
+            ax.set_ylim(y_ax_mn, y_ax_mx)
+        if column_labels:
+            col_header = column_labels[plot_idx]
+            ax.text(0.5, 1.015,
+                    col_header,
+                    horizontalalignment = "center",
+                    verticalalignment = "bottom",
+                    transform = ax.transAxes)
+        if show_sample_sizes:
+            y_min, y_max = ax.get_ylim()
+            y_n = y_min + ((y_max - y_min) * 0.001)
+            for i in range(len(sample_sizes)):
+                ax.text(i + 1, y_n,
+                        "\\scriptsize {ss}".format(
+                            ss = sample_sizes[i]),
+                        horizontalalignment = "center",
+                        verticalalignment = "bottom")
+        if show_means:
+            y_min, y_max = ax.get_ylim()
+            y_mean = y_min + ((y_max - y_min) * 0.999)
+            for i in range(len(means)):
+                ax.text(i + 1, y_mean,
+                        "\\scriptsize {mean:,.{ndigits}f}".format(
+                            mean = means[i],
+                            ndigits = 2),
+                        horizontalalignment = "center",
+                        verticalalignment = "top")
+
+    if force_shared_spines:
+        # show only the outside ticks
+        all_axes = fig.get_axes()
+        for ax in all_axes:
+            if not ax.is_last_row():
+                ax.set_xticks([])
+            if not ax.is_first_col():
+                ax.set_yticks([])
+
+        # show tick labels only for lower-left plot 
+        all_axes = fig.get_axes()
+        for ax in all_axes:
+            if ax.is_last_row() and ax.is_first_col():
+                continue
+            # xtick_labels = ["" for item in ax.get_xticklabels()]
+            ytick_labels = ["" for item in ax.get_yticklabels()]
+            # ax.set_xticklabels(xtick_labels)
+            ax.set_yticklabels(ytick_labels)
+
+        # avoid doubled spines
+        all_axes = fig.get_axes()
+        for ax in all_axes:
+            for sp in ax.spines.values():
+                sp.set_visible(False)
+                sp.set_linewidth(2)
+            if ax.is_first_row():
+                ax.spines['top'].set_visible(True)
+                ax.spines['bottom'].set_visible(True)
+            else:
+                ax.spines['bottom'].set_visible(True)
+            if ax.is_first_col():
+                ax.spines['left'].set_visible(True)
+                ax.spines['right'].set_visible(True)
+            else:
+                ax.spines['right'].set_visible(True)
+
+    if x_tick_rotation:
+        all_axes = fig.get_axes()
+        for ax in all_axes:
+            for tick in ax.get_xticklabels():
+                tick.set_rotation(x_tick_rotation)
+
+    if using_colors:
+        fig.legend(comparison_colors,
+                labels = comparison_labels,
+                loc = "upper center",
+                mode = "expand",
+                ncol = len(comparison_colors),
+                # borderaxespad = -0.5,
+                title = None)
+
+    if y_label:
+        fig.text(0.005, 0.5,
+                y_label,
+                horizontalalignment = "left",
+                verticalalignment = "center",
+                rotation = "vertical",
+                size = y_label_size)
+
+    gs.update(left = pad_left,
+            right = pad_right,
+            bottom = pad_bottom,
+            top = pad_top)
+
+    plot_dir = os.path.join(project_util.PLOT_DIR)
+    if not os.path.exists(plot_dir):
+        os.mkdir(plot_dir)
+    plot_path = os.path.join(plot_dir,
+            "{0}-violin.pdf".format(plot_file_prefix))
+    plt.savefig(plot_path)
+    _LOG.info("Plots written to {0!r}\n".format(plot_path))
 
 def generate_scatter_plots(
         parameters,
@@ -500,8 +745,9 @@ def generate_scatter_plots(
         row_labels = None,
         parameter_label = "divergence time",
         parameter_symbol = "\\tau",
-        # psrf_threshold = 1.2,
-        # psrf_color = None,
+        max_psrf = 1.2,
+        min_ess = 200,
+        highlight_color = "red",
         plot_width = 1.9,
         plot_height = 1.8,
         pad_left = 0.1,
@@ -560,15 +806,42 @@ def generate_scatter_plots(
             y = []
             y_upper = []
             y_lower = []
-            for parameter_str in parameters:
-                x.extend(float(x) for x in results["true_{0}".format(parameter_str)])
-                y.extend(float(x) for x in results["mean_{0}".format(parameter_str)])
-                y_lower.extend(float(x) for x in results["eti_95_lower_{0}".format(parameter_str)])
-                y_upper.extend(float(x) for x in results["eti_95_upper_{0}".format(parameter_str)])
+            bad_x = []
+            bad_y = []
+            bad_y_upper = []
+            bad_y_lower = []
+            has_chain_stats = bool("psrf_{0}".format(parameters[0]) in results)
+            if (not has_chain_stats) or ((not max_psrf) and (not min_ess)):
+                for parameter_str in parameters:
+                    x.extend(float(x) for x in results["true_{0}".format(parameter_str)])
+                    y.extend(float(x) for x in results["mean_{0}".format(parameter_str)])
+                    y_lower.extend(float(x) for x in results["eti_95_lower_{0}".format(parameter_str)])
+                    y_upper.extend(float(x) for x in results["eti_95_upper_{0}".format(parameter_str)])
+            else:
+                for parameter_str in parameters:
+                    for i in range(len(results["true_{0}".format(parameter_str)])):
+                        true_val = float(results["true_{0}".format(parameter_str)][i])
+                        mean_val = float(results["mean_{0}".format(parameter_str)][i])
+                        lower_val = float(results["eti_95_lower_{0}".format(parameter_str)][i])
+                        upper_val = float(results["eti_95_upper_{0}".format(parameter_str)][i])
+                        psrf_val = float(results["psrf_{0}".format(parameter_str)][i])
+                        ess_val = float(results["ess_{0}".format(parameter_str)][i])
+                        if (psrf_val > max_psrf) or (ess_val < min_ess):
+                            bad_x.append(true_val)
+                            bad_y.append(mean_val)
+                            bad_y_lower.append(lower_val)
+                            bad_y_upper.append(upper_val)
+                        x.append(true_val)
+                        y.append(mean_val)
+                        y_lower.append(lower_val)
+                        y_upper.append(upper_val)
 
             assert(len(x) == len(y))
             assert(len(x) == len(y_lower))
             assert(len(x) == len(y_upper))
+            assert(len(bad_x) == len(bad_y))
+            assert(len(bad_x) == len(bad_y_lower))
+            assert(len(bad_x) == len(bad_y_upper))
             proportion_within_ci = pycoevolity.stats.get_proportion_of_values_within_intervals(
                     x,
                     y_lower,
@@ -591,6 +864,27 @@ def generate_scatter_plots(
                     markersize = 2.5,
                     zorder = 100,
                     rasterized = True)
+            if bad_x:
+                bad_line = ax.errorbar(
+                        x = bad_x,
+                        y = bad_y,
+                        yerr = get_errors(bad_y, bad_y_lower, bad_y_upper),
+                        ecolor = highlight_color,
+                        elinewidth = 0.5,
+                        capsize = 0.8,
+                        barsabove = False,
+                        marker = 'o',
+                        linestyle = '',
+                        markerfacecolor = 'none',
+                        markeredgecolor = highlight_color,
+                        markeredgewidth = 0.7,
+                        markersize = 2.5,
+                        zorder = 200,
+                        rasterized = True)
+                for cap_line in bad_line.lines[1]:
+                    cap_line.set_alpha(0.3)
+                for bar_line in bad_line.lines[2]:
+                    bar_line.set_alpha(0.3)
             ax.set_xlim(axis_min, axis_max)
             ax.set_ylim(axis_min, axis_max)
             identity_line, = ax.plot(
@@ -1414,6 +1708,11 @@ def main_cli(argv = sys.argv):
             raise
 
     brooks_gelman_1998_recommended_psrf = 1.2
+    min_ess = 200
+    highlight_color = "red"
+
+    eco_color = "C1"
+    abc_color = "C2"
 
     independent_sim_names = (
             "fixed-independent-pairs-05-sites-00500-locus-500",
@@ -1509,6 +1808,9 @@ def main_cli(argv = sys.argv):
                 row_labels = row_labels,
                 parameter_label = "divergence time",
                 parameter_symbol = parameter_symbol,
+                max_psrf = brooks_gelman_1998_recommended_psrf,
+                min_ess = min_ess,
+                highlight_color = highlight_color,
                 plot_width = 2.0,
                 plot_height = 2.0,
                 pad_left = 0.1,
@@ -1532,6 +1834,9 @@ def main_cli(argv = sys.argv):
                 row_labels = row_labels,
                 parameter_label = "ancestral population size",
                 parameter_symbol = parameter_symbol,
+                max_psrf = brooks_gelman_1998_recommended_psrf,
+                min_ess = min_ess,
+                highlight_color = highlight_color,
                 plot_width = 2.0,
                 plot_height = 2.0,
                 pad_left = 0.11,
@@ -1559,6 +1864,9 @@ def main_cli(argv = sys.argv):
                 row_labels = row_labels,
                 parameter_label = "descendant population size",
                 parameter_symbol = parameter_symbol,
+                max_psrf = brooks_gelman_1998_recommended_psrf,
+                min_ess = min_ess,
+                highlight_color = highlight_color,
                 plot_width = 2.0,
                 plot_height = 2.0,
                 pad_left = 0.11,
@@ -1583,6 +1891,27 @@ def main_cli(argv = sys.argv):
                 y_label_size = 18.0,
                 y_label = "Estimated number ($\\hat{{k}}$)",
                 number_font_size = 6.0,
+                plot_file_prefix = sim_label)
+
+        generate_violin_plots(
+                parameters = ["mean_model_distance"],
+                results_grid = results_grid,
+                comparison_labels = ["ecoevolity", "dpp-msbayes"],
+                comparison_colors = [eco_color, abc_color],
+                column_labels = column_labels,
+                plot_width = 2.0,
+                plot_height = 2.4,
+                pad_left = 0.1,
+                pad_right = 0.98,
+                pad_bottom = 0.12,
+                pad_top = 0.77,
+                y_label = "Mean model distance",
+                y_label_size = 14.0,
+                x_tick_rotation = None,
+                force_shared_y_range = True,
+                force_shared_spines = True,
+                show_means = True,
+                show_sample_sizes = True,
                 plot_file_prefix = sim_label)
 
         generate_histograms(
