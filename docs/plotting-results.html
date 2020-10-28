@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plotting the simulation results &#8212; Codivergence bake-off 0.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Working on project docs" href="working-on-docs.html" />
+    <link rel="prev" title="Simulation-based analyses" href="sim-analyses.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Codivergence bake-off</a></h1>
+
+
+
+<p class="blurb">Experimenting with new comparative phylogeographical models</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=phyletica&repo=codiv-sanger-bake-off&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="background.html">Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Before starting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project-tour.html">Project Tour</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ecoevolity-configs.html">The ecoevolity configs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sim-analyses.html">Simulation-based analyses</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Plotting the simulation results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="working-on-docs.html">Working on project docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zbib/references.html">Literature Cited</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="sim-analyses.html" title="previous chapter">Simulation-based analyses</a></li>
+      <li>Next: <a href="working-on-docs.html" title="next chapter">Working on project docs</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="plotting-the-simulation-results">
+<span id="plotting-results"></span><h1>Plotting the simulation results<a class="headerlink" href="#plotting-the-simulation-results" title="Permalink to this headline">¶</a></h1>
+<p>After simulating datasets and analyzing those datasets, you might be interested
+in looking at some plots that summarize the results of those thousands of
+analyses.
+To do so, navigate to the <code class="docutils literal notranslate"><span class="pre">scripts</span></code> directory of the project:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">your</span><span class="o">/</span><span class="n">copy</span><span class="o">/</span><span class="n">of</span><span class="o">/</span><span class="n">codiv</span><span class="o">-</span><span class="n">sanger</span><span class="o">-</span><span class="n">bake</span><span class="o">-</span><span class="n">off</span><span class="o">/</span><span class="n">scripts</span>
+</pre></div>
+</div>
+<p>and activate the Python virtual environment for the project:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">../</span><span class="n">pyenv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+</pre></div>
+</div>
+<p>Then, run the <code class="docutils literal notranslate"><span class="pre">plot_sim_results.py</span></code> script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">plot_sim_results</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>The plots generated by this script will be written to the
+<code class="docutils literal notranslate"><span class="pre">codiv-sanger-bake-off/results/plots</span></code> directory, which from inside the
+<code class="docutils literal notranslate"><span class="pre">scripts</span></code> directory is located at <code class="docutils literal notranslate"><span class="pre">../results/plots</span></code>.</p>
+<p>All of the plots are written as PDF files, and so can be viewed with any PDF
+viewer.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the plotting script worked, you can ignore this. If it didn’t,
+please continue reading…</p>
+<p>The plotting script requires the <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> package, which requires the
+<code class="docutils literal notranslate"><span class="pre">NumPy</span></code> package.
+These requirements were installed to the Python virtual environment when we
+set up the project, so in theory, the plotting script should just work.
+However, the distributions of the <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">NumPy</span></code> packages are
+“brittle,” and will sometimes fail to work “out-of-the-box” on some systems.
+If the plotting script failed for you, it is likely due to this issue.
+The brittleness of <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>/<code class="docutils literal notranslate"><span class="pre">NumPy</span></code> is often caused by the
+pre-compiled packages having dynamic links to external libraries.
+I have seen this with the distributions from both PyPI/<code class="docutils literal notranslate"><span class="pre">pip</span></code> (what we are
+using) and <code class="docutils literal notranslate"><span class="pre">conda</span></code>.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+<div class="footer" role="contentinfo" align="center">
+    <a href="https://github.com/phyletica/ecoevolity-model-prior">GitHub</a> &nbsp; | &nbsp; <a href="license.html">License</a> &nbsp; | &nbsp; <a href="citation.html">Citation</a> &nbsp; | &nbsp; <a href="https://groups.google.com/forum/#!forum/ecoevolity-users">User's Forum</a>
+</div>
+
+  </body>
+</html>
