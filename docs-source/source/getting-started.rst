@@ -50,6 +50,11 @@ To get oriented to the contents of the project repository, please checkout the
 Setting up the project
 ======================
 
+.. note:: Run the following command to make sure you don't have an active
+    ``conda`` environment::
+
+        conda deactivate
+
 The first thing we need to do is run the ``setup_project_env.sh`` Bash script
 which is located at the base of the project directory::
 
