@@ -175,21 +175,36 @@ If you are not in the lab, some of the instructions below might still be useful
 for setting up your own system to work on this project.</p>
 <div class="section" id="setting-up-hopper-account">
 <h3>Setting up Hopper account<a class="headerlink" href="#setting-up-hopper-account" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="before-logging-into-hopper">
+<h4>Before logging into Hopper<a class="headerlink" href="#before-logging-into-hopper" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="setting-up-2-factor-authentication">
+<h5>Setting up 2-factor authentication<a class="headerlink" href="#setting-up-2-factor-authentication" title="Permalink to this headline">¶</a></h5>
+<p>To log in to Hopper you will need to have Duo 2-factor authentication set up.
+Go to <a class="reference external" href="https://duo.auburn.edu/">https://duo.auburn.edu/</a> for how to set up Duo.
+Also, you will need to have your AU 2-factor authentication configured to send
+you a Duo request by default.
+Go to <a class="reference external" href="https://auburn.edu/2factor">https://auburn.edu/2factor</a> and on the left side of the screen, click on
+“My settings &amp; Devices.”
+For the “When I log in” setting, choose “Automatically send this device a Duo
+Push.”</p>
+</div>
+<div class="section" id="setting-up-au-vpn">
+<h5>Setting up AU VPN<a class="headerlink" href="#setting-up-au-vpn" title="Permalink to this headline">¶</a></h5>
+<p>To access Hopper from off of AU’s campus, you will need to be connected to the
+AU virtual private network (VPN).
+<a class="reference external" href="https://libguides.auburn.edu/vpn">Here’s a guide</a>
+for how to set up the VPN so that you can log in from off campus.
+See the <a class="reference internal" href="#setting-up-ssh-tunnel"><span class="std std-ref">section below</span></a>
+for an altnernative to using VPN to access Hopper from off-campus.</p>
+</div>
+</div>
+<div class="section" id="logging-into-hopper">
+<h4>Logging into Hopper<a class="headerlink" href="#logging-into-hopper" title="Permalink to this headline">¶</a></h4>
 <p>Once you have an account on the Hopper cluster, you can log in from the command
 line using (please read the notes below before you try this for the first
 time):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">YOUR</span><span class="o">-</span><span class="n">AU</span><span class="o">-</span><span class="n">USERNAME</span><span class="nd">@hopper</span><span class="o">.</span><span class="n">auburn</span><span class="o">.</span><span class="n">edu</span>
 </pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>To log in to Hopper you will need to have Duo 2-factor authentication
-set up.  <a class="reference external" href="https://duo.auburn.edu/">Go here</a> for how to set up Duo.
-Also, you will need to have your AU 2-factor authentication configured to
-send you a Duo request by default.  Go to <a class="reference external" href="https://auburn.edu/2factor">https://auburn.edu/2factor</a> and on
-the left side of the screen, click on “My settings &amp; Devices.” For the
-“When I log in” setting, choose “Automatically send this device a Duo
-Push.”</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -204,16 +219,10 @@ normal; it just means that the IP address of the server you are logging
 in to is new and hasn’t been added to the <code class="docutils literal notranslate"><span class="pre">known_hosts</span></code> file on your
 computer. Simply type <code class="docutils literal notranslate"><span class="pre">yes</span></code> and hit enter to log in.</p>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This will only work if you are either on AU’s campus or are connected
-to the AU virtual private network (VPN).
-<a class="reference external" href="https://libguides.auburn.edu/vpn">Here’s a guide</a>
-for how to set up the VPN so that you can log in from off campus.</p>
-</div>
 <p>To log out of Hopper, simply type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">exit</span>
 </pre></div>
+</div>
 </div>
 <div class="section" id="setting-up-passwordless-login">
 <h4>Setting up passwordless login<a class="headerlink" href="#setting-up-passwordless-login" title="Permalink to this headline">¶</a></h4>
@@ -258,7 +267,7 @@ We can do this with one command entered on <em>your</em> computer:</p>
 Hopper without entering your password.</p>
 </div>
 <div class="section" id="setting-up-alternative-to-vpn">
-<h4>Setting up alternative to VPN<a class="headerlink" href="#setting-up-alternative-to-vpn" title="Permalink to this headline">¶</a></h4>
+<span id="setting-up-ssh-tunnel"></span><h4>Setting up alternative to VPN<a class="headerlink" href="#setting-up-alternative-to-vpn" title="Permalink to this headline">¶</a></h4>
 <p>Everything above about setting up Hopper assumes you were either on AU’s
 campus, or were connected to the AU VPN.
 AU’s VPN is … let’s just say, not always great.
