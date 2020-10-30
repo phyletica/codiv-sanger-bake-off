@@ -29,7 +29,7 @@ End of file name        # of 500bp loci
 ``-sites-00500.yml``    1
 ``-sites-01000.yml``    2
 ``-sites-02500.yml``    5
-``-sites-10000.yml``    10
+``-sites-10000.yml``    20
 ====================    ===============
 
 Also, we will simulate data where:
