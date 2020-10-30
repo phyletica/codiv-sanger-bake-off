@@ -34,13 +34,18 @@ End of file name        # of 500bp loci
 
 Also, we will simulate data where:
 
--   All 5 pairs diverge simultaneously (1 shared divergence time)
-    -   All config files that begin with ``fixed-simultaneous-``
-    -   Used to simulate data only
--   All 5 pairs diverge independently (5 divergence times)
-    -   All config files that begin with ``fixed-independent-``
-    -   Used to simulate data only
--   The number of divergence times, and the assignment of our 5 pairs is free
-    to vary according to a Dirichlet-process model
-    -   All config files that beging with ``pairs-05-``
-    -   Used to simulate and analyze data
+- All 5 pairs diverge simultaneously (1 shared divergence time)
+
+  -   All config files that begin with ``fixed-simultaneous-``
+  -   Used to simulate data only
+
+- All 5 pairs diverge independently (5 divergence times)
+
+  -   All config files that begin with ``fixed-independent-``
+  -   Used to simulate data only
+
+- The number of divergence times, and the assignment of our 5 pairs is free
+  to vary according to a Dirichlet-process model
+
+  -   All config files that beging with ``pairs-05-``
+  -   Used to simulate and analyze data
