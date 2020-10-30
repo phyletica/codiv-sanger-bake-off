@@ -1,19 +1,41 @@
+Before logging into Hopper
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Setting up 2-factor authentication
+""""""""""""""""""""""""""""""""""
+
+To log in to Hopper you will need to have Duo 2-factor authentication set up.
+Go to https://duo.auburn.edu/ for how to set up Duo.
+Also, you will need to have your AU 2-factor authentication configured to send
+you a Duo request by default.
+Go to https://auburn.edu/2factor and on the left side of the screen, click on
+"My settings & Devices."
+For the "When I log in" setting, choose "Automatically send this device a Duo
+Push."
+
+
+Setting up AU VPN
+"""""""""""""""""
+
+To access Hopper from off of AU's campus, you will need to be connected to the
+AU virtual private network (VPN).
+`Here's a guide <https://libguides.auburn.edu/vpn>`_
+for how to set up the VPN so that you can log in from off campus.
+See the :ref:`section below <setting-up-ssh-tunnel>`
+for an altnernative to using VPN to access Hopper from off-campus.
+
+
+Logging into Hopper
+^^^^^^^^^^^^^^^^^^^
+
 Once you have an account on the Hopper cluster, you can log in from the command
 line using (please read the notes below before you try this for the first
 time)::
 
     ssh YOUR-AU-USERNAME@hopper.auburn.edu
 
-.. note:: To log in to Hopper you will need to have Duo 2-factor authentication
-    set up.  `Go here <https://duo.auburn.edu/>`_ for how to set up Duo.
-    Also, you will need to have your AU 2-factor authentication configured to
-    send you a Duo request by default.  Go to https://auburn.edu/2factor and on
-    the left side of the screen, click on "My settings & Devices." For the
-    "When I log in" setting, choose "Automatically send this device a Duo
-    Push."
-
 .. note:: After entering this command, you will get asked to enter the password
-   associated with your AU account.
+    associated with your AU account.
 
 .. note:: The first time you log in you will receive a warning stating
     something like "the authenticiy of the host cannot be established." This is
@@ -21,10 +43,6 @@ time)::
     in to is new and hasn't been added to the ``known_hosts`` file on your
     computer. Simply type ``yes`` and hit enter to log in.
 
-.. note:: This will only work if you are either on AU's campus or are connected
-    to the AU virtual private network (VPN).
-    `Here's a guide <https://libguides.auburn.edu/vpn>`_
-    for how to set up the VPN so that you can log in from off campus.
 
 To log out of Hopper, simply type::
 
@@ -75,6 +93,8 @@ We can do this with one command entered on *your* computer::
 Now, after you start a fresh shell session, you should be able to log in to
 Hopper without entering your password.
 
+
+.. _setting-up-ssh-tunnel:
 
 Setting up alternative to VPN
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
