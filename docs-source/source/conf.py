@@ -101,7 +101,7 @@ html_theme_options = {
         'github_repo': 'codiv-sanger-bake-off',
         'github_button': True,
         'github_banner': False,
-        'description': 'Experimenting with new comparative phylogeographical models',
+        'description': 'Comparing methods of estimating shared divergence times',
         'show_powered_by': True,
         'fixed_sidebar': True,
 }

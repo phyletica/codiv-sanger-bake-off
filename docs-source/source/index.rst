@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The Great Codivergence Bake off
+The Great Codivergence Bake-off
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 .. include:: about.rst
