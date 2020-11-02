@@ -21,17 +21,19 @@ To avoid library conflicts, let's deactivate ``conda`` before we build
 
     conda deactivate
 
+If you get a message that the 'conda' command was not found, this just means
+that ``conda`` is not installed, which is not problem, and you can proceed.
 *On hopper*, download an archive of the |git|_ source code::
 
-    wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.26.2.tar.gz
+    wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.29.2.tar.gz
 
 After this command finishes, extract the archive::
 
-    tar xzf git-2.26.2.tar.gz
+    tar xzf git-2.29.2.tar.gz
 
 and then ``cd`` into the directory with the |git|_ source code::
 
-    cd git-2.26.2
+    cd git-2.29.2
 
 Compile the source code using::
 
@@ -51,7 +53,8 @@ source code::
 
 and then cleanup by removing everything you downloaded and extracted::
 
-    rm -r git-2.26.2*
+    rm git-2.29.2.tar.gz
+    rm -r git-2.29.2
 
 Next, you need to add the ``bin`` directory in your home folder to your PATH
 variable so that Bash knows where to find the ``git`` executable when you type
@@ -76,7 +79,7 @@ and when you enter::
 
 you should see::
 
-    git version 2.26.2
+    git version 2.29.2
 
 
 .. _configuring-git:
@@ -143,13 +146,13 @@ directory called ``git-lfs``, and then ``cd`` into it::
 
 Next, download an archive of the Git LFS software using ``wget``::
 
-    wget https://github.com/git-lfs/git-lfs/releases/download/v2.10.0/git-lfs-linux-amd64-v2.10.0.tar.gz
+    wget https://github.com/git-lfs/git-lfs/releases/download/v2.12.0/git-lfs-linux-amd64-v2.12.0.tar.gz
 
 When the download finishes, make a new directory called ``git-lfs-files`` and
 then extract the files from the archive into the this new directory::
 
     mkdir git-lfs-files
-    tar xzf git-lfs-linux-amd64-v2.10.0.tar.gz -C git-lfs-files
+    tar xzf git-lfs-linux-amd64-v2.12.0.tar.gz -C git-lfs-files
 
 Then, ``cd`` into the ``git-lfs-files`` directory::
 
@@ -165,7 +168,8 @@ Move back out of the ``git-lfs`` and cleanup by removing everything
 we downloaded and extracted::
 
     cd ..
-    rm -r git-lfs*
+    rm git-lfs-linux-amd64-v2.12.0.tar.gz
+    rm -r git-lfs-files
 
 Lastly, run the following command to configure ``git-lfs`` for your Hopper
 account::
