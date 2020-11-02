@@ -23,6 +23,7 @@ The Great Codivergence Bake-off
    sim-analyses
    plotting-results
    working-on-docs
+   troubleshooting
    acknowledgments
    citation
    license
