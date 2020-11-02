@@ -67,6 +67,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="plotting-results.html">Plotting the simulation results</a></li>
 <li class="toctree-l1"><a class="reference internal" href="working-on-docs.html">Working on project docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="citation.html">Citation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
@@ -196,6 +197,36 @@ of project Git repository:</p>
 </pre></div>
 </div>
 <p>Lastly, push the new scripts to the remote repository hosted on a <a class="reference external" href="https://github.com/">GitHub</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">main</span>
+</pre></div>
+</div>
+<p>If you get a message that looks something like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>! [rejected]        main -&gt; main (fetch first)
+error: failed to push some refs to &#39;/home/jamie/git-fun/local1/../remote&#39;
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., &#39;git pull ...&#39;) before pushing again.
+hint: See the &#39;Note about fast-forwards&#39; in &#39;git push --help&#39; for details.
+</pre></div>
+</div>
+<p><strong>OR</strong> a more cryptic message that looks something like (it’s more cryptic due
+to Git LFS):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ref</span> <span class="n">main</span><span class="p">::</span> <span class="n">Error</span> <span class="ow">in</span> <span class="n">git</span> <span class="n">rev</span><span class="o">-</span><span class="nb">list</span> <span class="o">--</span><span class="n">stdin</span> <span class="o">--</span><span class="n">objects</span> <span class="o">--</span><span class="ow">not</span> <span class="o">--</span><span class="n">remotes</span><span class="o">=</span><span class="n">origin</span> <span class="o">--</span><span class="p">:</span> <span class="n">exit</span> <span class="n">status</span> <span class="mi">128</span> <span class="n">fatal</span><span class="p">:</span> <span class="n">bad</span> <span class="nb">object</span> <span class="mi">19</span><span class="n">dd47de1e8368e425ffbec1a00c8f500f76976a</span>
+</pre></div>
+</div>
+<p>This simply means that your copy of the project repository is behind the copy
+on GitHub (i.e., someone else has pushed since you last pulled).
+This is not problem, all you need to do is <code class="docutils literal notranslate"><span class="pre">pull</span></code> to update your copy:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="n">main</span>
+</pre></div>
+</div>
+<p>This will likely create a new commit that merges the updates on GitHub with
+your new content.
+This is common, and Git will create a default commit message for you.
+After you save and close the commit message, the new merged commit will be
+finalized.
+Then you should be able to <code class="docutils literal notranslate"><span class="pre">push</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">main</span>
 </pre></div>
 </div>
@@ -668,6 +699,10 @@ server:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">main</span>
 </pre></div>
 </div>
+<p>If you get a “rejected” or “error” message, your copy of the repository is most
+likely behind the remote copy on GitHub.
+You will need to <code class="docutils literal notranslate"><span class="pre">pull</span></code> before you <code class="docutils literal notranslate"><span class="pre">push</span></code>.
+<a class="reference internal" href="troubleshooting.html#pushing-from-behind"><span class="std std-ref">See here for more details</span></a>.</p>
 </div>
 <div class="section" id="cleaning-up">
 <h2>Cleaning up<a class="headerlink" href="#cleaning-up" title="Permalink to this headline">¶</a></h2>
@@ -716,6 +751,10 @@ files for changes.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">main</span>
 </pre></div>
 </div>
+<p>If you get a “rejected” or “error” message, your copy of the repository is most
+likely behind the remote copy on GitHub.
+You will need to <code class="docutils literal notranslate"><span class="pre">pull</span></code> before you <code class="docutils literal notranslate"><span class="pre">push</span></code>.
+<a class="reference internal" href="troubleshooting.html#pushing-from-behind"><span class="std std-ref">See here for more details</span></a>.</p>
 </div>
 <div class="section" id="reflection">
 <h2>Reflection<a class="headerlink" href="#reflection" title="Permalink to this headline">¶</a></h2>

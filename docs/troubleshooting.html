@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Troubleshooting &#8212; Codivergence bake-off 0.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Acknowledgments" href="acknowledgments.html" />
+    <link rel="prev" title="Working on project docs" href="working-on-docs.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Codivergence bake-off</a></h1>
+
+
+
+<p class="blurb">Comparing methods of estimating shared divergence times</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=phyletica&repo=codiv-sanger-bake-off&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="background.html">Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Before starting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project-tour.html">Project Tour</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ecoevolity-configs.html">The ecoevolity configs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sim-analyses.html">Simulation-based analyses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotting-results.html">Plotting the simulation results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="working-on-docs.html">Working on project docs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pushing-when-your-repo-is-behind">Pushing when your repo is behind</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zbib/references.html">Literature Cited</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="working-on-docs.html" title="previous chapter">Working on project docs</a></li>
+      <li>Next: <a href="acknowledgments.html" title="next chapter">Acknowledgments</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="troubleshooting">
+<span id="id1"></span><h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="pushing-when-your-repo-is-behind">
+<span id="pushing-from-behind"></span><h2>Pushing when your repo is behind<a class="headerlink" href="#pushing-when-your-repo-is-behind" title="Permalink to this headline">¶</a></h2>
+<p>When you try to push new content to the remote copy of the repository:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">main</span>
+</pre></div>
+</div>
+<p>and your copy is behind the remote copy (i.e., someone else has pushed new
+content to the copy on GitHub since the last time you pulled),
+you will get a message that looks something like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>! [rejected]        main -&gt; main (fetch first)
+error: failed to push some refs to &#39;/home/jamie/git-fun/local1/../remote&#39;
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., &#39;git pull ...&#39;) before pushing again.
+hint: See the &#39;Note about fast-forwards&#39; in &#39;git push --help&#39; for details.
+</pre></div>
+</div>
+<p><strong>OR</strong> a more cryptic message that looks something like (it’s more cryptic due
+to Git LFS):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ref</span> <span class="n">main</span><span class="p">::</span> <span class="n">Error</span> <span class="ow">in</span> <span class="n">git</span> <span class="n">rev</span><span class="o">-</span><span class="nb">list</span> <span class="o">--</span><span class="n">stdin</span> <span class="o">--</span><span class="n">objects</span> <span class="o">--</span><span class="ow">not</span> <span class="o">--</span><span class="n">remotes</span><span class="o">=</span><span class="n">origin</span> <span class="o">--</span><span class="p">:</span> <span class="n">exit</span> <span class="n">status</span> <span class="mi">128</span> <span class="n">fatal</span><span class="p">:</span> <span class="n">bad</span> <span class="nb">object</span> <span class="mi">19</span><span class="n">dd47de1e8368e425ffbec1a00c8f500f76976a</span>
+</pre></div>
+</div>
+<p>This is very common, and not a problem at all.
+All you need to do is <code class="docutils literal notranslate"><span class="pre">pull</span></code> to update your copy:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="n">main</span>
+</pre></div>
+</div>
+<p>This will likely create a new commit that merges the updates on GitHub with
+your new content.
+This is common, and Git will create a default message for this merging commit
+for you.
+After you save and close the commit message, the new merged commit will be
+finalized.
+Then you should be able to <code class="docutils literal notranslate"><span class="pre">push</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">main</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+<div class="footer" role="contentinfo" align="center">
+    <a href="https://github.com/phyletica/codiv-sanger-bake-off">GitHub</a> &nbsp; | &nbsp; <a href="license.html">License</a> &nbsp; | &nbsp; <a href="citation.html">Citation</a> &nbsp; | &nbsp; <a href="http://phyletica.org">Phyletica Lab</a>
+</div>
+
+  </body>
+</html>

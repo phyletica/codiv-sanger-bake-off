@@ -100,6 +100,36 @@ Lastly, push the new scripts to the remote repository hosted on a |github|_::
 
     git push origin main
 
+If you get a message that looks something like::
+
+    ! [rejected]        main -> main (fetch first)
+    error: failed to push some refs to '/home/jamie/git-fun/local1/../remote'
+    hint: Updates were rejected because the remote contains work that you do
+    hint: not have locally. This is usually caused by another repository pushing
+    hint: to the same ref. You may want to first integrate the remote changes
+    hint: (e.g., 'git pull ...') before pushing again.
+    hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+**OR** a more cryptic message that looks something like (it's more cryptic due
+to Git LFS)::
+
+    ref main:: Error in git rev-list --stdin --objects --not --remotes=origin --: exit status 128 fatal: bad object 19dd47de1e8368e425ffbec1a00c8f500f76976a
+
+This simply means that your copy of the project repository is behind the copy
+on GitHub (i.e., someone else has pushed since you last pulled).
+This is not problem, all you need to do is ``pull`` to update your copy::
+
+    git pull origin main
+
+This will likely create a new commit that merges the updates on GitHub with
+your new content.
+This is common, and Git will create a default commit message for you.
+After you save and close the commit message, the new merged commit will be
+finalized.
+Then you should be able to ``push``::
+
+    git push origin main
+
 
 Run simulation scripts
 ======================
@@ -573,6 +603,11 @@ server::
 
     git push origin main
 
+If you get a "rejected" or "error" message, your copy of the repository is most
+likely behind the remote copy on GitHub.
+You will need to ``pull`` before you ``push``.
+:ref:`See here for more details <pushing-from-behind>`.
+
 
 Cleaning up
 ===========
@@ -621,6 +656,11 @@ A good commit message might look something like::
 Finally, push everything to the remote repository on |github|_::
 
     git push origin main
+
+If you get a "rejected" or "error" message, your copy of the repository is most
+likely behind the remote copy on GitHub.
+You will need to ``pull`` before you ``push``.
+:ref:`See here for more details <pushing-from-behind>`.
 
 
 Reflection
