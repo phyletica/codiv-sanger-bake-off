@@ -1336,6 +1336,8 @@ def generate_model_plots(
         column_labels = None,
         row_labels = None,
         number_of_comparisons = 5,
+        plot_as_histogram = False,
+        histogram_correct_values = [],
         plot_width = 1.6,
         plot_height = 1.5,
         pad_left = 0.1,
@@ -1416,20 +1418,56 @@ def generate_model_plots(
             # _LOG.info("p(model within CS) = {0:.4f}".format(p_model_within_95_cred))
             ax = plt.subplot(gs[row_index, column_index])
 
-            ax.imshow(true_map_nevents,
-                    origin = 'lower',
-                    cmap = cmap,
-                    interpolation = 'none',
-                    aspect = 'auto'
-                    # extent = [0.5, 3.5, 0.5, 3.5]
-                    )
-            for i, row_list in enumerate(true_map_nevents):
-                for j, num_events in enumerate(row_list):
-                    ax.text(j, i,
-                            str(num_events),
-                            horizontalalignment = "center",
-                            verticalalignment = "center",
-                            size = number_font_size)
+            if plot_as_histogram:
+                total_nevent_estimates = len(map_nevents)
+                nevents_indices = [float(x) for x in range(number_of_comparisons)]
+                nevents_counts = [0 for x in nevents_indices]
+                for k in map_nevents:
+                    nevents_counts[k - 1] += 1
+                nevents_freqs = [
+                        (x / float(total_nevent_estimates)) for x in nevents_counts
+                        ]
+                assert len(nevents_indices) == len(nevents_freqs)
+                bar_width = 0.9
+                bar_color = "0.5"
+                bars_posterior = ax.bar(
+                        nevents_indices,
+                        nevents_freqs,
+                        bar_width,
+                        color = bar_color,
+                        label = "MAP")
+                x_tick_labels = [str(i + 1) for i in range(number_of_comparisons)]
+                plt.xticks(
+                        nevents_indices,
+                        x_tick_labels
+                        )
+                if histogram_correct_values:
+                    correct_val = histogram_correct_values[row_index][column_index]
+                    correct_line, = ax.plot(
+                            [correct_val - 1, correct_val - 1],
+                            [0.0, 1.0])
+                    plt.setp(correct_line,
+                            color = '0.7',
+                            linestyle = '--',
+                            linewidth = 1.0,
+                            marker = '',
+                            zorder = 200)
+            else:
+                ax.imshow(true_map_nevents,
+                        origin = 'lower',
+                        cmap = cmap,
+                        interpolation = 'none',
+                        aspect = 'auto'
+                        # extent = [0.5, 3.5, 0.5, 3.5]
+                        )
+                for i, row_list in enumerate(true_map_nevents):
+                    for j, num_events in enumerate(row_list):
+                        ax.text(j, i,
+                                str(num_events),
+                                horizontalalignment = "center",
+                                verticalalignment = "center",
+                                size = number_font_size)
+
             ax.text(0.98, 0.02,
                     "\\scriptsize$p(k \\in \\textrm{{\\sffamily CS}}) = {0:.3f}$".format(
                             p_nevents_within_95_cred),
@@ -1464,8 +1502,12 @@ def generate_model_plots(
                         rotation = 270.0,
                         transform = ax.transAxes)
 
-    # show only the outside ticks
     all_axes = fig.get_axes()
+    if plot_as_histogram:
+        for ax in all_axes:
+            ax.set_ylim(0.0, 1.0)
+
+    # show only the outside ticks
     for ax in all_axes:
         if not ax.is_last_row():
             ax.set_xticks([])
@@ -1476,17 +1518,19 @@ def generate_model_plots(
     all_axes = fig.get_axes()
     for ax in all_axes:
         # Make sure ticks correspond only with number of events
-        ax.xaxis.set_ticks(range(number_of_comparisons))
-        ax.yaxis.set_ticks(range(number_of_comparisons))
+        if not plot_as_histogram:
+            ax.xaxis.set_ticks(range(number_of_comparisons))
+            ax.yaxis.set_ticks(range(number_of_comparisons))
         if ax.is_last_row() and ax.is_first_col():
-            xtick_labels = [item for item in ax.get_xticklabels()]
-            for i in range(len(xtick_labels)):
-                xtick_labels[i].set_text(str(i + 1))
-            ytick_labels = [item for item in ax.get_yticklabels()]
-            for i in range(len(ytick_labels)):
-                ytick_labels[i].set_text(str(i + 1))
-            ax.set_xticklabels(xtick_labels)
-            ax.set_yticklabels(ytick_labels)
+            if not plot_as_histogram:
+                xtick_labels = [item for item in ax.get_xticklabels()]
+                for i in range(len(xtick_labels)):
+                    xtick_labels[i].set_text(str(i + 1))
+                ytick_labels = [item for item in ax.get_yticklabels()]
+                for i in range(len(ytick_labels)):
+                    ytick_labels[i].set_text(str(i + 1))
+                ax.set_xticklabels(xtick_labels)
+                ax.set_yticklabels(ytick_labels)
         else:
             xtick_labels = ["" for item in ax.get_xticklabels()]
             ytick_labels = ["" for item in ax.get_yticklabels()]
@@ -1510,13 +1554,23 @@ def generate_model_plots(
         else:
             ax.spines['right'].set_visible(True)
 
-    fig.text(0.5, 0.001,
-            "True number of events ($k$)",
-            horizontalalignment = "center",
-            verticalalignment = "bottom",
-            size = 18.0)
+    if plot_as_histogram:
+        fig.text(0.5, 0.001,
+                "Estimated number of events ($\\hat{{k}}$)",
+                horizontalalignment = "center",
+                verticalalignment = "bottom",
+                size = 18.0)
+    else:
+        fig.text(0.5, 0.001,
+                "True number of events ($k$)",
+                horizontalalignment = "center",
+                verticalalignment = "bottom",
+                size = 18.0)
     if y_label is None:
-        y_label = "Estimated number of events ($\\hat{{k}}$)"
+        if plot_as_histogram:
+            y_label = "Frequency"
+        else:
+            y_label = "Estimated number of events ($\\hat{{k}}$)"
     fig.text(0.005, 0.5,
             y_label,
             horizontalalignment = "left",
@@ -1707,6 +1761,7 @@ def main_cli(argv = sys.argv):
         else:
             raise
 
+    number_of_comparisons = 5
     brooks_gelman_1998_recommended_psrf = 1.2
     min_ess = 200
     highlight_color = "red"
@@ -1877,21 +1932,61 @@ def main_cli(argv = sys.argv):
                 y_label = "Estimated size ($\\hat{{{0}}}$)".format(parameter_symbol),
                 plot_file_prefix = sim_label + "-leaf-pop-size")
 
-        generate_model_plots(
-                results_grid = results_grid,
-                column_labels = column_labels,
-                row_labels = row_labels,
-                number_of_comparisons = 5,
-                plot_width = 2.5,
-                plot_height = 2.7,
-                pad_left = 0.065,
-                pad_right = 0.975,
-                pad_bottom = 0.12,
-                pad_top = 0.96,
-                y_label_size = 18.0,
-                y_label = "Estimated number ($\\hat{{k}}$)",
-                number_font_size = 6.0,
-                plot_file_prefix = sim_label)
+        if sim_label == "independent":
+            correct_values = [ [number_of_comparisons for col in row] for row in results_grid ]
+            generate_model_plots(
+                    results_grid = results_grid,
+                    column_labels = column_labels,
+                    row_labels = row_labels,
+                    number_of_comparisons = number_of_comparisons,
+                    plot_as_histogram = True,
+                    histogram_correct_values = correct_values,
+                    plot_width = 2.5,
+                    plot_height = 2.7,
+                    pad_left = 0.065,
+                    pad_right = 0.975,
+                    pad_bottom = 0.12,
+                    pad_top = 0.96,
+                    y_label_size = 18.0,
+                    y_label = "Frequency",
+                    number_font_size = 6.0,
+                    plot_file_prefix = sim_label)
+        elif sim_label == "simultaneous":
+            correct_values = [ [1 for col in row] for row in results_grid ]
+            generate_model_plots(
+                    results_grid = results_grid,
+                    column_labels = column_labels,
+                    row_labels = row_labels,
+                    number_of_comparisons = number_of_comparisons,
+                    plot_as_histogram = True,
+                    histogram_correct_values = correct_values,
+                    plot_width = 2.5,
+                    plot_height = 2.7,
+                    pad_left = 0.065,
+                    pad_right = 0.975,
+                    pad_bottom = 0.12,
+                    pad_top = 0.96,
+                    y_label_size = 18.0,
+                    y_label = "Frequency",
+                    number_font_size = 6.0,
+                    plot_file_prefix = sim_label)
+        else:
+            generate_model_plots(
+                    results_grid = results_grid,
+                    column_labels = column_labels,
+                    row_labels = row_labels,
+                    number_of_comparisons = number_of_comparisons,
+                    plot_as_histogram = False,
+                    plot_width = 2.5,
+                    plot_height = 2.7,
+                    pad_left = 0.065,
+                    pad_right = 0.975,
+                    pad_bottom = 0.12,
+                    pad_top = 0.96,
+                    y_label_size = 18.0,
+                    y_label = "Estimated number ($\\hat{{k}}$)",
+                    number_font_size = 6.0,
+                    plot_file_prefix = sim_label)
 
         generate_violin_plots(
                 parameters = ["mean_model_distance"],
