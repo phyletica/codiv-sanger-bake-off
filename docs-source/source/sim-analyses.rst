@@ -43,7 +43,7 @@ Use the ``create_new_batch_of_simcoevolity-scripts.py`` Python script to create
 simcoevolity scripts for generating a new batch of 10 simulated datasets for
 each of the 5 models (ecoevolity config files)::
 
-    python create_new_batch_of_simcoevolity_scripts.py -n 20 ../configs/*.yml
+    python create_new_batch_of_simcoevolity_scripts.py ../configs/*.yml
 
 The output should confirm the creation of 12 new scripts for running
 ``simcoevolity`` (one for each config in ``configs``), and report a
