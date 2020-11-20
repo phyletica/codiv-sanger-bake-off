@@ -1,0 +1,31 @@
+[pymsbayes]
+	version = Version 0.2.4
+	output_directory = /home/jamie/codiv-sanger-bake-off/pymsbayes-analyses/priors/pairs-05-sites-00500-locus-500/pymsbayes-results
+	temp_directory = /home/jamie/codiv-sanger-bake-off/pymsbayes-analyses/priors/pairs-05-sites-00500-locus-500/pymsbayes-results/temp-files-_1RvMG
+	sort_index = 0
+	simulation_reps = 1
+	seed = 1384268
+	num_processors = 8
+	num_prior_samples = 1000000
+	num_standardizing_samples = 100000
+	bandwidth = 0.00016
+	posterior_quantiles = 1000
+	posterior_sample_size = 12500
+	stat_patterns = ^\s*pi\.\d+\s*$, ^\s*wattTheta\.\d+\s*$, ^\s*pi\.net\.\d+\s*$, ^\s*tajD\.denom\.\d+\s*$
+	num_taxon_pairs = 5
+	dry_run = False
+	[[tool_paths]]
+		dpp_msbayes = /home/jamie/python-venvs/codiv-bakeoff/bin/dpp-msbayes.pl
+		msbayes = /home/jamie/python-venvs/codiv-bakeoff/bin/msbayes.pl
+		eureject = /home/jamie/python-venvs/codiv-bakeoff/bin/eureject
+		abcestimator = /home/jamie/python-venvs/codiv-bakeoff/bin/ABCestimator
+	[[observed_configs]]
+		1 = ../../../configs/pairs-05-sites-00500-locus-500.cfg
+	[[observed_paths]]
+		1 = observed-summary-stats/observed-1.txt
+	[[prior_configs]]
+		1 = ../../../configs/pairs-05-sites-00500-locus-500.cfg
+	[[run_stats]]
+		start_time = 2020-10-13 20:56:58.321464
+		stop_time = 2020-10-13 21:19:52.131559
+		total_duration = 0:22:53.810095
