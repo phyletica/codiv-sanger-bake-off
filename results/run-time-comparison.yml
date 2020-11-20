@@ -1,0 +1,12 @@
+---
+pairs-05-sites-10000-locus-500:
+    pymsbayes:
+        prior_time: 33864.506664
+        mean_reject_time: 112509.346496
+        mean: 146373.85316
+    ecoevolity:
+        mean: 723.5750000000003
+        std_deviation: 63.236100689240345
+        min: 595
+        max: 873
+        n: 80

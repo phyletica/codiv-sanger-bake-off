@@ -37,6 +37,15 @@ SIM_STATE_LOG_PATTERN_STR = (
 SIM_STATE_LOG_PATTERN = re.compile(
         r"^" + SIM_STATE_LOG_PATTERN_STR + r"$")
 
+SIM_STDOUT_PATTERN_STR = (
+        r"run-(?P<run_num>\d+)-"
+        r"(?P<var_only>var-only-)?"
+        r"(?P<config_name>\S+)"
+        r"-sim-(?P<sim_num>\d+)"
+        r"-config\.yml\.out")
+SIM_STDOUT_PATTERN = re.compile(
+        r"^" + SIM_STDOUT_PATTERN_STR + r"$")
+
 BATCH_DIR_PATTERN_STR = r"batch-(?P<batch_num>\d+)"
 BATCH_DIR_PATTERN = re.compile(
         r"^" + BATCH_DIR_PATTERN_STR + r"$")
@@ -138,6 +147,10 @@ def batch_dir_iter(directory = None):
     if directory is None:
         directory = SIM_DIR
     for path in dir_path_iter(directory, BATCH_DIR_PATTERN):
+        yield path
+
+def sim_stdout_iter(sim_directory):
+    for path in file_path_iter(sim_directory, SIM_STDOUT_PATTERN):
         yield path
 
 def get_sim_state_log_paths(sim_directory = None):
