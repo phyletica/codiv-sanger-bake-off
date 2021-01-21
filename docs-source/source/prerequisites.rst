@@ -38,6 +38,8 @@ the lab has a series of videos:
     <iframe width="560" height="315" src="https://www.youtube.com/embed/evZj6XbeQ-s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/_R3q2rv5wxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/o1Q1r2gmCPw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     
 Also,
 `Software Carpentry <https://software-carpentry.org/>`_
