@@ -24,9 +24,10 @@ or::
 
     ssh hopper
 
-and navigating to your scratch directory::
+and navigating to your home directory (or any directory where you want to keep
+this project)::
 
-    cd /scratch/YOUR-AU-USERNAME
+    cd ~
 
 Now, clone the |git|_ repository for this project::
 

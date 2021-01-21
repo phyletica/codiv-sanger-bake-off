@@ -22,9 +22,9 @@ there)::
 
     cd /path/to/your/copy/of/codiv-sanger-bake-off
 
-If you are working on AU's Hopper cluster, this will be::
+For example, if the project is in your home directory, this will be::
 
-    cd /scratch/YOUR-AU-USERNAME/codiv-sanger-bake-off
+    cd ~/codiv-sanger-bake-off
 
 If you haven't already, let's activate the Python virutal environment for this
 project::

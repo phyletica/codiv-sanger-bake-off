@@ -180,14 +180,15 @@ Because Venus is accessible off-campus, this login should work on and off
 campus, regardless of whether you are connected to the AU VPN.
 
 
-Create your scratch directory
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-We will be conducting the analyses for this project from the ``/scratch``
-storage on hopper.
-There is a huge amount of (fast) hard drive space mounted at the ``/scratch``
-directory to which all Hopper users have access.
-Make your own directory in ``/scratch`` using (make sure you are logged in to
-Hopper for this)::
-
-    mkdir /scratch/YOUR-AU-USERNAME
+..
+    Create your scratch directory
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    
+    We will be conducting the analyses for this project from the ``/scratch``
+    storage on hopper.
+    There is a huge amount of (fast) hard drive space mounted at the ``/scratch``
+    directory to which all Hopper users have access.
+    Make your own directory in ``/scratch`` using (make sure you are logged in to
+    Hopper for this)::
+    
+        mkdir /scratch/YOUR-AU-USERNAME
