@@ -55,7 +55,13 @@ Setting up passwordless login
 We can log in to Hopper more securely and without needing to enter our AU
 password.
 To do this, we will use SSH authentication keys.
-To see if you have SSH keys on your machine (e.g., your laptop),
+Below is a short video about SSH keys followed by instructions
+on how to create and use them.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/M9rc286eJII" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+To see if you have SSH keys on your computer (the computer
+you use to log in to Hopper),
 open your terminal and enter::
 
     ls ~/.ssh
