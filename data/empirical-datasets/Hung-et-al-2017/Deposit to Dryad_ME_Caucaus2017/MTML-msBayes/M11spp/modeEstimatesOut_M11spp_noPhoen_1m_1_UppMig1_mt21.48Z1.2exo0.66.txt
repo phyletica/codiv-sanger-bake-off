@@ -1,0 +1,80 @@
+######### results #######
+##### Summary of posterior distribution #####
+##### Psi (= number of possible divtimes) #####
+
+### Posterior probability table with local multinomial logit regression.
+                    1         2            3            4            5       6
+posterior.p 0.9120278 0.0879722 3.278346e-10 4.492053e-17 1.197862e-16 0.00000
+prior.p     0.0920900 0.0893200 8.954000e-02 9.229000e-02 9.022000e-02 0.09052
+                      7       8       9      10      11
+posterior.p 1.48145e-08 0.00000 0.00000 0.00000 0.00000
+prior.p     9.08300e-02 0.09206 0.09103 0.09228 0.08982
+
+## Mode (from local multinomial logit regression):
+[1] "1"
+## Mean/Median  (from local multinomial logit regression):
+    mean   median 
+1.087972 1.000000 
+
+### The above results should be better than simple rejection method below.
+
+### Posterior probability table with SIMPLE rejection method, NO REGRESSION.
+                  1       2       3       4       5       6       7       8
+posterior.p 0.90800 0.08000 0.00400 0.00200 0.00400 0.00000 0.00200 0.00000
+prior.p     0.09209 0.08932 0.08954 0.09229 0.09022 0.09052 0.09083 0.09206
+                  9      10      11
+posterior.p 0.00000 0.00000 0.00000
+prior.p     0.09103 0.09228 0.08982
+
+## Mode (from simple rejection):
+[1] "1"
+## Mean/Median (from simple rejection)
+  mean median 
+ 1.122  1.000 
+
+##### Summary of posterior distribution #####
+##### var.t  #####
+### Mode
+NA
+** locfit failed to find mode, this occurs with an extreme
+** L-shaped posterior distribution, and the mode is at the boundary (e.g. 0)
+### Mean/Median
+        mean       median 
+0.0004938258 0.0000000000 
+### 95 % quantile
+       2.5%       97.5% 
+0.000000000 0.002440119 
+### 95% Highest Postererior Density (HPD) interval
+[1] 0.000000000 0.001326081
+
+##### Summary of posterior distribution #####
+##### E.t (= E(t)) #####
+### Mode
+INFO: loc1stats: difference in log(prob. density) between the max (mode) and the ends of confidence interval (at p=0.95) is 0.001968144.
+MODE:
+[1] 0.02132555
+### Mean/Median
+      mean     median 
+0.02178362 0.02018511 
+### 95 % quantile
+      2.5%      97.5% 
+0.00000000 0.05207026 
+### 95% Highest Postererior Density (HPD) interval
+[1] 0.00000000 0.04070143
+
+##### Summary of posterior distribution #####
+##### omega (=Var(t)/E(t)) #####
+### Mode
+NA
+** locfit failed to find mode, this occurs with an extreme
+** L-shaped posterior distribution, and the mode is at the boundary (e.g. 0)
+### Mean/Median
+       mean      median 
+0.003239522 0.000000000 
+### 95 % quantile
+      2.5%      97.5% 
+0.00000000 0.01645896 
+### 95% Highest Postererior Density (HPD) interval
+[1] 0.0000000 0.0108418
+
+######### end of results #######

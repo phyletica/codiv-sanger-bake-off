@@ -1,0 +1,15 @@
+Aegithalos_caudatus	0	3
+Carduelis_carduelis	0.040270313	4
+Carduelis_chloris	15.4682	3
+Carpodacus_erythrinus	3.58183875	5
+Certhia_familiaris	4.60928125	2
+Erithacus_rubecula	0.93732	5
+Ficedula_hypoleuca	0.0320551	3
+Garrulus_glandarius	1.59839325	2
+Parus_ater	0.797869463	2
+Parus_caeruleus	14.60011713	4
+Phylloscopus_collybita	0	3
+Prunella_modularis	0	1
+Sylvia_atricapilla	0	3
+Sitta_europaea	0	2
+Troglodytes_troglodytes	0	2

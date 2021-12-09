@@ -1,0 +1,356 @@
+**HKA**   -- COMPUTER PROGRAM FOR HKA TESTS --
+      This program implements the method described in:
+          Hudson, R. R., M. Kreitman and M. Aguadé, (1987) 
+          A test of neutral molecular evolution based on nucleotide data
+          Genetics 116: 153-159 
+
+_____________________________________________________________________________
+*****************************************************************************
+
+DATA FROM FILE: Fringilla-mt9in1exo.txt
+DATA FILE TEXT LINE:
+ HKA program test data 
+
+Additional text from data file : 
+  Fringilla coelebs Caucasus vs Europe  
+
+
+MESSAGE ADDED AT RUNTIME: 
+ n 
+
+NUMBER OF SIMULATIONS: 10000 
+LOCI AND LENGTHS               species1 species2  between
+                         ND2 :   1041     1041     1041   
+                       00132 :    294      294      294   
+                       08352 :    376      376      376   
+                       09385 :    309      309      309   
+                       13380 :    666      666      666   
+                       17483 :    472      472      472   
+                         MPP :    244      244      244   
+                         RHO :    850      850      850   
+                        TGFB :    486      486      486   
+                         ACO :    866      866      866   
+                        MC1R :    660      660      660   
+
+OBSERVED AND EXPECTED VARIATION 
+
+POLYMORPHIC SITES WITHIN SPECIES 
+Species           SampSize observed    expected     variance  deviation
+--------------    -------- --------    --------     --------  ---------
+
+*** LOCUS: ND2   extrachromosomal or Y-linked *** 
+
+      Caucasus        5       6            6.00       17.79       0.000
+        Europe        5       6            5.65       16.11       0.008
+
+*** LOCUS: 00132   Autosomal *** 
+
+      Caucasus       10       5            5.55       11.46       0.026
+        Europe       10       6            5.22       10.47       0.058
+
+*** LOCUS: 08352   Autosomal *** 
+
+      Caucasus       10       9           10.86       33.58       0.104
+        Europe       10      12           10.23       30.38       0.103
+
+*** LOCUS: 09385   Autosomal *** 
+
+      Caucasus       10       5            6.09       13.21       0.089
+        Europe       10       7            5.73       12.05       0.133
+
+*** LOCUS: 13380   Autosomal *** 
+
+      Caucasus       10       4            5.03        9.91       0.108
+        Europe        8       5            4.35        8.59       0.050
+
+*** LOCUS: 17483   Autosomal *** 
+
+      Caucasus       10      23           20.81      104.09       0.046
+        Europe       10      18           19.60       93.47       0.027
+
+*** LOCUS: MPP   Autosomal *** 
+
+      Caucasus       10       9           10.05       29.48       0.037
+        Europe       10      10            9.47       26.70       0.011
+
+*** LOCUS: RHO   Autosomal *** 
+
+      Caucasus        8      11           13.72       56.04       0.132
+        Europe        8      16           12.92       50.47       0.188
+
+*** LOCUS: TGFB   Autosomal *** 
+
+      Caucasus       10      24           20.98      105.70       0.086
+        Europe       10      17           19.76       94.92       0.080
+
+*** LOCUS: ACO   Sex-linked *** 
+
+      Caucasus        5      17           13.90       77.23       0.125
+        Europe        8      12           16.29       75.95       0.242
+
+*** LOCUS: MC1R   Autosomal *** 
+
+      Caucasus        8       4            4.02        7.65       0.000
+        Europe        8       4            3.78        7.00       0.007
+
+
+DIVERGENCE BETWEEN SPECIES 
+       observed  expected   variance  deviation 
+       --------  --------   --------  --------- 
+
+*** LOCUS: ND2   extrachromosomal or Y-linked *** 
+
+         2.72       3.07      10.89      0.012 
+*** LOCUS: 00132   Autosomal *** 
+
+         1.72       1.95       5.57      0.010 
+*** LOCUS: 08352   Autosomal *** 
+
+         3.92       3.82      17.73      0.001 
+*** LOCUS: 09385   Autosomal *** 
+
+         1.96       2.14       6.50      0.005 
+*** LOCUS: 13380   Autosomal *** 
+
+         2.15       1.77       4.76      0.030 
+*** LOCUS: 17483   Autosomal *** 
+
+         6.72       7.32      58.31      0.006 
+*** LOCUS: MPP   Autosomal *** 
+
+         4.05       3.54      15.43      0.017 
+*** LOCUS: RHO   Autosomal *** 
+
+         4.91       5.27      31.66      0.004 
+*** LOCUS: TGFB   Autosomal *** 
+
+         7.13       7.38      59.25      0.001 
+*** LOCUS: ACO   Sex-linked *** 
+
+         7.88       6.69      48.63      0.029 
+*** LOCUS: MC1R   Autosomal *** 
+
+         1.34       1.54       3.81      0.010 
+SUM OF DEVIATIONS:   1.7840 
+Degrees of Freedom: 20  Probability from chi square distribution: 1.00000 
+
+ Could not fit in run 38 
+ Could not fit in run 136 
+ Could not fit in run 180 
+ Could not fit in run 315 
+ Could not fit in run 368 
+ Could not fit in run 477 
+ Could not fit in run 636 
+ Could not fit in run 695 
+ Could not fit in run 708 
+ Could not fit in run 788 
+ Could not fit in run 936 
+ Could not fit in run 1003 
+ Could not fit in run 1083 
+ Could not fit in run 1083 
+ Could not fit in run 1214 
+ Could not fit in run 1258 
+ Could not fit in run 1356 
+ Could not fit in run 1360 
+ Could not fit in run 1636 
+ Could not fit in run 1660 
+ Could not fit in run 1760 
+ Could not fit in run 1797 
+ Could not fit in run 1871 
+ Could not fit in run 2025 
+ Could not fit in run 2232 
+ Could not fit in run 2317 
+ Could not fit in run 2359 
+ Could not fit in run 2394 
+ Could not fit in run 2422 
+ Could not fit in run 2549 
+ Could not fit in run 2624 
+ Could not fit in run 2645 
+ Could not fit in run 2706 
+ Could not fit in run 2791 
+ Could not fit in run 2850 
+ Could not fit in run 2885 
+ Could not fit in run 2901 
+ Could not fit in run 3093 
+ Could not fit in run 3107 
+ Could not fit in run 3216 
+ Could not fit in run 3231 
+ Could not fit in run 3329 
+ Could not fit in run 3329 
+ Could not fit in run 3376 
+ Could not fit in run 3397 
+ Could not fit in run 3405 
+ Could not fit in run 3438 
+ Could not fit in run 3697 
+ Could not fit in run 3743 
+ Could not fit in run 3790 
+ Could not fit in run 3827 
+ Could not fit in run 3889 
+ Could not fit in run 3907 
+ Could not fit in run 4035 
+ Could not fit in run 4047 
+ Could not fit in run 4149 
+ Could not fit in run 4157 
+ Could not fit in run 4493 
+ Could not fit in run 4540 
+ Could not fit in run 4553 
+ Could not fit in run 4559 
+ Could not fit in run 4572 
+ Could not fit in run 4614 
+ Could not fit in run 4708 
+ Could not fit in run 4732 
+ Could not fit in run 4870 
+ Could not fit in run 5011 
+ Could not fit in run 5020 
+ Could not fit in run 5021 
+ Could not fit in run 5050 
+ Could not fit in run 5069 
+ Could not fit in run 5075 
+ Could not fit in run 5108 
+ Could not fit in run 5184 
+ Could not fit in run 5188 
+ Could not fit in run 5196 
+ Could not fit in run 5243 
+ Could not fit in run 5294 
+ Could not fit in run 5356 
+ Could not fit in run 5378 
+ Could not fit in run 5415 
+ Could not fit in run 5435 
+ Could not fit in run 5455 
+ Could not fit in run 5526 
+ Could not fit in run 5536 
+ Could not fit in run 5571 
+ Could not fit in run 5584 
+ Could not fit in run 5613 
+ Could not fit in run 5756 
+ Could not fit in run 5773 
+ Could not fit in run 5792 
+ Could not fit in run 5887 
+ Could not fit in run 6013 
+ Could not fit in run 6015 
+ Could not fit in run 6099 
+ Could not fit in run 6110 
+ Could not fit in run 6186 
+ Could not fit in run 6208 
+ Could not fit in run 6310 
+ Could not fit in run 6322 
+ Could not fit in run 6408 
+ Could not fit in run 6517 
+ Could not fit in run 6528 
+ Could not fit in run 6546 
+ Could not fit in run 6744 
+ Could not fit in run 6760 
+ Could not fit in run 7052 
+ Could not fit in run 7126 
+ Could not fit in run 7294 
+ Could not fit in run 7313 
+ Could not fit in run 7317 
+ Could not fit in run 7389 
+ Could not fit in run 7453 
+ Could not fit in run 7491 
+ Could not fit in run 7566 
+ Could not fit in run 7696 
+ Could not fit in run 7753 
+ Could not fit in run 7761 
+ Could not fit in run 7763 
+ Could not fit in run 7857 
+ Could not fit in run 7880 
+ Could not fit in run 8075 
+ Could not fit in run 8244 
+ Could not fit in run 8295 
+ Could not fit in run 8310 
+ Could not fit in run 8373 
+ Could not fit in run 8412 
+ Could not fit in run 8469 
+ Could not fit in run 8822 
+ Could not fit in run 8928 
+ Could not fit in run 9046 
+ Could not fit in run 9126 
+ Could not fit in run 9130 
+ Could not fit in run 9144 
+ Could not fit in run 9151 
+ Could not fit in run 9153 
+ Could not fit in run 9294 
+ Could not fit in run 9337 
+ Could not fit in run 9337 
+ Could not fit in run 9362 
+ Could not fit in run 9483 
+ Could not fit in run 9546 
+ Could not fit in run 9610 
+ Could not fit in run 9614 
+ Could not fit in run 9665 
+ Could not fit in run 9666 
+ Could not fit in run 9817 
+SUM OF DEVIATIONS:   1.7840 < 0.99870 of simulated values 
+Comparison with chi-square distribution. 
+Proportion of simulations with X^2 values greater than 31.410 (0.05) : 0.00080 
+Proportion of simulations with X^2 values greater than 37.566 (0.01) : 0.00050 
+
+CUMULATIVE PROBABILITY DISTRIBUTION FROM SIMULATIONS
+
+ %        X^2 Value  Location in Cumulative Chi Square Distribution 
+ 99.0% >=  3.693         1.000  
+ 95.0% >=  4.864         1.000  
+ 90.0% >=  5.498         0.999  
+ 85.0% >=  5.955         0.999  
+ 80.0% >=  6.366         0.998  
+ 75.0% >=  6.736         0.997  
+ 70.0% >=  7.069         0.996  
+ 65.0% >=  7.401         0.995  
+ 60.0% >=  7.737         0.993  
+ 55.0% >=  8.064         0.991  
+ 50.0% >=  8.435         0.989  
+ 45.0% >=  8.819         0.985  
+ 40.0% >=  9.223         0.980  
+ 35.0% >=  9.667         0.974  
+ 30.0% >= 10.150         0.965  
+ 25.0% >= 10.733         0.953  
+ 20.0% >= 11.405         0.935  
+ 15.0% >= 12.217         0.908  
+ 10.0% >= 13.344         0.862  
+  5.0% >= 15.346         0.756  
+  1.0% >= 19.228         0.507  
+TEST OF MAXIMUM CELL VALUE: 
+  Maximum Cell Value:   0.2421  Proportion of runs with lower values : 0.00520 
+
+
+ESTIMATED PARAMETER VALUES AND SIMULATION STATISTICS
+
+Parameter                                   Estimate   2.5%  -  97.5%    Mean  Variance
+-----------------------------------------   -------   ------  -------     -----  -------
+Theta(4Nu) for species 1, locus:       ND2  0.01106  0.00170  0.02898  0.01093  0.0000495
+Theta(4Nu) for species 1, locus:     00132  0.00667  0.00111  0.01562  0.00649  0.0000144
+Theta(4Nu) for species 1, locus:     08352  0.01021  0.00273  0.02265  0.00990  0.0000271
+Theta(4Nu) for species 1, locus:     09385  0.00696  0.00133  0.01663  0.00672  0.0000157
+Theta(4Nu) for species 1, locus:     13380  0.00267  0.00044  0.00656  0.00261  0.0000026
+Theta(4Nu) for species 1, locus:     17483  0.01558  0.00515  0.03388  0.01522  0.0000546
+Theta(4Nu) for species 1, locus:       MPP  0.01456  0.00370  0.03244  0.01410  0.0000558
+Theta(4Nu) for species 1, locus:       RHO  0.00622  0.00177  0.01408  0.00605  0.0000101
+Theta(4Nu) for species 1, locus:      TGFB  0.01526  0.00508  0.03227  0.01472  0.0000496
+Theta(4Nu) for species 1, locus:       ACO  0.01027  0.00267  0.02422  0.00999  0.0000308
+Theta(4Nu) for species 1, locus:      MC1R  0.00235  0.00025  0.00613  0.00231  0.0000024
+Speciation time parameter 'T'               0.02427 -0.43625  0.59946  0.03343  0.0701857
+Population Scalar 'f' for species 2         0.94184  0.74759  1.34436  1.01103  0.0225283
+
+Theta values adjusted for length 
+
+Theta(4Nu) for species 1, locus:       ND2 11.51466  1.77193 30.16582 11.37456 53.6697131
+Theta(4Nu) for species 1, locus:     00132  1.96037  0.32719  4.59345  1.90751  1.2468853
+Theta(4Nu) for species 1, locus:     08352  3.84059  1.02466  8.51579  3.72180  3.8313505
+Theta(4Nu) for species 1, locus:     09385  2.15147  0.41233  5.13735  2.07565  1.4978136
+Theta(4Nu) for species 1, locus:     13380  1.77939  0.29338  4.36748  1.73925  1.1635766
+Theta(4Nu) for species 1, locus:     17483  7.35446  2.42885 15.99111  7.18421 12.1748894
+Theta(4Nu) for species 1, locus:       MPP  3.55239  0.90357  7.91518  3.43922  3.3198135
+Theta(4Nu) for species 1, locus:       RHO  5.29113  1.50300 11.96933  5.14672  7.3083968
+Theta(4Nu) for species 1, locus:      TGFB  7.41765  2.46735 15.68080  7.15287 11.7201041
+Theta(4Nu) for species 1, locus:       ACO  8.89306  2.31426 20.97199  8.65565 23.0977391
+Theta(4Nu) for species 1, locus:      MC1R  1.54956  0.16701  4.04747  1.52637  1.0493890
+_____________________________________________________________________________
+*****************************************************************************
+
+_____________________________________________________________________________
+*****************************************************************************
+
+
+
+  - HKA  program by Jody Hey  updated and compiled August 30, 2001 

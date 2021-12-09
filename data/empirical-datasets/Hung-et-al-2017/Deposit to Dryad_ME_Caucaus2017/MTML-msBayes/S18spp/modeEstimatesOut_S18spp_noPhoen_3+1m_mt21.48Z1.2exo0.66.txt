@@ -1,0 +1,86 @@
+######### results #######
+##### Summary of posterior distribution #####
+##### Psi (= number of possible divtimes) #####
+
+### Posterior probability table with local multinomial logit regression.
+                    1            2            3       4       5           6
+posterior.p 0.9999264 6.773576e-69 7.358359e-05 0.00000 0.00000 7.88606e-12
+prior.p     0.0554300 5.491000e-02 5.615000e-02 0.05606 0.05599 5.49500e-02
+                  7       8       9      10      11      12      13     14
+posterior.p 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.00000 0.0000
+prior.p     0.05472 0.05578 0.05622 0.05629 0.05449 0.05559 0.05455 0.0558
+                 15     16      17      18
+posterior.p 0.00000 0.0000 0.00000 0.00000
+prior.p     0.05562 0.0557 0.05673 0.05502
+
+## Mode (from local multinomial logit regression):
+[1] "1"
+## Mean/Median  (from local multinomial logit regression):
+    mean   median 
+1.000147 1.000000 
+
+### The above results should be better than simple rejection method below.
+
+### Posterior probability table with SIMPLE rejection method, NO REGRESSION.
+                  1       2       3       4       5       6       7       8
+posterior.p 0.95600 0.03800 0.00400 0.00000 0.00000 0.00200 0.00000 0.00000
+prior.p     0.05543 0.05491 0.05615 0.05606 0.05599 0.05495 0.05472 0.05578
+                  9      10      11      12      13     14      15     16
+posterior.p 0.00000 0.00000 0.00000 0.00000 0.00000 0.0000 0.00000 0.0000
+prior.p     0.05622 0.05629 0.05449 0.05559 0.05455 0.0558 0.05562 0.0557
+                 17      18
+posterior.p 0.00000 0.00000
+prior.p     0.05673 0.05502
+
+## Mode (from simple rejection):
+[1] "1"
+## Mean/Median (from simple rejection)
+  mean median 
+ 1.056  1.000 
+
+##### Summary of posterior distribution #####
+##### var.t  #####
+### Mode
+INFO: loc1stats: difference in log(prob. density) between the max (mode) and the ends of confidence interval (at p=0.95) is 0.08032229.
+MODE:
+[1] 1.455898e-05
+### Mean/Median
+        mean       median 
+0.0003472537 0.0002335439 
+### 95 % quantile
+       2.5%       97.5% 
+0.000000000 0.001101215 
+### 95% Highest Postererior Density (HPD) interval
+[1] 0.0000000000 0.0009476582
+
+##### Summary of posterior distribution #####
+##### E.t (= E(t)) #####
+### Mode
+INFO: loc1stats: difference in log(prob. density) between the max (mode) and the ends of confidence interval (at p=0.95) is 0.002781412.
+MODE:
+[1] 0.01612227
+### Mean/Median
+      mean     median 
+0.01693852 0.01636390 
+### 95 % quantile
+       2.5%       97.5% 
+0.002728149 0.033437640 
+### 95% Highest Postererior Density (HPD) interval
+[1] 0.00000000 0.02932956
+
+##### Summary of posterior distribution #####
+##### omega (=Var(t)/E(t)) #####
+### Mode
+INFO: loc1stats: difference in log(prob. density) between the max (mode) and the ends of confidence interval (at p=0.95) is 0.08450116.
+MODE:
+[1] 0.0002001943
+### Mean/Median
+       mean      median 
+0.003130444 0.002422002 
+### 95 % quantile
+       2.5%       97.5% 
+0.000000000 0.009566575 
+### 95% Highest Postererior Density (HPD) interval
+[1] 0.000000000 0.007992091
+
+######### end of results #######

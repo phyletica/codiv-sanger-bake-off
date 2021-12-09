@@ -1,0 +1,279 @@
+# the concentration based on 8 divergent events for 18 spp 
+concentrationShape = 2.0
+concentrationScale = 2.4742482417
+#this becomes an exponiential distribution by setting shape=1
+thetaShape = 1.0
+thetaScale = 0.005
+# Since I set thetaParameters = 000, ancetral theta is constrained to equal to current ones. So the two ancestralTheta parameters has no effect.
+ancestralThetaShape = 0
+ancestralThetaScale = 0
+#By setting thetaParameters as 000, the theta of two current and one ancentral populations are all constrained to be equal
+thetaParameters = 000
+#this becomes an exponiential distribution by setting shape=1
+tauShape = 1.0
+tauScale = 0.002
+# timeInSubsPerSite = 1 sets tau is scaled by the expected substitutions per site (T*u); if timeInSubsPerSite = 0, the setting is equal to msBayes. But the author of PyMsBayes discourage to use the latter.
+timeInSubsPerSite = 1
+bottleProportionShapeA = 0
+bottleProportionShapeB = 0
+bottleProportionShared = 0
+##this becomes an exponiential distribution by setting shape=1
+migrationShape = 1
+migrationScale = 15
+# if numTauClasses is 0, the number of divergence events is free to vary according to the Dirichlet process prior on divergence models.
+numTauClasses = 0
+
+# taxonName	locusName	Ne_Scalar	Mut_Scalar	sampleSizeA	sampleSizeB	tstv	seqLen	Afreq	Cfreq	Gfreq	fastaFileName
+BEGIN SAMPLE_TBL
+AECA-CauEu-mt10in1exo	ND2	0.25	21.48	5	5	1	1041	0.304	0.340	0.114	fastaFromIM/AECA-CauEu-mt10in1exo_ND2.fasta
+AECA-CauEu-mt10in1exo	00132	1	1	10	10	1	323	0.195	0.198	0.375	fastaFromIM/AECA-CauEu-mt10in1exo_00132.fasta
+AECA-CauEu-mt10in1exo	09385	1	1	10	10	1	329	0.192	0.366	0.280	fastaFromIM/AECA-CauEu-mt10in1exo_09385.fasta
+AECA-CauEu-mt10in1exo	14765	1	1	10	10	1	828	0.277	0.166	0.262	fastaFromIM/AECA-CauEu-mt10in1exo_14765.fasta
+AECA-CauEu-mt10in1exo	ACL	1	1	10	10	1	779	0.305	0.201	0.229	fastaFromIM/AECA-CauEu-mt10in1exo_ACL.fasta
+AECA-CauEu-mt10in1exo	MPP	1	1	10	10	1	215	0.200	0.262	0.353	fastaFromIM/AECA-CauEu-mt10in1exo_MPP.fasta
+AECA-CauEu-mt10in1exo	RHO	1	1	10	10	1	854	0.238	0.230	0.254	fastaFromIM/AECA-CauEu-mt10in1exo_RHO.fasta
+AECA-CauEu-mt10in1exo	TGFB	1	1	10	10	1	602	0.251	0.221	0.206	fastaFromIM/AECA-CauEu-mt10in1exo_TGFB.fasta
+AECA-CauEu-mt10in1exo	ABCA1	0.75	1.2	7	7	1	270	0.274	0.174	0.204	fastaFromIM/AECA-CauEu-mt10in1exo_ABCA1.fasta
+AECA-CauEu-mt10in1exo	ACO	0.75	1.2	8	7	1	880	0.270	0.168	0.206	fastaFromIM/AECA-CauEu-mt10in1exo_ACO.fasta
+AECA-CauEu-mt10in1exo	MUSK-TL	0.75	1.2	7	8	1	592	0.319	0.211	0.169	fastaFromIM/AECA-CauEu-mt10in1exo_MUSK-TL.fasta
+AECA-CauEu-mt10in1exo	MC1R	1	0.66	10	10	1	659	0.161	0.380	0.208	fastaFromIM/AECA-CauEu-mt10in1exo_MC1R.fasta
+C.chloris-CauEu-mt12in	ND2	0.25	21.48	5	5	1	1041	0.303	0.337	0.098	fastaFromIM/C.chloris-CauEu-mt12in_ND2.fasta
+C.chloris-CauEu-mt12in	00132	1	1	10	10	1	297	0.180	0.220	0.370	fastaFromIM/C.chloris-CauEu-mt12in_00132.fasta
+C.chloris-CauEu-mt12in	08352	1	1	10	10	1	369	0.222	0.260	0.239	fastaFromIM/C.chloris-CauEu-mt12in_08352.fasta
+C.chloris-CauEu-mt12in	09385	1	1	10	10	1	371	0.194	0.357	0.277	fastaFromIM/C.chloris-CauEu-mt12in_09385.fasta
+C.chloris-CauEu-mt12in	13380	1	1	10	10	1	644	0.267	0.203	0.260	fastaFromIM/C.chloris-CauEu-mt12in_13380.fasta
+C.chloris-CauEu-mt12in	17483	1	1	10	10	1	546	0.315	0.179	0.211	fastaFromIM/C.chloris-CauEu-mt12in_17483.fasta
+C.chloris-CauEu-mt12in	ACL	1	1	10	8	1	441	0.276	0.203	0.265	fastaFromIM/C.chloris-CauEu-mt12in_ACL.fasta
+C.chloris-CauEu-mt12in	RHO	1	1	10	10	1	831	0.231	0.215	0.271	fastaFromIM/C.chloris-CauEu-mt12in_RHO.fasta
+C.chloris-CauEu-mt12in	TGFB	1	1	10	10	1	555	0.241	0.218	0.227	fastaFromIM/C.chloris-CauEu-mt12in_TGFB.fasta
+C.chloris-CauEu-mt12in	ABCA1	0.75	1.2	6	8	1	368	0.323	0.179	0.198	fastaFromIM/C.chloris-CauEu-mt12in_ABCA1.fasta
+C.chloris-CauEu-mt12in	ACO	0.75	1.2	6	8	1	866	0.262	0.167	0.200	fastaFromIM/C.chloris-CauEu-mt12in_ACO.fasta
+C.chloris-CauEu-mt12in	MAK10	0.75	1.2	6	8	1	635	0.265	0.196	0.222	fastaFromIM/C.chloris-CauEu-mt12in_MAK10.fasta
+C.chloris-CauEu-mt12in	MUSK-TL	0.75	1.2	6	8	1	585	0.311	0.219	0.176	fastaFromIM/C.chloris-CauEu-mt12in_MUSK-TL.fasta
+C.spinus-CauEu-mt13in	ND2	0.25	21.48	5	5	1	1041	0.316	0.339	0.096	fastaFromIM/C.spinus-CauEu-mt13in_ND2.fasta
+C.spinus-CauEu-mt13in	00132	1	1	10	10	1	365	0.238	0.367	0.236	fastaFromIM/C.spinus-CauEu-mt13in_00132.fasta
+C.spinus-CauEu-mt13in	08352	1	1	10	10	1	332	0.223	0.261	0.225	fastaFromIM/C.spinus-CauEu-mt13in_08352.fasta
+C.spinus-CauEu-mt13in	09385	1	1	10	10	1	372	0.191	0.356	0.277	fastaFromIM/C.spinus-CauEu-mt13in_09385.fasta
+C.spinus-CauEu-mt13in	13380	1	1	10	10	1	638	0.274	0.199	0.254	fastaFromIM/C.spinus-CauEu-mt13in_13380.fasta
+C.spinus-CauEu-mt13in	14765	1	1	10	10	1	842	0.288	0.159	0.257	fastaFromIM/C.spinus-CauEu-mt13in_14765.fasta
+C.spinus-CauEu-mt13in	17483	1	1	10	10	1	513	0.315	0.177	0.208	fastaFromIM/C.spinus-CauEu-mt13in_17483.fasta
+C.spinus-CauEu-mt13in	MPP	1	1	10	10	1	351	0.198	0.298	0.340	fastaFromIM/C.spinus-CauEu-mt13in_MPP.fasta
+C.spinus-CauEu-mt13in	RHO	1	1	10	8	1	827	0.227	0.218	0.269	fastaFromIM/C.spinus-CauEu-mt13in_RHO.fasta
+C.spinus-CauEu-mt13in	TGFB	1	1	10	10	1	515	0.254	0.229	0.222	fastaFromIM/C.spinus-CauEu-mt13in_TGFB.fasta
+C.spinus-CauEu-mt13in	ABCA1	0.75	1.2	8	7	1	363	0.320	0.185	0.201	fastaFromIM/C.spinus-CauEu-mt13in_ABCA1.fasta
+C.spinus-CauEu-mt13in	ACO	0.75	1.2	8	7	1	827	0.265	0.166	0.197	fastaFromIM/C.spinus-CauEu-mt13in_ACO.fasta
+C.spinus-CauEu-mt13in	MAK10	0.75	1.2	7	6	1	963	0.333	0.205	0.180	fastaFromIM/C.spinus-CauEu-mt13in_MAK10.fasta
+C.spinus-CauEu-mt13in	NNT	0.75	1.2	6	7	1	718	0.290	0.150	0.179	fastaFromIM/C.spinus-CauEu-mt13in_NNT.fasta
+Certhia-CauEu-mt13in	ND2	0.25	21.48	5	5	1	1041	0.281	0.344	0.119	fastaFromIM/Certhia-CauEu-mt13in_ND2.fasta
+Certhia-CauEu-mt13in	00132	1	1	8	10	1	344	0.198	0.186	0.378	fastaFromIM/Certhia-CauEu-mt13in_00132.fasta
+Certhia-CauEu-mt13in	08352	1	1	10	10	1	448	0.237	0.260	0.250	fastaFromIM/Certhia-CauEu-mt13in_08352.fasta
+Certhia-CauEu-mt13in	09385	1	1	10	10	1	316	0.190	0.339	0.294	fastaFromIM/Certhia-CauEu-mt13in_09385.fasta
+Certhia-CauEu-mt13in	13380	1	1	10	10	1	648	0.258	0.197	0.273	fastaFromIM/Certhia-CauEu-mt13in_13380.fasta
+Certhia-CauEu-mt13in	14765	1	1	10	8	1	792	0.294	0.167	0.240	fastaFromIM/Certhia-CauEu-mt13in_14765.fasta
+Certhia-CauEu-mt13in	17483	1	1	10	10	1	489	0.320	0.175	0.211	fastaFromIM/Certhia-CauEu-mt13in_17483.fasta
+Certhia-CauEu-mt13in	ACL	1	1	10	10	1	480	0.255	0.221	0.255	fastaFromIM/Certhia-CauEu-mt13in_ACL.fasta
+Certhia-CauEu-mt13in	MPP	1	1	8	10	1	354	0.202	0.282	0.328	fastaFromIM/Certhia-CauEu-mt13in_MPP.fasta
+Certhia-CauEu-mt13in	RHO	1	1	10	8	1	858	0.225	0.238	0.266	fastaFromIM/Certhia-CauEu-mt13in_RHO.fasta
+Certhia-CauEu-mt13in	TGFB	1	1	10	10	1	599	0.238	0.216	0.219	fastaFromIM/Certhia-CauEu-mt13in_TGFB.fasta
+Certhia-CauEu-mt13in	ABCA1	0.75	1.2	9	8	1	284	0.337	0.163	0.162	fastaFromIM/Certhia-CauEu-mt13in_ABCA1.fasta
+Certhia-CauEu-mt13in	ACO	0.75	1.2	9	8	1	863	0.270	0.164	0.208	fastaFromIM/Certhia-CauEu-mt13in_ACO.fasta
+Certhia-CauEu-mt13in	MAK10	0.75	1.2	9	8	1	706	0.326	0.216	0.195	fastaFromIM/Certhia-CauEu-mt13in_MAK10.fasta
+F.parva-CauEu-mt14in1exo	ND2	0.25	21.48	5	5	1	1041	0.299	0.364	0.119	fastaFromIM/F.parva-CauEu-mt14in1exo_ND2.fasta
+F.parva-CauEu-mt14in1exo	00132	1	1	8	10	1	324	0.181	0.193	0.390	fastaFromIM/F.parva-CauEu-mt14in1exo_00132.fasta
+F.parva-CauEu-mt14in1exo	08352	1	1	10	10	1	346	0.246	0.250	0.243	fastaFromIM/F.parva-CauEu-mt14in1exo_08352.fasta
+F.parva-CauEu-mt14in1exo	09385	1	1	8	10	1	283	0.180	0.381	0.297	fastaFromIM/F.parva-CauEu-mt14in1exo_09385.fasta
+F.parva-CauEu-mt14in1exo	13380	1	1	10	10	1	684	0.266	0.202	0.259	fastaFromIM/F.parva-CauEu-mt14in1exo_13380.fasta
+F.parva-CauEu-mt14in1exo	14765	1	1	10	10	1	815	0.297	0.164	0.242	fastaFromIM/F.parva-CauEu-mt14in1exo_14765.fasta
+F.parva-CauEu-mt14in1exo	17483	1	1	8	10	1	490	0.298	0.182	0.223	fastaFromIM/F.parva-CauEu-mt14in1exo_17483.fasta
+F.parva-CauEu-mt14in1exo	ACL	1	1	10	10	1	476	0.245	0.195	0.288	fastaFromIM/F.parva-CauEu-mt14in1exo_ACL.fasta
+F.parva-CauEu-mt14in1exo	MPP	1	1	10	10	1	354	0.208	0.289	0.314	fastaFromIM/F.parva-CauEu-mt14in1exo_MPP.fasta
+F.parva-CauEu-mt14in1exo	RHO	1	1	8	8	1	868	0.228	0.228	0.266	fastaFromIM/F.parva-CauEu-mt14in1exo_RHO.fasta
+F.parva-CauEu-mt14in1exo	TGFB	1	1	8	10	1	602	0.225	0.233	0.233	fastaFromIM/F.parva-CauEu-mt14in1exo_TGFB.fasta
+F.parva-CauEu-mt14in1exo	ABCA1	0.75	1.2	8	7	1	281	0.292	0.181	0.196	fastaFromIM/F.parva-CauEu-mt14in1exo_ABCA1.fasta
+F.parva-CauEu-mt14in1exo	MAK10	0.75	1.2	8	5	1	1046	0.327	0.203	0.182	fastaFromIM/F.parva-CauEu-mt14in1exo_MAK10.fasta
+F.parva-CauEu-mt14in1exo	MUSK-TL	0.75	1.2	10	7	1	571	0.322	0.208	0.175	fastaFromIM/F.parva-CauEu-mt14in1exo_MUSK-TL.fasta
+F.parva-CauEu-mt14in1exo	NNT	0.75	1.2	10	7	1	772	0.303	0.143	0.177	fastaFromIM/F.parva-CauEu-mt14in1exo_NNT.fasta
+F.parva-CauEu-mt14in1exo	MC1R	1	0.66	10	10	1	655	0.156	0.377	0.216	fastaFromIM/F.parva-CauEu-mt14in1exo_MC1R.fasta
+F.semi-hypo-CauEu-mt13in	ND2	0.25	21.48	5	5	1	1041	0.287	0.361	0.126	fastaFromIM/F.semi-hypo-CauEu-mt13in_ND2.fasta
+F.semi-hypo-CauEu-mt13in	00132	1	1	10	10	1	342	0.176	0.204	0.383	fastaFromIM/F.semi-hypo-CauEu-mt13in_00132.fasta
+F.semi-hypo-CauEu-mt13in	08352	1	1	8	10	1	337	0.245	0.256	0.247	fastaFromIM/F.semi-hypo-CauEu-mt13in_08352.fasta
+F.semi-hypo-CauEu-mt13in	09385	1	1	10	8	1	361	0.191	0.373	0.288	fastaFromIM/F.semi-hypo-CauEu-mt13in_09385.fasta
+F.semi-hypo-CauEu-mt13in	14765	1	1	10	10	1	789	0.296	0.161	0.247	fastaFromIM/F.semi-hypo-CauEu-mt13in_14765.fasta
+F.semi-hypo-CauEu-mt13in	17483	1	1	10	10	1	489	0.300	0.180	0.219	fastaFromIM/F.semi-hypo-CauEu-mt13in_17483.fasta
+F.semi-hypo-CauEu-mt13in	ACL	1	1	10	10	1	473	0.247	0.193	0.283	fastaFromIM/F.semi-hypo-CauEu-mt13in_ACL.fasta
+F.semi-hypo-CauEu-mt13in	RHO	1	1	10	10	1	834	0.231	0.225	0.266	fastaFromIM/F.semi-hypo-CauEu-mt13in_RHO.fasta
+F.semi-hypo-CauEu-mt13in	TGFB	1	1	10	10	1	594	0.225	0.229	0.235	fastaFromIM/F.semi-hypo-CauEu-mt13in_TGFB.fasta
+F.semi-hypo-CauEu-mt13in	ABCA1	0.75	1.2	9	9	1	367	0.304	0.188	0.212	fastaFromIM/F.semi-hypo-CauEu-mt13in_ABCA1.fasta
+F.semi-hypo-CauEu-mt13in	ACO	0.75	1.2	7	9	1	848	0.265	0.160	0.209	fastaFromIM/F.semi-hypo-CauEu-mt13in_ACO.fasta
+F.semi-hypo-CauEu-mt13in	MAK10	0.75	1.2	7	9	1	612	0.270	0.208	0.219	fastaFromIM/F.semi-hypo-CauEu-mt13in_MAK10.fasta
+F.semi-hypo-CauEu-mt13in	MUSK-TL	0.75	1.2	9	9	1	489	0.327	0.198	0.181	fastaFromIM/F.semi-hypo-CauEu-mt13in_MUSK-TL.fasta
+F.semi-hypo-CauEu-mt13in	NNT	0.75	1.2	9	9	1	810	0.297	0.146	0.182	fastaFromIM/F.semi-hypo-CauEu-mt13in_NNT.fasta
+Garrulus-CauEu-mt12in	ND2	0.25	21.48	4	5	1	1041	0.307	0.342	0.100	fastaFromIM/Garrulus-CauEu-mt12in_ND2.fasta
+Garrulus-CauEu-mt12in	00132	1	1	10	10	1	296	0.198	0.190	0.385	fastaFromIM/Garrulus-CauEu-mt12in_00132.fasta
+Garrulus-CauEu-mt12in	08352	1	1	10	8	1	356	0.221	0.263	0.265	fastaFromIM/Garrulus-CauEu-mt12in_08352.fasta
+Garrulus-CauEu-mt12in	09385	1	1	10	10	1	372	0.206	0.325	0.280	fastaFromIM/Garrulus-CauEu-mt12in_09385.fasta
+Garrulus-CauEu-mt12in	13380	1	1	8	10	1	681	0.264	0.199	0.263	fastaFromIM/Garrulus-CauEu-mt12in_13380.fasta
+Garrulus-CauEu-mt12in	14765	1	1	10	10	1	855	0.290	0.163	0.250	fastaFromIM/Garrulus-CauEu-mt12in_14765.fasta
+Garrulus-CauEu-mt12in	17483	1	1	10	10	1	527	0.315	0.164	0.220	fastaFromIM/Garrulus-CauEu-mt12in_17483.fasta
+Garrulus-CauEu-mt12in	ACL	1	1	10	10	1	472	0.261	0.220	0.271	fastaFromIM/Garrulus-CauEu-mt12in_ACL.fasta
+Garrulus-CauEu-mt12in	MPP	1	1	8	10	1	351	0.220	0.292	0.318	fastaFromIM/Garrulus-CauEu-mt12in_MPP.fasta
+Garrulus-CauEu-mt12in	TGFB	1	1	10	10	1	570	0.243	0.243	0.211	fastaFromIM/Garrulus-CauEu-mt12in_TGFB.fasta
+Garrulus-CauEu-mt12in	ABCA1	0.75	1.2	6	6	1	368	0.298	0.182	0.221	fastaFromIM/Garrulus-CauEu-mt12in_ABCA1.fasta
+Garrulus-CauEu-mt12in	ACO	0.75	1.2	6	6	1	775	0.268	0.164	0.221	fastaFromIM/Garrulus-CauEu-mt12in_ACO.fasta
+Garrulus-CauEu-mt12in	MUSK-TL	0.75	1.2	6	7	1	562	0.307	0.211	0.184	fastaFromIM/Garrulus-CauEu-mt12in_MUSK-TL.fasta
+P.ater-CauEu-mt11in	ND2	0.25	21.48	4	5	1	1040	0.300	0.384	0.108	fastaFromIM/P.ater-CauEu-mt11in_ND2.fasta
+P.ater-CauEu-mt11in	00132	1	1	10	10	1	333	0.209	0.207	0.360	fastaFromIM/P.ater-CauEu-mt11in_00132.fasta
+P.ater-CauEu-mt11in	08352	1	1	10	10	1	377	0.233	0.267	0.241	fastaFromIM/P.ater-CauEu-mt11in_08352.fasta
+P.ater-CauEu-mt11in	09385	1	1	10	10	1	316	0.184	0.350	0.294	fastaFromIM/P.ater-CauEu-mt11in_09385.fasta
+P.ater-CauEu-mt11in	14765	1	1	10	10	1	763	0.311	0.158	0.234	fastaFromIM/P.ater-CauEu-mt11in_14765.fasta
+P.ater-CauEu-mt11in	17483	1	1	10	10	1	484	0.304	0.171	0.215	fastaFromIM/P.ater-CauEu-mt11in_17483.fasta
+P.ater-CauEu-mt11in	ACL	1	1	10	10	1	745	0.297	0.191	0.234	fastaFromIM/P.ater-CauEu-mt11in_ACL.fasta
+P.ater-CauEu-mt11in	RHO	1	1	8	10	1	784	0.221	0.233	0.265	fastaFromIM/P.ater-CauEu-mt11in_RHO.fasta
+P.ater-CauEu-mt11in	TGFB	1	1	10	10	1	510	0.249	0.214	0.216	fastaFromIM/P.ater-CauEu-mt11in_TGFB.fasta
+P.ater-CauEu-mt11in	ACO	0.75	1.2	7	6	1	832	0.269	0.159	0.218	fastaFromIM/P.ater-CauEu-mt11in_ACO.fasta
+P.ater-CauEu-mt11in	MUSK-TL	0.75	1.2	8	8	1	531	0.320	0.202	0.157	fastaFromIM/P.ater-CauEu-mt11in_MUSK-TL.fasta
+P.ater-CauEu-mt11in	NNT	0.75	1.2	8	8	1	358	0.285	0.146	0.178	fastaFromIM/P.ater-CauEu-mt11in_NNT.fasta
+P.collybita-CauEu-mt10in1exo	ND2	0.25	21.48	5	5	1	1041	0.305	0.335	0.098	fastaFromIM/P.collybita-CauEu-mt10in1exo_ND2.fasta
+P.collybita-CauEu-mt10in1exo	08352	1	1	10	10	1	385	0.234	0.261	0.243	fastaFromIM/P.collybita-CauEu-mt10in1exo_08352.fasta
+P.collybita-CauEu-mt10in1exo	09385	1	1	8	10	1	316	0.184	0.379	0.287	fastaFromIM/P.collybita-CauEu-mt10in1exo_09385.fasta
+P.collybita-CauEu-mt10in1exo	13380	1	1	10	10	1	683	0.250	0.206	0.269	fastaFromIM/P.collybita-CauEu-mt10in1exo_13380.fasta
+P.collybita-CauEu-mt10in1exo	14765	1	1	10	10	1	808	0.284	0.165	0.251	fastaFromIM/P.collybita-CauEu-mt10in1exo_14765.fasta
+P.collybita-CauEu-mt10in1exo	17483	1	1	10	10	1	478	0.324	0.172	0.212	fastaFromIM/P.collybita-CauEu-mt10in1exo_17483.fasta
+P.collybita-CauEu-mt10in1exo	ACL	1	1	10	8	1	756	0.306	0.193	0.234	fastaFromIM/P.collybita-CauEu-mt10in1exo_ACL.fasta
+P.collybita-CauEu-mt10in1exo	RHO	1	1	10	10	1	855	0.231	0.225	0.263	fastaFromIM/P.collybita-CauEu-mt10in1exo_RHO.fasta
+P.collybita-CauEu-mt10in1exo	TGFB	1	1	10	10	1	573	0.237	0.230	0.212	fastaFromIM/P.collybita-CauEu-mt10in1exo_TGFB.fasta
+P.collybita-CauEu-mt10in1exo	ACO	0.75	1.2	9	9	1	941	0.260	0.178	0.204	fastaFromIM/P.collybita-CauEu-mt10in1exo_ACO.fasta
+P.collybita-CauEu-mt10in1exo	MUSK-TL	0.75	1.2	9	8	1	521	0.335	0.199	0.177	fastaFromIM/P.collybita-CauEu-mt10in1exo_MUSK-TL.fasta
+P.collybita-CauEu-mt10in1exo	MC1R	1	0.66	8	10	1	659	0.156	0.379	0.215	fastaFromIM/P.collybita-CauEu-mt10in1exo_MC1R.fasta
+P.sibilatrix-CauEu-mt11in1exo	ND2	0.25	21.48	5	5	1	1012	0.288	0.374	0.107	fastaFromIM/P.sibilatrix-CauEu-mt11in1exo_ND2.fasta
+P.sibilatrix-CauEu-mt11in1exo	00132	1	1	10	10	1	311	0.183	0.183	0.402	fastaFromIM/P.sibilatrix-CauEu-mt11in1exo_00132.fasta
+P.sibilatrix-CauEu-mt11in1exo	08352	1	1	10	10	1	376	0.234	0.267	0.239	fastaFromIM/P.sibilatrix-CauEu-mt11in1exo_08352.fasta
+P.sibilatrix-CauEu-mt11in1exo	09385	1	1	10	10	1	310	0.175	0.374	0.296	fastaFromIM/P.sibilatrix-CauEu-mt11in1exo_09385.fasta
+P.sibilatrix-CauEu-mt11in1exo	13380	1	1	10	10	1	678	0.245	0.205	0.278	fastaFromIM/P.sibilatrix-CauEu-mt11in1exo_13380.fasta
+P.sibilatrix-CauEu-mt11in1exo	14765	1	1	10	10	1	836	0.288	0.167	0.250	fastaFromIM/P.sibilatrix-CauEu-mt11in1exo_14765.fasta
+P.sibilatrix-CauEu-mt11in1exo	17483	1	1	10	10	1	463	0.328	0.154	0.216	fastaFromIM/P.sibilatrix-CauEu-mt11in1exo_17483.fasta
+P.sibilatrix-CauEu-mt11in1exo	TGFB	1	1	10	10	1	590	0.244	0.233	0.205	fastaFromIM/P.sibilatrix-CauEu-mt11in1exo_TGFB.fasta
+P.sibilatrix-CauEu-mt11in1exo	ABCA1	0.75	1.2	8	8	1	244	0.292	0.180	0.196	fastaFromIM/P.sibilatrix-CauEu-mt11in1exo_ABCA1.fasta
+P.sibilatrix-CauEu-mt11in1exo	ACO	0.75	1.2	8	8	1	789	0.263	0.164	0.213	fastaFromIM/P.sibilatrix-CauEu-mt11in1exo_ACO.fasta
+P.sibilatrix-CauEu-mt11in1exo	MUSK-TL	0.75	1.2	8	8	1	556	0.329	0.200	0.180	fastaFromIM/P.sibilatrix-CauEu-mt11in1exo_MUSK-TL.fasta
+P.sibilatrix-CauEu-mt11in1exo	NNT	0.75	1.2	6	6	1	601	0.371	0.175	0.152	fastaFromIM/P.sibilatrix-CauEu-mt11in1exo_NNT.fasta
+P.sibilatrix-CauEu-mt11in1exo	MC1R	1	0.66	10	10	1	639	0.159	0.371	0.218	fastaFromIM/P.sibilatrix-CauEu-mt11in1exo_MC1R.fasta
+Prunella-CauEu-mt13in1exo	ND2	0.25	21.48	5	5	1	1041	0.313	0.330	0.112	fastaFromIM/Prunella-CauEu-mt13in1exo_ND2.fasta
+Prunella-CauEu-mt13in1exo	00132	1	1	10	10	1	353	0.233	0.365	0.204	fastaFromIM/Prunella-CauEu-mt13in1exo_00132.fasta
+Prunella-CauEu-mt13in1exo	08352	1	1	10	10	1	373	0.234	0.258	0.233	fastaFromIM/Prunella-CauEu-mt13in1exo_08352.fasta
+Prunella-CauEu-mt13in1exo	09385	1	1	10	10	1	348	0.190	0.368	0.272	fastaFromIM/Prunella-CauEu-mt13in1exo_09385.fasta
+Prunella-CauEu-mt13in1exo	13380	1	1	8	8	1	673	0.257	0.202	0.274	fastaFromIM/Prunella-CauEu-mt13in1exo_13380.fasta
+Prunella-CauEu-mt13in1exo	14765	1	1	8	10	1	828	0.291	0.170	0.243	fastaFromIM/Prunella-CauEu-mt13in1exo_14765.fasta
+Prunella-CauEu-mt13in1exo	17483	1	1	10	10	1	534	0.326	0.169	0.210	fastaFromIM/Prunella-CauEu-mt13in1exo_17483.fasta
+Prunella-CauEu-mt13in1exo	RHO	1	1	10	10	1	893	0.236	0.224	0.249	fastaFromIM/Prunella-CauEu-mt13in1exo_RHO.fasta
+Prunella-CauEu-mt13in1exo	TGFB	1	1	8	10	1	503	0.240	0.235	0.230	fastaFromIM/Prunella-CauEu-mt13in1exo_TGFB.fasta
+Prunella-CauEu-mt13in1exo	ABCA1	0.75	1.2	9	8	1	358	0.307	0.189	0.198	fastaFromIM/Prunella-CauEu-mt13in1exo_ABCA1.fasta
+Prunella-CauEu-mt13in1exo	ACO	0.75	1.2	9	9	1	972	0.271	0.167	0.209	fastaFromIM/Prunella-CauEu-mt13in1exo_ACO.fasta
+Prunella-CauEu-mt13in1exo	MAK10	0.75	1.2	7	6	1	744	0.281	0.192	0.196	fastaFromIM/Prunella-CauEu-mt13in1exo_MAK10.fasta
+Prunella-CauEu-mt13in1exo	MUSK-TL	0.75	1.2	7	7	1	515	0.330	0.208	0.155	fastaFromIM/Prunella-CauEu-mt13in1exo_MUSK-TL.fasta
+Prunella-CauEu-mt13in1exo	NNT	0.75	1.2	9	8	1	486	0.298	0.145	0.192	fastaFromIM/Prunella-CauEu-mt13in1exo_NNT.fasta
+Prunella-CauEu-mt13in1exo	MC1R	1	0.66	8	10	1	530	0.149	0.386	0.246	fastaFromIM/Prunella-CauEu-mt13in1exo_MC1R.fasta
+Pyrrhula-CauEu-mt14in	ND2	0.25	21.48	5	5	1	1041	0.297	0.349	0.106	fastaFromIM/Pyrrhula-CauEu-mt14in_ND2.fasta
+Pyrrhula-CauEu-mt14in	00132	1	1	10	10	1	302	0.175	0.215	0.381	fastaFromIM/Pyrrhula-CauEu-mt14in_00132.fasta
+Pyrrhula-CauEu-mt14in	08352	1	1	10	10	1	379	0.232	0.261	0.241	fastaFromIM/Pyrrhula-CauEu-mt14in_08352.fasta
+Pyrrhula-CauEu-mt14in	09385	1	1	10	10	1	318	0.186	0.356	0.280	fastaFromIM/Pyrrhula-CauEu-mt14in_09385.fasta
+Pyrrhula-CauEu-mt14in	13380	1	1	10	10	1	687	0.271	0.205	0.252	fastaFromIM/Pyrrhula-CauEu-mt14in_13380.fasta
+Pyrrhula-CauEu-mt14in	14765	1	1	8	10	1	847	0.294	0.153	0.252	fastaFromIM/Pyrrhula-CauEu-mt14in_14765.fasta
+Pyrrhula-CauEu-mt14in	17483	1	1	10	10	1	484	0.311	0.181	0.211	fastaFromIM/Pyrrhula-CauEu-mt14in_17483.fasta
+Pyrrhula-CauEu-mt14in	ACL	1	1	10	10	1	483	0.264	0.257	0.207	fastaFromIM/Pyrrhula-CauEu-mt14in_ACL.fasta
+Pyrrhula-CauEu-mt14in	MPP	1	1	10	10	1	303	0.142	0.342	0.298	fastaFromIM/Pyrrhula-CauEu-mt14in_MPP.fasta
+Pyrrhula-CauEu-mt14in	RHO	1	1	10	10	1	422	0.211	0.232	0.264	fastaFromIM/Pyrrhula-CauEu-mt14in_RHO.fasta
+Pyrrhula-CauEu-mt14in	TGFB	1	1	10	10	1	579	0.248	0.221	0.214	fastaFromIM/Pyrrhula-CauEu-mt14in_TGFB.fasta
+Pyrrhula-CauEu-mt14in	ABCA1	0.75	1.2	8	8	1	297	0.320	0.175	0.175	fastaFromIM/Pyrrhula-CauEu-mt14in_ABCA1.fasta
+Pyrrhula-CauEu-mt14in	ACO	0.75	1.2	8	8	1	905	0.259	0.174	0.201	fastaFromIM/Pyrrhula-CauEu-mt14in_ACO.fasta
+Pyrrhula-CauEu-mt14in	MAK10	0.75	1.2	8	8	1	994	0.282	0.185	0.203	fastaFromIM/Pyrrhula-CauEu-mt14in_MAK10.fasta
+Pyrrhula-CauEu-mt14in	MUSK-TL	0.75	1.2	6	7	1	554	0.309	0.206	0.179	fastaFromIM/Pyrrhula-CauEu-mt14in_MUSK-TL.fasta
+Regulus-CauEu-mt13in1exo	ND2	0.25	21.48	5	5	1	1041	0.323	0.318	0.108	fastaFromIM/Regulus-CauEu-mt13in1exo_ND2.fasta
+Regulus-CauEu-mt13in1exo	00132	1	1	10	10	1	319	0.180	0.170	0.421	fastaFromIM/Regulus-CauEu-mt13in1exo_00132.fasta
+Regulus-CauEu-mt13in1exo	08352	1	1	10	10	1	380	0.235	0.274	0.249	fastaFromIM/Regulus-CauEu-mt13in1exo_08352.fasta
+Regulus-CauEu-mt13in1exo	09385	1	1	10	10	1	319	0.176	0.332	0.306	fastaFromIM/Regulus-CauEu-mt13in1exo_09385.fasta
+Regulus-CauEu-mt13in1exo	13380	1	1	10	10	1	664	0.248	0.220	0.279	fastaFromIM/Regulus-CauEu-mt13in1exo_13380.fasta
+Regulus-CauEu-mt13in1exo	14765	1	1	10	10	1	803	0.288	0.154	0.259	fastaFromIM/Regulus-CauEu-mt13in1exo_14765.fasta
+Regulus-CauEu-mt13in1exo	17483	1	1	8	10	1	465	0.316	0.166	0.200	fastaFromIM/Regulus-CauEu-mt13in1exo_17483.fasta
+Regulus-CauEu-mt13in1exo	ACL	1	1	10	10	1	478	0.256	0.277	0.233	fastaFromIM/Regulus-CauEu-mt13in1exo_ACL.fasta
+Regulus-CauEu-mt13in1exo	RHO	1	1	10	8	1	881	0.242	0.212	0.264	fastaFromIM/Regulus-CauEu-mt13in1exo_RHO.fasta
+Regulus-CauEu-mt13in1exo	TGFB	1	1	10	10	1	577	0.253	0.213	0.218	fastaFromIM/Regulus-CauEu-mt13in1exo_TGFB.fasta
+Regulus-CauEu-mt13in1exo	ABCA1	0.75	1.2	10	9	1	274	0.300	0.197	0.180	fastaFromIM/Regulus-CauEu-mt13in1exo_ABCA1.fasta
+Regulus-CauEu-mt13in1exo	MAK10	0.75	1.2	10	9	1	598	0.259	0.211	0.214	fastaFromIM/Regulus-CauEu-mt13in1exo_MAK10.fasta
+Regulus-CauEu-mt13in1exo	MUSK-TL	0.75	1.2	10	9	1	546	0.335	0.203	0.174	fastaFromIM/Regulus-CauEu-mt13in1exo_MUSK-TL.fasta
+Regulus-CauEu-mt13in1exo	NNT	0.75	1.2	10	7	1	814	0.294	0.144	0.186	fastaFromIM/Regulus-CauEu-mt13in1exo_NNT.fasta
+Regulus-CauEu-mt13in1exo	MC1R	1	0.66	10	10	1	628	0.158	0.385	0.213	fastaFromIM/Regulus-CauEu-mt13in1exo_MC1R.fasta
+Sitta-CauEu-mt10in1exo	ND2	0.25	21.48	5	5	1	1041	0.323	0.366	0.100	fastaFromIM/Sitta-CauEu-mt10in1exo_ND2.fasta
+Sitta-CauEu-mt10in1exo	08352	1	1	8	10	1	448	0.243	0.250	0.248	fastaFromIM/Sitta-CauEu-mt10in1exo_08352.fasta
+Sitta-CauEu-mt10in1exo	13380	1	1	10	10	1	672	0.276	0.215	0.259	fastaFromIM/Sitta-CauEu-mt10in1exo_13380.fasta
+Sitta-CauEu-mt10in1exo	14765	1	1	10	10	1	812	0.288	0.167	0.247	fastaFromIM/Sitta-CauEu-mt10in1exo_14765.fasta
+Sitta-CauEu-mt10in1exo	17483	1	1	10	10	1	483	0.322	0.167	0.207	fastaFromIM/Sitta-CauEu-mt10in1exo_17483.fasta
+Sitta-CauEu-mt10in1exo	ACL	1	1	10	10	1	466	0.256	0.224	0.273	fastaFromIM/Sitta-CauEu-mt10in1exo_ACL.fasta
+Sitta-CauEu-mt10in1exo	MPP	1	1	10	10	1	365	0.219	0.270	0.318	fastaFromIM/Sitta-CauEu-mt10in1exo_MPP.fasta
+Sitta-CauEu-mt10in1exo	RHO	1	1	10	10	1	846	0.280	0.260	0.227	fastaFromIM/Sitta-CauEu-mt10in1exo_RHO.fasta
+Sitta-CauEu-mt10in1exo	TGFB	1	1	10	10	1	476	0.245	0.226	0.231	fastaFromIM/Sitta-CauEu-mt10in1exo_TGFB.fasta
+Sitta-CauEu-mt10in1exo	ABCA1	0.75	1.2	7	9	1	356	0.315	0.181	0.214	fastaFromIM/Sitta-CauEu-mt10in1exo_ABCA1.fasta
+Sitta-CauEu-mt10in1exo	NNT	0.75	1.2	7	9	1	581	0.378	0.198	0.140	fastaFromIM/Sitta-CauEu-mt10in1exo_NNT.fasta
+Sitta-CauEu-mt10in1exo	MC1R	1	0.66	10	10	1	655	0.160	0.379	0.215	fastaFromIM/Sitta-CauEu-mt10in1exo_MC1R.fasta
+S.atricapilla-CauEu-mt12in	ND2	0.25	21.48	5	5	1	1041	0.318	0.331	0.102	fastaFromIM/S.atricapilla-CauEu-mt12in_ND2.fasta
+S.atricapilla-CauEu-mt12in	00132	1	1	8	10	1	388	0.191	0.201	0.369	fastaFromIM/S.atricapilla-CauEu-mt12in_00132.fasta
+S.atricapilla-CauEu-mt12in	08352	1	1	10	10	1	374	0.225	0.281	0.232	fastaFromIM/S.atricapilla-CauEu-mt12in_08352.fasta
+S.atricapilla-CauEu-mt12in	09385	1	1	10	10	1	349	0.201	0.360	0.278	fastaFromIM/S.atricapilla-CauEu-mt12in_09385.fasta
+S.atricapilla-CauEu-mt12in	13380	1	1	10	10	1	662	0.270	0.212	0.258	fastaFromIM/S.atricapilla-CauEu-mt12in_13380.fasta
+S.atricapilla-CauEu-mt12in	14765	1	1	10	10	1	829	0.281	0.165	0.263	fastaFromIM/S.atricapilla-CauEu-mt12in_14765.fasta
+S.atricapilla-CauEu-mt12in	17483	1	1	10	10	1	458	0.325	0.172	0.198	fastaFromIM/S.atricapilla-CauEu-mt12in_17483.fasta
+S.atricapilla-CauEu-mt12in	RHO	1	1	8	10	1	883	0.221	0.227	0.265	fastaFromIM/S.atricapilla-CauEu-mt12in_RHO.fasta
+S.atricapilla-CauEu-mt12in	TGFB	1	1	10	10	1	573	0.234	0.221	0.212	fastaFromIM/S.atricapilla-CauEu-mt12in_TGFB.fasta
+S.atricapilla-CauEu-mt12in	ABCA1	0.75	1.2	4	5	1	357	0.305	0.177	0.213	fastaFromIM/S.atricapilla-CauEu-mt12in_ABCA1.fasta
+S.atricapilla-CauEu-mt12in	ACO	0.75	1.2	6	5	1	886	0.275	0.166	0.209	fastaFromIM/S.atricapilla-CauEu-mt12in_ACO.fasta
+S.atricapilla-CauEu-mt12in	MAK10	0.75	1.2	4	4	1	858	0.275	0.210	0.190	fastaFromIM/S.atricapilla-CauEu-mt12in_MAK10.fasta
+S.atricapilla-CauEu-mt12in	MUSK-TL	0.75	1.2	4	5	1	581	0.317	0.201	0.173	fastaFromIM/S.atricapilla-CauEu-mt12in_MUSK-TL.fasta
+Troglodytes-CauEu-mt11in	ND2	0.25	21.48	5	5	1	1041	0.306	0.383	0.102	fastaFromIM/Troglodytes-CauEu-mt11in_ND2.fasta
+Troglodytes-CauEu-mt11in	00132	1	1	10	10	1	325	0.170	0.206	0.384	fastaFromIM/Troglodytes-CauEu-mt11in_00132.fasta
+Troglodytes-CauEu-mt11in	08352	1	1	10	10	1	384	0.237	0.255	0.242	fastaFromIM/Troglodytes-CauEu-mt11in_08352.fasta
+Troglodytes-CauEu-mt11in	09385	1	1	10	10	1	317	0.186	0.359	0.293	fastaFromIM/Troglodytes-CauEu-mt11in_09385.fasta
+Troglodytes-CauEu-mt11in	13380	1	1	10	10	1	673	0.258	0.203	0.275	fastaFromIM/Troglodytes-CauEu-mt11in_13380.fasta
+Troglodytes-CauEu-mt11in	14765	1	1	10	10	1	843	0.291	0.162	0.247	fastaFromIM/Troglodytes-CauEu-mt11in_14765.fasta
+Troglodytes-CauEu-mt11in	RHO	1	1	10	10	1	835	0.234	0.229	0.262	fastaFromIM/Troglodytes-CauEu-mt11in_RHO.fasta
+Troglodytes-CauEu-mt11in	TGFB	1	1	10	10	1	574	0.243	0.225	0.202	fastaFromIM/Troglodytes-CauEu-mt11in_TGFB.fasta
+Troglodytes-CauEu-mt11in	ABCA1	0.75	1.2	9	9	1	297	0.318	0.178	0.178	fastaFromIM/Troglodytes-CauEu-mt11in_ABCA1.fasta
+Troglodytes-CauEu-mt11in	ACO	0.75	1.2	7	9	1	848	0.265	0.150	0.209	fastaFromIM/Troglodytes-CauEu-mt11in_ACO.fasta
+Troglodytes-CauEu-mt11in	MAK10	0.75	1.2	6	9	1	563	0.306	0.209	0.199	fastaFromIM/Troglodytes-CauEu-mt11in_MAK10.fasta
+Troglodytes-CauEu-mt11in	MUSK-TL	0.75	1.2	6	9	1	558	0.319	0.211	0.167	fastaFromIM/Troglodytes-CauEu-mt11in_MUSK-TL.fasta
+T.merula-CauEu-mt11in1exo	ND2	0.25	21.48	5	5	1	1041	0.293	0.348	0.125	fastaFromIM/T.merula-CauEu-mt11in1exo_ND2.fasta
+T.merula-CauEu-mt11in1exo	00132	1	1	10	10	1	379	0.187	0.207	0.355	fastaFromIM/T.merula-CauEu-mt11in1exo_00132.fasta
+T.merula-CauEu-mt11in1exo	08352	1	1	10	10	1	361	0.233	0.245	0.251	fastaFromIM/T.merula-CauEu-mt11in1exo_08352.fasta
+T.merula-CauEu-mt11in1exo	09385	1	1	10	10	1	372	0.195	0.344	0.284	fastaFromIM/T.merula-CauEu-mt11in1exo_09385.fasta
+T.merula-CauEu-mt11in1exo	14765	1	1	10	10	1	840	0.305	0.164	0.236	fastaFromIM/T.merula-CauEu-mt11in1exo_14765.fasta
+T.merula-CauEu-mt11in1exo	17483	1	1	10	10	1	469	0.297	0.163	0.223	fastaFromIM/T.merula-CauEu-mt11in1exo_17483.fasta
+T.merula-CauEu-mt11in1exo	ACL	1	1	10	8	1	383	0.259	0.208	0.264	fastaFromIM/T.merula-CauEu-mt11in1exo_ACL.fasta
+T.merula-CauEu-mt11in1exo	RHO	1	1	8	8	1	821	0.237	0.210	0.268	fastaFromIM/T.merula-CauEu-mt11in1exo_RHO.fasta
+T.merula-CauEu-mt11in1exo	TGFB	1	1	10	10	1	600	0.230	0.227	0.221	fastaFromIM/T.merula-CauEu-mt11in1exo_TGFB.fasta
+T.merula-CauEu-mt11in1exo	ABCA1	0.75	1.2	7	9	1	358	0.299	0.178	0.209	fastaFromIM/T.merula-CauEu-mt11in1exo_ABCA1.fasta
+T.merula-CauEu-mt11in1exo	MAK10	0.75	1.2	6	9	1	903	0.275	0.196	0.208	fastaFromIM/T.merula-CauEu-mt11in1exo_MAK10.fasta
+T.merula-CauEu-mt11in1exo	MUSK-TL	0.75	1.2	6	9	1	570	0.327	0.203	0.170	fastaFromIM/T.merula-CauEu-mt11in1exo_MUSK-TL.fasta
+T.merula-CauEu-mt11in1exo	MC1R	1	0.66	10	10	1	553	0.160	0.395	0.186	fastaFromIM/T.merula-CauEu-mt11in1exo_MC1R.fasta
+T.philomelos-CauEu-mt11in	ND2	0.25	21.48	5	5	1	1041	0.280	0.350	0.128	fastaFromIM/T.philomelos-CauEu-mt11in_ND2.fasta
+T.philomelos-CauEu-mt11in	00132	1	1	10	8	1	380	0.187	0.209	0.357	fastaFromIM/T.philomelos-CauEu-mt11in_00132.fasta
+T.philomelos-CauEu-mt11in	08352	1	1	10	10	1	361	0.233	0.238	0.252	fastaFromIM/T.philomelos-CauEu-mt11in_08352.fasta
+T.philomelos-CauEu-mt11in	09385	1	1	10	10	1	372	0.195	0.334	0.286	fastaFromIM/T.philomelos-CauEu-mt11in_09385.fasta
+T.philomelos-CauEu-mt11in	14765	1	1	10	10	1	833	0.300	0.160	0.243	fastaFromIM/T.philomelos-CauEu-mt11in_14765.fasta
+T.philomelos-CauEu-mt11in	17483	1	1	10	10	1	492	0.295	0.165	0.222	fastaFromIM/T.philomelos-CauEu-mt11in_17483.fasta
+T.philomelos-CauEu-mt11in	RHO	1	1	8	8	1	825	0.234	0.215	0.265	fastaFromIM/T.philomelos-CauEu-mt11in_RHO.fasta
+T.philomelos-CauEu-mt11in	TGFB	1	1	10	10	1	522	0.226	0.228	0.231	fastaFromIM/T.philomelos-CauEu-mt11in_TGFB.fasta
+T.philomelos-CauEu-mt11in	ABCA1	0.75	1.2	8	7	1	359	0.298	0.173	0.212	fastaFromIM/T.philomelos-CauEu-mt11in_ABCA1.fasta
+T.philomelos-CauEu-mt11in	ACO	0.75	1.2	8	7	1	888	0.271	0.157	0.207	fastaFromIM/T.philomelos-CauEu-mt11in_ACO.fasta
+T.philomelos-CauEu-mt11in	MAK10	0.75	1.2	8	7	1	940	0.281	0.195	0.204	fastaFromIM/T.philomelos-CauEu-mt11in_MAK10.fasta
+T.philomelos-CauEu-mt11in	MUSK-TL	0.75	1.2	7	7	1	580	0.321	0.210	0.176	fastaFromIM/T.philomelos-CauEu-mt11in_MUSK-TL.fasta
+END SAMPLE_TBL
+
+
+# Most users can ignore the following table
+BEGIN CONSTRAIN
+1.0	0.9	0.1	0.5	0.0	10.1	1.5	0.1	0.0
+1.1	0.8	0.2	0.6	0.0	20.1	1.4	0.2	0.0
+1.2	0.7	0.3	0.7	0.0	30.1	1.3	0.3	0.0
+1.0	0.3	0.7	0.8	0.0	40.1	1.2	0.4	0.0
+1.0	0.3	0.8	0.9	0.0	5.1	1.1	0.5	0.0
+1.0	0.3	0.9	0.3	0.0	25.1	1.0	0.5	0.0
+END CONSTRAIN

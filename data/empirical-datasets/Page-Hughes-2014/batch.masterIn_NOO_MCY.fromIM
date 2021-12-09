@@ -1,0 +1,35 @@
+# bounds for theta per site (guessed from observed pi within subpops)
+upperTheta = 0.010204
+lowerTheta = 4e-08
+# upper limit of tau (divergence time)
+upperTau = 1.25
+# number of tau classes (Psi): 0 means Psi are drawn from [1,#taxonPairs]
+numTauClasses = 0
+# upper bound of migration rate (0 disables migration)
+upperMig = 0.0
+upperRec = 0.0
+# Ancestral theta multiplier:
+#  product of this and upperTheta is the upper bound of ancestral theta
+upperAncPopSize = 0.5
+reps = 1000000
+# Most users don't want to constrain the subparameters
+constrain = 0
+subParamConstrain = 111111111
+
+# taxonName	locusName	Ne_Scalar	Mut_Scalar	sampleSizeA	sampleSizeB	tstv	seqLen	Afreq	Cfreq	Gfreq	fastaFileName
+BEGIN SAMPLE_TBL
+MT_noos_mchy	coi	1	1	3	22	1	392	0.273	0.245	0.189	fastaFromIM/MT_noos_mchy_coi.fasta
+RO_noos_mchy	atp	1	1	12	43	1	457	0.262	0.323	0.114	fastaFromIM/RO_noos_mchy_atp.fasta
+RS_noos_mchy	cytb	1	1	7	4	1	690	0.216	0.294	0.183	fastaFromIM/RS_noos_mchy_cytb.fasta
+END SAMPLE_TBL
+
+
+# Most users can ignore the following table
+BEGIN CONSTRAIN
+1.0	0.9	0.1	0.5	0.0	10.1	1.5	0.1	0.0
+1.1	0.8	0.2	0.6	0.0	20.1	1.4	0.2	0.0
+1.2	0.7	0.3	0.7	0.0	30.1	1.3	0.3	0.0
+1.0	0.3	0.7	0.8	0.0	40.1	1.2	0.4	0.0
+1.0	0.3	0.8	0.9	0.0	5.1	1.1	0.5	0.0
+1.0	0.3	0.9	0.3	0.0	25.1	1.0	0.5	0.0
+END CONSTRAIN

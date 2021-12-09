@@ -1,0 +1,1293 @@
+**HKA**   -- COMPUTER PROGRAM FOR HKA TESTS --
+      This program implements the method described in:
+          Hudson, R. R., M. Kreitman and M. Aguadé, (1987) 
+          A test of neutral molecular evolution based on nucleotide data
+          Genetics 116: 153-159 
+
+_____________________________________________________________________________
+*****************************************************************************
+
+DATA FROM FILE: Garrulus-mt12in.txt
+DATA FILE TEXT LINE:
+ HKA program test data 
+
+Additional text from data file : 
+  Garrulus glandarius Caucasus vs Europe  
+
+
+MESSAGE ADDED AT RUNTIME: 
+ no 
+
+NUMBER OF SIMULATIONS: 10000 
+LOCI AND LENGTHS               species1 species2  between
+                         ND2 :   1041     1041     1041   
+                       00132 :    296      296      296   
+                       08352 :    356      356      356   
+                       09385 :    309      309      309   
+                       13380 :    681      681      681   
+                       14765 :    855      855      855   
+                       17483 :    527      527      527   
+                         ACL :    472      472      472   
+                         MPP :    351      351      351   
+                        TGFB :    570      570      570   
+                       ABCA1 :    368      368      368   
+                         ACO :    775      775      775   
+                        MUSK :    562      562      562   
+
+OBSERVED AND EXPECTED VARIATION 
+
+POLYMORPHIC SITES WITHIN SPECIES 
+Species           SampSize observed    expected     variance  deviation
+--------------    -------- --------    --------     --------  ---------
+
+*** LOCUS: ND2   extrachromosomal or Y-linked *** 
+
+      Caucasus        4       4            4.16       11.15       0.002
+        Europe        5       3            7.44       25.60       0.770
+
+*** LOCUS: 00132   Autosomal *** 
+
+      Caucasus       10       3            2.24        3.21       0.180
+        Europe       10       3            3.53        5.93       0.047
+
+*** LOCUS: 08352   Autosomal *** 
+
+      Caucasus       10       6            5.47       11.24       0.025
+        Europe        8       7            7.90       21.94       0.037
+
+*** LOCUS: 09385   Autosomal *** 
+
+      Caucasus       10       5            4.43        8.21       0.039
+        Europe       10       7            6.98       16.35       0.000
+
+*** LOCUS: 13380   Autosomal *** 
+
+      Caucasus        8      10            7.33       19.41       0.368
+        Europe       10      11           12.60       43.12       0.059
+
+*** LOCUS: 14765   Autosomal *** 
+
+      Caucasus       10       2            2.01        2.79       0.000
+        Europe       10       3            3.17        5.10       0.006
+
+*** LOCUS: 17483   Autosomal *** 
+
+      Caucasus       10       5            3.26        5.30       0.574
+        Europe       10       4            5.13       10.19       0.125
+
+*** LOCUS: ACL   Autosomal *** 
+
+      Caucasus       10       1            1.73        2.31       0.233
+        Europe       10       3            2.73        4.16       0.018
+
+*** LOCUS: MPP   Autosomal *** 
+
+      Caucasus        8       4            2.47        3.83       0.615
+        Europe       10       3            4.24        7.69       0.199
+
+*** LOCUS: TGFB   Autosomal *** 
+
+      Caucasus       10       3            3.07        4.89       0.001
+        Europe       10       5            4.84        9.35       0.003
+
+*** LOCUS: ABCA1   Sex-linked *** 
+
+      Caucasus        6       1            1.48        2.10       0.110
+        Europe        6       3            2.33        3.86       0.115
+
+*** LOCUS: ACO   Sex-linked *** 
+
+      Caucasus        6       3            9.27       33.40       1.177
+        Europe        6      23           14.60       74.48       0.947
+
+*** LOCUS: MUSK   Sex-linked *** 
+
+      Caucasus        6       2            2.08        3.29       0.002
+        Europe        7       4            3.51        6.57       0.037
+
+
+DIVERGENCE BETWEEN SPECIES 
+       observed  expected   variance  deviation 
+       --------  --------   --------  --------- 
+
+*** LOCUS: ND2   extrachromosomal or Y-linked *** 
+
+        10.60       6.00      14.53      1.455 
+*** LOCUS: 00132   Autosomal *** 
+
+         1.06       1.29       2.33      0.023 
+*** LOCUS: 08352   Autosomal *** 
+
+         3.52       3.15       9.36      0.015 
+*** LOCUS: 09385   Autosomal *** 
+
+         1.96       2.55       6.62      0.052 
+*** LOCUS: 13380   Autosomal *** 
+
+         3.52       4.60      17.85      0.065 
+*** LOCUS: 14765   Autosomal *** 
+
+         1.34       1.16       2.00      0.017 
+*** LOCUS: 17483   Autosomal *** 
+
+         1.26       1.87       4.07      0.092 
+*** LOCUS: ACL   Autosomal *** 
+
+         1.46       1.00       1.62      0.132 
+*** LOCUS: MPP   Autosomal *** 
+
+         1.25       1.55       3.05      0.029 
+*** LOCUS: TGFB   Autosomal *** 
+
+         1.68       1.77       3.72      0.002 
+*** LOCUS: ABCA1   Sex-linked *** 
+
+         0.94       1.13       1.83      0.019 
+*** LOCUS: ACO   Sex-linked *** 
+
+         4.94       7.07      34.40      0.131 
+*** LOCUS: MUSK   Sex-linked *** 
+
+         1.17       1.58       2.95      0.059 
+SUM OF DEVIATIONS:   7.7787 
+Degrees of Freedom: 24  Probability from chi square distribution: 0.99928 
+
+ Could not fit in run 5 
+ Could not fit in run 34 
+ Could not fit in run 36 
+ Could not fit in run 38 
+ Could not fit in run 42 
+ Could not fit in run 50 
+ Could not fit in run 64 
+ Could not fit in run 82 
+ Could not fit in run 110 
+ Could not fit in run 110 
+ Could not fit in run 138 
+ Could not fit in run 149 
+ Could not fit in run 154 
+ Could not fit in run 171 
+ Could not fit in run 173 
+ Could not fit in run 197 
+ Could not fit in run 206 
+ Could not fit in run 225 
+ Could not fit in run 229 
+ Could not fit in run 230 
+ Could not fit in run 237 
+ Could not fit in run 237 
+ Could not fit in run 239 
+ Could not fit in run 240 
+ Could not fit in run 243 
+ Could not fit in run 272 
+ Could not fit in run 274 
+ Could not fit in run 278 
+ Could not fit in run 295 
+ Could not fit in run 312 
+ Could not fit in run 326 
+ Could not fit in run 335 
+ Could not fit in run 341 
+ Could not fit in run 343 
+ Could not fit in run 346 
+ Could not fit in run 365 
+ Could not fit in run 368 
+ Could not fit in run 376 
+ Could not fit in run 377 
+ Could not fit in run 379 
+ Could not fit in run 398 
+ Could not fit in run 402 
+ Could not fit in run 406 
+ Could not fit in run 409 
+ Could not fit in run 410 
+ Could not fit in run 435 
+ Could not fit in run 442 
+ Could not fit in run 448 
+ Could not fit in run 459 
+ Could not fit in run 464 
+ Could not fit in run 478 
+ Could not fit in run 480 
+ Could not fit in run 482 
+ Could not fit in run 484 
+ Could not fit in run 484 
+ Could not fit in run 493 
+ Could not fit in run 499 
+ Could not fit in run 507 
+ Could not fit in run 526 
+ Could not fit in run 528 
+ Could not fit in run 533 
+ Could not fit in run 545 
+ Could not fit in run 548 
+ Could not fit in run 553 
+ Could not fit in run 553 
+ Could not fit in run 566 
+ Could not fit in run 574 
+ Could not fit in run 579 
+ Could not fit in run 593 
+ Could not fit in run 593 
+ Could not fit in run 595 
+ Could not fit in run 603 
+ Could not fit in run 623 
+ Could not fit in run 629 
+ Could not fit in run 650 
+ Could not fit in run 652 
+ Could not fit in run 662 
+ Could not fit in run 663 
+ Could not fit in run 668 
+ Could not fit in run 670 
+ Could not fit in run 673 
+ Could not fit in run 674 
+ Could not fit in run 676 
+ Could not fit in run 678 
+ Could not fit in run 679 
+ Could not fit in run 683 
+ Could not fit in run 684 
+ Could not fit in run 691 
+ Could not fit in run 694 
+ Could not fit in run 698 
+ Could not fit in run 705 
+ Could not fit in run 710 
+ Could not fit in run 743 
+ Could not fit in run 757 
+ Could not fit in run 757 
+ Could not fit in run 757 
+ Could not fit in run 761 
+ Could not fit in run 768 
+ Could not fit in run 784 
+ Could not fit in run 805 
+ Could not fit in run 815 
+ Could not fit in run 827 
+ Could not fit in run 836 
+ Could not fit in run 837 
+ Could not fit in run 840 
+ Could not fit in run 880 
+ Could not fit in run 885 
+ Could not fit in run 887 
+ Could not fit in run 902 
+ Could not fit in run 925 
+ Could not fit in run 925 
+ Could not fit in run 928 
+ Could not fit in run 935 
+ Could not fit in run 940 
+ Could not fit in run 965 
+ Could not fit in run 966 
+ Could not fit in run 984 
+ Could not fit in run 997 
+ Could not fit in run 1006 
+ Could not fit in run 1008 
+ Could not fit in run 1012 
+ Could not fit in run 1018 
+ Could not fit in run 1018 
+ Could not fit in run 1031 
+ Could not fit in run 1040 
+ Could not fit in run 1072 
+ Could not fit in run 1074 
+ Could not fit in run 1083 
+ Could not fit in run 1106 
+ Could not fit in run 1127 
+ Could not fit in run 1140 
+ Could not fit in run 1147 
+ Could not fit in run 1159 
+ Could not fit in run 1162 
+ Could not fit in run 1173 
+ Could not fit in run 1174 
+ Could not fit in run 1179 
+ Could not fit in run 1199 
+ Could not fit in run 1208 
+ Could not fit in run 1219 
+ Could not fit in run 1235 
+ Could not fit in run 1266 
+ Could not fit in run 1289 
+ Could not fit in run 1310 
+ Could not fit in run 1310 
+ Could not fit in run 1324 
+ Could not fit in run 1328 
+ Could not fit in run 1341 
+ Could not fit in run 1342 
+ Could not fit in run 1343 
+ Could not fit in run 1366 
+ Could not fit in run 1369 
+ Could not fit in run 1375 
+ Could not fit in run 1385 
+ Could not fit in run 1392 
+ Could not fit in run 1397 
+ Could not fit in run 1414 
+ Could not fit in run 1427 
+ Could not fit in run 1431 
+ Could not fit in run 1432 
+ Could not fit in run 1433 
+ Could not fit in run 1457 
+ Could not fit in run 1462 
+ Could not fit in run 1463 
+ Could not fit in run 1492 
+ Could not fit in run 1492 
+ Could not fit in run 1496 
+ Could not fit in run 1496 
+ Could not fit in run 1502 
+ Could not fit in run 1502 
+ Could not fit in run 1514 
+ Could not fit in run 1528 
+ Could not fit in run 1557 
+ Could not fit in run 1560 
+ Could not fit in run 1581 
+ Could not fit in run 1600 
+ Could not fit in run 1603 
+ Could not fit in run 1604 
+ Could not fit in run 1612 
+ Could not fit in run 1623 
+ Could not fit in run 1623 
+ Could not fit in run 1647 
+ Could not fit in run 1664 
+ Could not fit in run 1673 
+ Could not fit in run 1681 
+ Could not fit in run 1711 
+ Could not fit in run 1720 
+ Could not fit in run 1729 
+ Could not fit in run 1731 
+ Could not fit in run 1741 
+ Could not fit in run 1746 
+ Could not fit in run 1755 
+ Could not fit in run 1756 
+ Could not fit in run 1787 
+ Could not fit in run 1796 
+ Could not fit in run 1815 
+ Could not fit in run 1822 
+ Could not fit in run 1834 
+ Could not fit in run 1852 
+ Could not fit in run 1852 
+ Could not fit in run 1862 
+ Could not fit in run 1869 
+ Could not fit in run 1870 
+ Could not fit in run 1877 
+ Could not fit in run 1879 
+ Could not fit in run 1886 
+ Could not fit in run 1891 
+ Could not fit in run 1891 
+ Could not fit in run 1896 
+ Could not fit in run 1910 
+ Could not fit in run 1911 
+ Could not fit in run 1912 
+ Could not fit in run 1919 
+ Could not fit in run 1947 
+ Could not fit in run 1990 
+ Could not fit in run 1999 
+ Could not fit in run 2005 
+ Could not fit in run 2007 
+ Could not fit in run 2008 
+ Could not fit in run 2015 
+ Could not fit in run 2017 
+ Could not fit in run 2037 
+ Could not fit in run 2044 
+ Could not fit in run 2059 
+ Could not fit in run 2060 
+ Could not fit in run 2060 
+ Could not fit in run 2061 
+ Could not fit in run 2063 
+ Could not fit in run 2063 
+ Could not fit in run 2083 
+ Could not fit in run 2103 
+ Could not fit in run 2121 
+ Could not fit in run 2134 
+ Could not fit in run 2138 
+ Could not fit in run 2157 
+ Could not fit in run 2164 
+ Could not fit in run 2184 
+ Could not fit in run 2204 
+ Could not fit in run 2206 
+ Could not fit in run 2215 
+ Could not fit in run 2215 
+ Could not fit in run 2215 
+ Could not fit in run 2217 
+ Could not fit in run 2217 
+ Could not fit in run 2242 
+ Could not fit in run 2245 
+ Could not fit in run 2250 
+ Could not fit in run 2254 
+ Could not fit in run 2258 
+ Could not fit in run 2262 
+ Could not fit in run 2262 
+ Could not fit in run 2289 
+ Could not fit in run 2315 
+ Could not fit in run 2340 
+ Could not fit in run 2347 
+ Could not fit in run 2388 
+ Could not fit in run 2413 
+ Could not fit in run 2430 
+ Could not fit in run 2446 
+ Could not fit in run 2462 
+ Could not fit in run 2469 
+ Could not fit in run 2482 
+ Could not fit in run 2482 
+ Could not fit in run 2489 
+ Could not fit in run 2490 
+ Could not fit in run 2499 
+ Could not fit in run 2509 
+ Could not fit in run 2513 
+ Could not fit in run 2519 
+ Could not fit in run 2536 
+ Could not fit in run 2540 
+ Could not fit in run 2555 
+ Could not fit in run 2568 
+ Could not fit in run 2601 
+ Could not fit in run 2605 
+ Could not fit in run 2612 
+ Could not fit in run 2617 
+ Could not fit in run 2622 
+ Could not fit in run 2624 
+ Could not fit in run 2626 
+ Could not fit in run 2632 
+ Could not fit in run 2633 
+ Could not fit in run 2638 
+ Could not fit in run 2646 
+ Could not fit in run 2650 
+ Could not fit in run 2664 
+ Could not fit in run 2664 
+ Could not fit in run 2680 
+ Could not fit in run 2712 
+ Could not fit in run 2723 
+ Could not fit in run 2735 
+ Could not fit in run 2735 
+ Could not fit in run 2756 
+ Could not fit in run 2770 
+ Could not fit in run 2784 
+ Could not fit in run 2835 
+ Could not fit in run 2842 
+ Could not fit in run 2865 
+ Could not fit in run 2877 
+ Could not fit in run 2879 
+ Could not fit in run 2886 
+ Could not fit in run 2902 
+ Could not fit in run 2904 
+ Could not fit in run 2911 
+ Could not fit in run 2915 
+ Could not fit in run 2919 
+ Could not fit in run 2927 
+ Could not fit in run 2955 
+ Could not fit in run 2957 
+ Could not fit in run 2965 
+ Could not fit in run 2977 
+ Could not fit in run 3009 
+ Could not fit in run 3016 
+ Could not fit in run 3022 
+ Could not fit in run 3036 
+ Could not fit in run 3045 
+ Could not fit in run 3045 
+ Could not fit in run 3059 
+ Could not fit in run 3067 
+ Could not fit in run 3073 
+ Could not fit in run 3076 
+ Could not fit in run 3095 
+ Could not fit in run 3095 
+ Could not fit in run 3122 
+ Could not fit in run 3139 
+ Could not fit in run 3141 
+ Could not fit in run 3144 
+ Could not fit in run 3153 
+ Could not fit in run 3154 
+ Could not fit in run 3156 
+ Could not fit in run 3174 
+ Could not fit in run 3174 
+ Could not fit in run 3183 
+ Could not fit in run 3185 
+ Could not fit in run 3203 
+ Could not fit in run 3215 
+ Could not fit in run 3240 
+ Could not fit in run 3273 
+ Could not fit in run 3281 
+ Could not fit in run 3287 
+ Could not fit in run 3297 
+ Could not fit in run 3313 
+ Could not fit in run 3332 
+ Could not fit in run 3345 
+ Could not fit in run 3345 
+ Could not fit in run 3359 
+ Could not fit in run 3359 
+ Could not fit in run 3372 
+ Could not fit in run 3377 
+ Could not fit in run 3390 
+ Could not fit in run 3395 
+ Could not fit in run 3401 
+ Could not fit in run 3406 
+ Could not fit in run 3420 
+ Could not fit in run 3425 
+ Could not fit in run 3433 
+ Could not fit in run 3464 
+ Could not fit in run 3478 
+ Could not fit in run 3503 
+ Could not fit in run 3549 
+ Could not fit in run 3551 
+ Could not fit in run 3591 
+ Could not fit in run 3607 
+ Could not fit in run 3608 
+ Could not fit in run 3616 
+ Could not fit in run 3628 
+ Could not fit in run 3637 
+ Could not fit in run 3643 
+ Could not fit in run 3649 
+ Could not fit in run 3653 
+ Could not fit in run 3659 
+ Could not fit in run 3659 
+ Could not fit in run 3664 
+ Could not fit in run 3673 
+ Could not fit in run 3681 
+ Could not fit in run 3685 
+ Could not fit in run 3687 
+ Could not fit in run 3691 
+ Could not fit in run 3697 
+ Could not fit in run 3702 
+ Could not fit in run 3714 
+ Could not fit in run 3714 
+ Could not fit in run 3721 
+ Could not fit in run 3726 
+ Could not fit in run 3762 
+ Could not fit in run 3775 
+ Could not fit in run 3783 
+ Could not fit in run 3786 
+ Could not fit in run 3827 
+ Could not fit in run 3829 
+ Could not fit in run 3840 
+ Could not fit in run 3846 
+ Could not fit in run 3857 
+ Could not fit in run 3863 
+ Could not fit in run 3882 
+ Could not fit in run 3882 
+ Could not fit in run 3904 
+ Could not fit in run 3904 
+ Could not fit in run 3907 
+ Could not fit in run 3916 
+ Could not fit in run 3925 
+ Could not fit in run 3937 
+ Could not fit in run 3948 
+ Could not fit in run 3958 
+ Could not fit in run 3967 
+ Could not fit in run 3988 
+ Could not fit in run 4013 
+ Could not fit in run 4020 
+ Could not fit in run 4023 
+ Could not fit in run 4030 
+ Could not fit in run 4048 
+ Could not fit in run 4059 
+ Could not fit in run 4060 
+ Could not fit in run 4064 
+ Could not fit in run 4078 
+ Could not fit in run 4082 
+ Could not fit in run 4111 
+ Could not fit in run 4133 
+ Could not fit in run 4136 
+ Could not fit in run 4144 
+ Could not fit in run 4155 
+ Could not fit in run 4179 
+ Could not fit in run 4183 
+ Could not fit in run 4191 
+ Could not fit in run 4226 
+ Could not fit in run 4226 
+ Could not fit in run 4236 
+ Could not fit in run 4237 
+ Could not fit in run 4241 
+ Could not fit in run 4272 
+ Could not fit in run 4277 
+ Could not fit in run 4277 
+ Could not fit in run 4283 
+ Could not fit in run 4297 
+ Could not fit in run 4300 
+ Could not fit in run 4303 
+ Could not fit in run 4312 
+ Could not fit in run 4319 
+ Could not fit in run 4344 
+ Could not fit in run 4402 
+ Could not fit in run 4447 
+ Could not fit in run 4450 
+ Could not fit in run 4458 
+ Could not fit in run 4483 
+ Could not fit in run 4483 
+ Could not fit in run 4495 
+ Could not fit in run 4502 
+ Could not fit in run 4505 
+ Could not fit in run 4524 
+ Could not fit in run 4559 
+ Could not fit in run 4559 
+ Could not fit in run 4562 
+ Could not fit in run 4567 
+ Could not fit in run 4574 
+ Could not fit in run 4587 
+ Could not fit in run 4590 
+ Could not fit in run 4607 
+ Could not fit in run 4613 
+ Could not fit in run 4642 
+ Could not fit in run 4672 
+ Could not fit in run 4682 
+ Could not fit in run 4689 
+ Could not fit in run 4704 
+ Could not fit in run 4728 
+ Could not fit in run 4736 
+ Could not fit in run 4758 
+ Could not fit in run 4762 
+ Could not fit in run 4770 
+ Could not fit in run 4780 
+ Could not fit in run 4792 
+ Could not fit in run 4792 
+ Could not fit in run 4794 
+ Could not fit in run 4794 
+ Could not fit in run 4797 
+ Could not fit in run 4805 
+ Could not fit in run 4806 
+ Could not fit in run 4806 
+ Could not fit in run 4883 
+ Could not fit in run 4892 
+ Could not fit in run 4893 
+ Could not fit in run 4907 
+ Could not fit in run 4912 
+ Could not fit in run 4915 
+ Could not fit in run 4933 
+ Could not fit in run 4942 
+ Could not fit in run 4953 
+ Could not fit in run 4957 
+ Could not fit in run 4957 
+ Could not fit in run 4958 
+ Could not fit in run 4961 
+ Could not fit in run 4967 
+ Could not fit in run 4970 
+ Could not fit in run 4976 
+ Could not fit in run 4991 
+ Could not fit in run 5001 
+ Could not fit in run 5007 
+ Could not fit in run 5012 
+ Could not fit in run 5025 
+ Could not fit in run 5040 
+ Could not fit in run 5048 
+ Could not fit in run 5064 
+ Could not fit in run 5085 
+ Could not fit in run 5086 
+ Could not fit in run 5088 
+ Could not fit in run 5096 
+ Could not fit in run 5097 
+ Could not fit in run 5101 
+ Could not fit in run 5108 
+ Could not fit in run 5123 
+ Could not fit in run 5129 
+ Could not fit in run 5130 
+ Could not fit in run 5140 
+ Could not fit in run 5179 
+ Could not fit in run 5192 
+ Could not fit in run 5210 
+ Could not fit in run 5222 
+ Could not fit in run 5247 
+ Could not fit in run 5249 
+ Could not fit in run 5261 
+ Could not fit in run 5287 
+ Could not fit in run 5296 
+ Could not fit in run 5300 
+ Could not fit in run 5319 
+ Could not fit in run 5334 
+ Could not fit in run 5341 
+ Could not fit in run 5347 
+ Could not fit in run 5349 
+ Could not fit in run 5351 
+ Could not fit in run 5366 
+ Could not fit in run 5374 
+ Could not fit in run 5383 
+ Could not fit in run 5403 
+ Could not fit in run 5405 
+ Could not fit in run 5405 
+ Could not fit in run 5413 
+ Could not fit in run 5443 
+ Could not fit in run 5444 
+ Could not fit in run 5490 
+ Could not fit in run 5504 
+ Could not fit in run 5513 
+ Could not fit in run 5524 
+ Could not fit in run 5530 
+ Could not fit in run 5533 
+ Could not fit in run 5534 
+ Could not fit in run 5537 
+ Could not fit in run 5541 
+ Could not fit in run 5561 
+ Could not fit in run 5562 
+ Could not fit in run 5562 
+ Could not fit in run 5569 
+ Could not fit in run 5580 
+ Could not fit in run 5601 
+ Could not fit in run 5601 
+ Could not fit in run 5606 
+ Could not fit in run 5626 
+ Could not fit in run 5631 
+ Could not fit in run 5648 
+ Could not fit in run 5655 
+ Could not fit in run 5655 
+ Could not fit in run 5659 
+ Could not fit in run 5659 
+ Could not fit in run 5668 
+ Could not fit in run 5672 
+ Could not fit in run 5675 
+ Could not fit in run 5696 
+ Could not fit in run 5696 
+ Could not fit in run 5705 
+ Could not fit in run 5727 
+ Could not fit in run 5745 
+ Could not fit in run 5746 
+ Could not fit in run 5746 
+ Could not fit in run 5767 
+ Could not fit in run 5802 
+ Could not fit in run 5808 
+ Could not fit in run 5813 
+ Could not fit in run 5813 
+ Could not fit in run 5816 
+ Could not fit in run 5817 
+ Could not fit in run 5827 
+ Could not fit in run 5830 
+ Could not fit in run 5846 
+ Could not fit in run 5852 
+ Could not fit in run 5857 
+ Could not fit in run 5861 
+ Could not fit in run 5872 
+ Could not fit in run 5872 
+ Could not fit in run 5882 
+ Could not fit in run 5896 
+ Could not fit in run 5908 
+ Could not fit in run 5911 
+ Could not fit in run 5917 
+ Could not fit in run 5919 
+ Could not fit in run 5919 
+ Could not fit in run 5921 
+ Could not fit in run 5921 
+ Could not fit in run 5923 
+ Could not fit in run 5925 
+ Could not fit in run 5935 
+ Could not fit in run 5959 
+ Could not fit in run 5965 
+ Could not fit in run 5991 
+ Could not fit in run 6006 
+ Could not fit in run 6006 
+ Could not fit in run 6009 
+ Could not fit in run 6016 
+ Could not fit in run 6016 
+ Could not fit in run 6021 
+ Could not fit in run 6049 
+ Could not fit in run 6063 
+ Could not fit in run 6064 
+ Could not fit in run 6085 
+ Could not fit in run 6093 
+ Could not fit in run 6112 
+ Could not fit in run 6125 
+ Could not fit in run 6127 
+ Could not fit in run 6133 
+ Could not fit in run 6140 
+ Could not fit in run 6166 
+ Could not fit in run 6167 
+ Could not fit in run 6178 
+ Could not fit in run 6180 
+ Could not fit in run 6185 
+ Could not fit in run 6190 
+ Could not fit in run 6202 
+ Could not fit in run 6214 
+ Could not fit in run 6222 
+ Could not fit in run 6225 
+ Could not fit in run 6239 
+ Could not fit in run 6245 
+ Could not fit in run 6247 
+ Could not fit in run 6257 
+ Could not fit in run 6297 
+ Could not fit in run 6297 
+ Could not fit in run 6298 
+ Could not fit in run 6319 
+ Could not fit in run 6321 
+ Could not fit in run 6332 
+ Could not fit in run 6341 
+ Could not fit in run 6342 
+ Could not fit in run 6342 
+ Could not fit in run 6351 
+ Could not fit in run 6353 
+ Could not fit in run 6362 
+ Could not fit in run 6362 
+ Could not fit in run 6367 
+ Could not fit in run 6372 
+ Could not fit in run 6384 
+ Could not fit in run 6384 
+ Could not fit in run 6389 
+ Could not fit in run 6394 
+ Could not fit in run 6407 
+ Could not fit in run 6407 
+ Could not fit in run 6410 
+ Could not fit in run 6411 
+ Could not fit in run 6419 
+ Could not fit in run 6422 
+ Could not fit in run 6423 
+ Could not fit in run 6425 
+ Could not fit in run 6426 
+ Could not fit in run 6426 
+ Could not fit in run 6428 
+ Could not fit in run 6436 
+ Could not fit in run 6457 
+ Could not fit in run 6460 
+ Could not fit in run 6466 
+ Could not fit in run 6469 
+ Could not fit in run 6486 
+ Could not fit in run 6488 
+ Could not fit in run 6515 
+ Could not fit in run 6516 
+ Could not fit in run 6520 
+ Could not fit in run 6554 
+ Could not fit in run 6568 
+ Could not fit in run 6576 
+ Could not fit in run 6582 
+ Could not fit in run 6601 
+ Could not fit in run 6606 
+ Could not fit in run 6623 
+ Could not fit in run 6631 
+ Could not fit in run 6640 
+ Could not fit in run 6647 
+ Could not fit in run 6658 
+ Could not fit in run 6660 
+ Could not fit in run 6665 
+ Could not fit in run 6671 
+ Could not fit in run 6672 
+ Could not fit in run 6675 
+ Could not fit in run 6689 
+ Could not fit in run 6690 
+ Could not fit in run 6698 
+ Could not fit in run 6699 
+ Could not fit in run 6699 
+ Could not fit in run 6702 
+ Could not fit in run 6727 
+ Could not fit in run 6746 
+ Could not fit in run 6752 
+ Could not fit in run 6765 
+ Could not fit in run 6792 
+ Could not fit in run 6799 
+ Could not fit in run 6802 
+ Could not fit in run 6805 
+ Could not fit in run 6825 
+ Could not fit in run 6841 
+ Could not fit in run 6856 
+ Could not fit in run 6888 
+ Could not fit in run 6891 
+ Could not fit in run 6905 
+ Could not fit in run 6937 
+ Could not fit in run 6937 
+ Could not fit in run 6953 
+ Could not fit in run 6953 
+ Could not fit in run 6972 
+ Could not fit in run 6992 
+ Could not fit in run 6998 
+ Could not fit in run 7000 
+ Could not fit in run 7004 
+ Could not fit in run 7023 
+ Could not fit in run 7034 
+ Could not fit in run 7038 
+ Could not fit in run 7069 
+ Could not fit in run 7083 
+ Could not fit in run 7097 
+ Could not fit in run 7106 
+ Could not fit in run 7122 
+ Could not fit in run 7122 
+ Could not fit in run 7125 
+ Could not fit in run 7133 
+ Could not fit in run 7153 
+ Could not fit in run 7154 
+ Could not fit in run 7155 
+ Could not fit in run 7163 
+ Could not fit in run 7174 
+ Could not fit in run 7182 
+ Could not fit in run 7185 
+ Could not fit in run 7201 
+ Could not fit in run 7209 
+ Could not fit in run 7218 
+ Could not fit in run 7227 
+ Could not fit in run 7259 
+ Could not fit in run 7263 
+ Could not fit in run 7263 
+ Could not fit in run 7278 
+ Could not fit in run 7278 
+ Could not fit in run 7278 
+ Could not fit in run 7278 
+ Could not fit in run 7291 
+ Could not fit in run 7301 
+ Could not fit in run 7303 
+ Could not fit in run 7307 
+ Could not fit in run 7307 
+ Could not fit in run 7329 
+ Could not fit in run 7334 
+ Could not fit in run 7336 
+ Could not fit in run 7344 
+ Could not fit in run 7361 
+ Could not fit in run 7368 
+ Could not fit in run 7372 
+ Could not fit in run 7373 
+ Could not fit in run 7405 
+ Could not fit in run 7442 
+ Could not fit in run 7459 
+ Could not fit in run 7481 
+ Could not fit in run 7504 
+ Could not fit in run 7527 
+ Could not fit in run 7565 
+ Could not fit in run 7580 
+ Could not fit in run 7585 
+ Could not fit in run 7592 
+ Could not fit in run 7596 
+ Could not fit in run 7598 
+ Could not fit in run 7611 
+ Could not fit in run 7616 
+ Could not fit in run 7619 
+ Could not fit in run 7625 
+ Could not fit in run 7631 
+ Could not fit in run 7633 
+ Could not fit in run 7639 
+ Could not fit in run 7654 
+ Could not fit in run 7660 
+ Could not fit in run 7663 
+ Could not fit in run 7679 
+ Could not fit in run 7686 
+ Could not fit in run 7689 
+ Could not fit in run 7690 
+ Could not fit in run 7698 
+ Could not fit in run 7698 
+ Could not fit in run 7700 
+ Could not fit in run 7711 
+ Could not fit in run 7785 
+ Could not fit in run 7791 
+ Could not fit in run 7792 
+ Could not fit in run 7797 
+ Could not fit in run 7800 
+ Could not fit in run 7811 
+ Could not fit in run 7821 
+ Could not fit in run 7821 
+ Could not fit in run 7824 
+ Could not fit in run 7833 
+ Could not fit in run 7850 
+ Could not fit in run 7850 
+ Could not fit in run 7853 
+ Could not fit in run 7863 
+ Could not fit in run 7864 
+ Could not fit in run 7885 
+ Could not fit in run 7909 
+ Could not fit in run 7912 
+ Could not fit in run 7936 
+ Could not fit in run 7950 
+ Could not fit in run 7950 
+ Could not fit in run 7952 
+ Could not fit in run 7952 
+ Could not fit in run 7956 
+ Could not fit in run 7968 
+ Could not fit in run 7983 
+ Could not fit in run 7987 
+ Could not fit in run 8011 
+ Could not fit in run 8016 
+ Could not fit in run 8027 
+ Could not fit in run 8031 
+ Could not fit in run 8041 
+ Could not fit in run 8047 
+ Could not fit in run 8058 
+ Could not fit in run 8058 
+ Could not fit in run 8063 
+ Could not fit in run 8064 
+ Could not fit in run 8070 
+ Could not fit in run 8070 
+ Could not fit in run 8072 
+ Could not fit in run 8095 
+ Could not fit in run 8107 
+ Could not fit in run 8117 
+ Could not fit in run 8121 
+ Could not fit in run 8135 
+ Could not fit in run 8151 
+ Could not fit in run 8158 
+ Could not fit in run 8174 
+ Could not fit in run 8178 
+ Could not fit in run 8183 
+ Could not fit in run 8183 
+ Could not fit in run 8191 
+ Could not fit in run 8198 
+ Could not fit in run 8203 
+ Could not fit in run 8209 
+ Could not fit in run 8211 
+ Could not fit in run 8211 
+ Could not fit in run 8232 
+ Could not fit in run 8239 
+ Could not fit in run 8250 
+ Could not fit in run 8254 
+ Could not fit in run 8256 
+ Could not fit in run 8277 
+ Could not fit in run 8277 
+ Could not fit in run 8278 
+ Could not fit in run 8281 
+ Could not fit in run 8302 
+ Could not fit in run 8306 
+ Could not fit in run 8336 
+ Could not fit in run 8350 
+ Could not fit in run 8354 
+ Could not fit in run 8356 
+ Could not fit in run 8358 
+ Could not fit in run 8359 
+ Could not fit in run 8369 
+ Could not fit in run 8375 
+ Could not fit in run 8388 
+ Could not fit in run 8389 
+ Could not fit in run 8399 
+ Could not fit in run 8408 
+ Could not fit in run 8429 
+ Could not fit in run 8429 
+ Could not fit in run 8432 
+ Could not fit in run 8449 
+ Could not fit in run 8458 
+ Could not fit in run 8458 
+ Could not fit in run 8459 
+ Could not fit in run 8466 
+ Could not fit in run 8469 
+ Could not fit in run 8482 
+ Could not fit in run 8496 
+ Could not fit in run 8504 
+ Could not fit in run 8506 
+ Could not fit in run 8506 
+ Could not fit in run 8509 
+ Could not fit in run 8515 
+ Could not fit in run 8515 
+ Could not fit in run 8520 
+ Could not fit in run 8523 
+ Could not fit in run 8530 
+ Could not fit in run 8538 
+ Could not fit in run 8544 
+ Could not fit in run 8546 
+ Could not fit in run 8561 
+ Could not fit in run 8565 
+ Could not fit in run 8567 
+ Could not fit in run 8580 
+ Could not fit in run 8594 
+ Could not fit in run 8595 
+ Could not fit in run 8596 
+ Could not fit in run 8598 
+ Could not fit in run 8600 
+ Could not fit in run 8610 
+ Could not fit in run 8612 
+ Could not fit in run 8623 
+ Could not fit in run 8643 
+ Could not fit in run 8651 
+ Could not fit in run 8661 
+ Could not fit in run 8670 
+ Could not fit in run 8670 
+ Could not fit in run 8683 
+ Could not fit in run 8688 
+ Could not fit in run 8689 
+ Could not fit in run 8689 
+ Could not fit in run 8693 
+ Could not fit in run 8699 
+ Could not fit in run 8699 
+ Could not fit in run 8710 
+ Could not fit in run 8715 
+ Could not fit in run 8720 
+ Could not fit in run 8720 
+ Could not fit in run 8720 
+ Could not fit in run 8723 
+ Could not fit in run 8738 
+ Could not fit in run 8745 
+ Could not fit in run 8763 
+ Could not fit in run 8792 
+ Could not fit in run 8804 
+ Could not fit in run 8809 
+ Could not fit in run 8809 
+ Could not fit in run 8823 
+ Could not fit in run 8824 
+ Could not fit in run 8828 
+ Could not fit in run 8849 
+ Could not fit in run 8854 
+ Could not fit in run 8858 
+ Could not fit in run 8861 
+ Could not fit in run 8868 
+ Could not fit in run 8874 
+ Could not fit in run 8908 
+ Could not fit in run 8914 
+ Could not fit in run 8919 
+ Could not fit in run 8922 
+ Could not fit in run 8922 
+ Could not fit in run 8937 
+ Could not fit in run 8941 
+ Could not fit in run 8951 
+ Could not fit in run 8952 
+ Could not fit in run 8956 
+ Could not fit in run 8984 
+ Could not fit in run 8991 
+ Could not fit in run 9018 
+ Could not fit in run 9019 
+ Could not fit in run 9021 
+ Could not fit in run 9031 
+ Could not fit in run 9044 
+ Could not fit in run 9050 
+ Could not fit in run 9050 
+ Could not fit in run 9050 
+ Could not fit in run 9051 
+ Could not fit in run 9072 
+ Could not fit in run 9074 
+ Could not fit in run 9075 
+ Could not fit in run 9085 
+ Could not fit in run 9133 
+ Could not fit in run 9133 
+ Could not fit in run 9133 
+ Could not fit in run 9133 
+ Could not fit in run 9139 
+ Could not fit in run 9144 
+ Could not fit in run 9145 
+ Could not fit in run 9156 
+ Could not fit in run 9161 
+ Could not fit in run 9184 
+ Could not fit in run 9186 
+ Could not fit in run 9193 
+ Could not fit in run 9204 
+ Could not fit in run 9220 
+ Could not fit in run 9234 
+ Could not fit in run 9236 
+ Could not fit in run 9241 
+ Could not fit in run 9244 
+ Could not fit in run 9248 
+ Could not fit in run 9258 
+ Could not fit in run 9270 
+ Could not fit in run 9277 
+ Could not fit in run 9285 
+ Could not fit in run 9292 
+ Could not fit in run 9297 
+ Could not fit in run 9305 
+ Could not fit in run 9314 
+ Could not fit in run 9326 
+ Could not fit in run 9328 
+ Could not fit in run 9329 
+ Could not fit in run 9329 
+ Could not fit in run 9334 
+ Could not fit in run 9337 
+ Could not fit in run 9341 
+ Could not fit in run 9362 
+ Could not fit in run 9363 
+ Could not fit in run 9367 
+ Could not fit in run 9379 
+ Could not fit in run 9380 
+ Could not fit in run 9385 
+ Could not fit in run 9399 
+ Could not fit in run 9431 
+ Could not fit in run 9433 
+ Could not fit in run 9445 
+ Could not fit in run 9451 
+ Could not fit in run 9456 
+ Could not fit in run 9458 
+ Could not fit in run 9458 
+ Could not fit in run 9479 
+ Could not fit in run 9483 
+ Could not fit in run 9486 
+ Could not fit in run 9496 
+ Could not fit in run 9519 
+ Could not fit in run 9530 
+ Could not fit in run 9537 
+ Could not fit in run 9537 
+ Could not fit in run 9563 
+ Could not fit in run 9563 
+ Could not fit in run 9569 
+ Could not fit in run 9575 
+ Could not fit in run 9576 
+ Could not fit in run 9580 
+ Could not fit in run 9582 
+ Could not fit in run 9602 
+ Could not fit in run 9611 
+ Could not fit in run 9618 
+ Could not fit in run 9634 
+ Could not fit in run 9635 
+ Could not fit in run 9668 
+ Could not fit in run 9670 
+ Could not fit in run 9679 
+ Could not fit in run 9721 
+ Could not fit in run 9721 
+ Could not fit in run 9735 
+ Could not fit in run 9747 
+ Could not fit in run 9764 
+ Could not fit in run 9764 
+ Could not fit in run 9765 
+ Could not fit in run 9778 
+ Could not fit in run 9780 
+ Could not fit in run 9782 
+ Could not fit in run 9795 
+ Could not fit in run 9818 
+ Could not fit in run 9822 
+ Could not fit in run 9823 
+ Could not fit in run 9829 
+ Could not fit in run 9853 
+ Could not fit in run 9859 
+ Could not fit in run 9861 
+ Could not fit in run 9869 
+ Could not fit in run 9873 
+ Could not fit in run 9886 
+ Could not fit in run 9886 
+ Could not fit in run 9910 
+ Could not fit in run 9920 
+ Could not fit in run 9922 
+ Could not fit in run 9965 
+ Could not fit in run 9969 
+ Could not fit in run 9981 
+ Could not fit in run 9998 
+SUM OF DEVIATIONS:   7.7787 < 0.96590 of simulated values 
+Comparison with chi-square distribution. 
+Proportion of simulations with X^2 values greater than 36.415 (0.05) : 0.00020 
+Proportion of simulations with X^2 values greater than 42.980 (0.01) : 0.00000 
+
+CUMULATIVE PROBABILITY DISTRIBUTION FROM SIMULATIONS
+
+ %        X^2 Value  Location in Cumulative Chi Square Distribution 
+ 99.0% >=  6.614         1.000  
+ 95.0% >=  8.332         0.999  
+ 90.0% >=  9.283         0.997  
+ 85.0% >= 10.031         0.994  
+ 80.0% >= 10.663         0.991  
+ 75.0% >= 11.264         0.987  
+ 70.0% >= 11.754         0.983  
+ 65.0% >= 12.239         0.977  
+ 60.0% >= 12.722         0.970  
+ 55.0% >= 13.199         0.963  
+ 50.0% >= 13.701         0.953  
+ 45.0% >= 14.211         0.942  
+ 40.0% >= 14.799         0.927  
+ 35.0% >= 15.335         0.911  
+ 30.0% >= 15.943         0.890  
+ 25.0% >= 16.619         0.864  
+ 20.0% >= 17.438         0.829  
+ 15.0% >= 18.416         0.782  
+ 10.0% >= 19.700         0.714  
+  5.0% >= 22.078         0.575  
+  1.0% >= 26.940         0.307  
+TEST OF MAXIMUM CELL VALUE: 
+  Maximum Cell Value:   1.1775  Proportion of runs with lower values : 0.16810 
+
+
+ESTIMATED PARAMETER VALUES AND SIMULATION STATISTICS
+
+Parameter                                   Estimate   2.5%  -  97.5%    Mean  Variance
+-----------------------------------------   -------   ------  -------     -----  -------
+Theta(4Nu) for species 1, locus:       ND2  0.00871  0.00275  0.02375  0.01004  0.0000287
+Theta(4Nu) for species 1, locus:     00132  0.00268  0.00044  0.00834  0.00318  0.0000043
+Theta(4Nu) for species 1, locus:     08352  0.00543  0.00162  0.01466  0.00626  0.0000116
+Theta(4Nu) for species 1, locus:     09385  0.00507  0.00137  0.01428  0.00590  0.0000111
+Theta(4Nu) for species 1, locus:     13380  0.00415  0.00151  0.01126  0.00485  0.0000063
+Theta(4Nu) for species 1, locus:     14765  0.00083  0.00014  0.00267  0.00099  0.0000004
+Theta(4Nu) for species 1, locus:     17483  0.00218  0.00049  0.00640  0.00255  0.0000024
+Theta(4Nu) for species 1, locus:       ACL  0.00130  0.00019  0.00444  0.00156  0.0000012
+Theta(4Nu) for species 1, locus:       MPP  0.00271  0.00041  0.00830  0.00321  0.0000042
+Theta(4Nu) for species 1, locus:      TGFB  0.00191  0.00040  0.00559  0.00222  0.0000019
+Theta(4Nu) for species 1, locus:     ABCA1  0.00235  0.00000  0.00814  0.00286  0.0000045
+Theta(4Nu) for species 1, locus:       ACO  0.00699  0.00259  0.01864  0.00814  0.0000179
+Theta(4Nu) for species 1, locus:      MUSK  0.00216  0.00035  0.00689  0.00256  0.0000030
+Speciation time parameter 'T'               0.33996 -0.18604  1.02145  0.32459  0.0946950
+Population Scalar 'f' for species 2         1.57517  0.74895  1.94611  1.21776  0.0921415
+
+Theta values adjusted for length 
+
+Theta(4Nu) for species 1, locus:       ND2  9.06941  2.86410 24.72514 10.45443 31.0647284
+Theta(4Nu) for species 1, locus:     00132  0.79214  0.13019  2.46967  0.94177  0.3806276
+Theta(4Nu) for species 1, locus:     08352  1.93485  0.57678  5.21991  2.23018  1.4675582
+Theta(4Nu) for species 1, locus:     09385  1.56632  0.42229  4.41257  1.82281  1.0634622
+Theta(4Nu) for species 1, locus:     13380  2.82660  1.02618  7.66846  3.30249  2.9395825
+Theta(4Nu) for species 1, locus:     14765  0.71135  0.12126  2.28295  0.84577  0.3239768
+Theta(4Nu) for species 1, locus:     17483  1.15118  0.25648  3.37221  1.34645  0.6576713
+Theta(4Nu) for species 1, locus:       ACL  0.61262  0.08890  2.09462  0.73727  0.2738394
+Theta(4Nu) for species 1, locus:       MPP  0.95084  0.14463  2.91331  1.12630  0.5210702
+Theta(4Nu) for species 1, locus:      TGFB  1.08610  0.23028  3.18609  1.26477  0.6101932
+Theta(4Nu) for species 1, locus:     ABCA1  0.86500  0.00000  2.99644  1.05142  0.6089077
+Theta(4Nu) for species 1, locus:       ACO  5.41393  2.00349 14.44503  6.31080 10.7590185
+Theta(4Nu) for species 1, locus:      MUSK  1.21217  0.19431  3.87145  1.43766  0.9365853
+_____________________________________________________________________________
+*****************************************************************************
+
+_____________________________________________________________________________
+*****************************************************************************
+
+
+
+  - HKA  program by Jody Hey  updated and compiled August 30, 2001 

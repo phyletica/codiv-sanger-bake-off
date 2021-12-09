@@ -1,0 +1,98 @@
+######### results #######
+##### Summary of posterior distribution #####
+##### Psi (= number of possible divtimes) #####
+
+### Posterior probability table with local multinomial logit regression.
+                       1       2             3             4             5
+posterior.p 3.617182e-23 0.50000 1.112537e-308 1.664399e-240 1.112537e-308
+prior.p     3.353000e-02 0.03443  3.484000e-02  3.525000e-02  3.478000e-02
+                        6             7       8             9      10      11
+posterior.p 1.112537e-308 1.428602e-298 0.00000 1.256002e-112 0.00000 0.00000
+prior.p      3.459000e-02  3.316000e-02 0.03408  3.478000e-02 0.03399 0.03411
+                       12     13            14     15            16
+posterior.p 1.112537e-308 0.0000 3.632686e-242 0.0000 1.112537e-308
+prior.p      3.474000e-02 0.0338  3.495000e-02 0.0344  3.552000e-02
+                       17      18      19      20      21      22      23
+posterior.p 1.112537e-308 0.00000 0.00000 0.50000 0.00000 0.00000 0.00000
+prior.p      3.478000e-02 0.03404 0.03515 0.03375 0.03504 0.03378 0.03428
+                      24            25            26            27
+posterior.p 5.552626e-99 1.055093e-296 1.379774e-308 1.717286e-241
+prior.p     3.498000e-02  3.504000e-02  3.512000e-02  3.476000e-02
+                       28      29
+posterior.p 7.458341e-155 0.00000
+prior.p      3.400000e-02 0.03433
+
+## Mode (from local multinomial logit regression):
+[1] "2"
+## Mean/Median  (from local multinomial logit regression):
+  mean median 
+    11      2 
+
+### The above results should be better than simple rejection method below.
+
+### Posterior probability table with SIMPLE rejection method, NO REGRESSION.
+                  1       2       3       4       5       6       7       8
+posterior.p 0.86200 0.07800 0.01800 0.00400 0.00600 0.00200 0.00200 0.00000
+prior.p     0.03353 0.03443 0.03484 0.03525 0.03478 0.03459 0.03316 0.03408
+                  9      10      11      12     13      14     15      16
+posterior.p 0.00200 0.00000 0.00000 0.00600 0.0000 0.00200 0.0000 0.00200
+prior.p     0.03478 0.03399 0.03411 0.03474 0.0338 0.03495 0.0344 0.03552
+                 17      18      19      20      21      22      23      24
+posterior.p 0.00200 0.00000 0.00000 0.00200 0.00000 0.00000 0.00000 0.00400
+prior.p     0.03478 0.03404 0.03515 0.03375 0.03504 0.03378 0.03428 0.03498
+                 25      26      27    28      29
+posterior.p 0.00200 0.00200 0.00200 0.002 0.00000
+prior.p     0.03504 0.03512 0.03476 0.034 0.03433
+
+## Mode (from simple rejection):
+[1] "1"
+## Mean/Median (from simple rejection)
+  mean median 
+ 1.676  1.000 
+
+##### Summary of posterior distribution #####
+##### var.t  #####
+### Mode
+INFO: loc1stats: difference in log(prob. density) between the max (mode) and the ends of confidence interval (at p=0.95) is 0.007181883.
+MODE:
+[1] 0.02709142
+### Mean/Median
+      mean     median 
+0.03006392 0.02935066 
+### 95 % quantile
+       2.5%       97.5% 
+0.006737982 0.059033028 
+### 95% Highest Postererior Density (HPD) interval
+[1] 0.000000 0.047541
+
+##### Summary of posterior distribution #####
+##### E.t (= E(t)) #####
+### Mode
+INFO: loc1stats: difference in log(prob. density) between the max (mode) and the ends of confidence interval (at p=0.95) is 0.00189279.
+MODE:
+[1] 0.143388
+### Mean/Median
+     mean    median 
+0.1557329 0.1528646 
+### 95 % quantile
+      2.5%      97.5% 
+0.06495913 0.29474277 
+### 95% Highest Postererior Density (HPD) interval
+[1] 0.05663039 0.25767851
+
+##### Summary of posterior distribution #####
+##### omega (=Var(t)/E(t)) #####
+### Mode
+INFO: loc1stats: difference in log(prob. density) between the max (mode) and the ends of confidence interval (at p=0.95) is 0.007629417.
+MODE:
+[1] 0.09140878
+### Mean/Median
+      mean     median 
+0.08482544 0.08467660 
+### 95 % quantile
+      2.5%      97.5% 
+0.02829744 0.15213110 
+### 95% Highest Postererior Density (HPD) interval
+[1] 0.02028365 0.14127417
+
+######### end of results #######

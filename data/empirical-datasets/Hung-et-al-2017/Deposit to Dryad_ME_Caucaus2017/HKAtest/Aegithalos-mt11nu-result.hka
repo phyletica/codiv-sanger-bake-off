@@ -1,0 +1,37 @@
+**HKA**   -- COMPUTER PROGRAM FOR HKA TESTS --
+      This program implements the method described in:
+          Hudson, R. R., M. Kreitman and M. Aguadé, (1987) 
+          A test of neutral molecular evolution based on nucleotide data
+          Genetics 116: 153-159 
+
+_____________________________________________________________________________
+*****************************************************************************
+
+DATA FROM FILE: Aegithalos-mt11nu.txt
+DATA FILE TEXT LINE:
+ HKA program test data 
+
+Additional text from data file : 
+  Aegithalos caudatus Caucasus vs Europe  
+
+
+MESSAGE ADDED AT RUNTIME: 
+ no 
+
+NUMBER OF SIMULATIONS: 10000 
+LOCI AND LENGTHS               species1 species2  between
+                         ND2 :   1041     1041     1041   
+                       00132 :    323      323      323   
+                       09385 :    329      329      329   
+                       14765 :    828      828      828   
+                         ACL :    779      779      779   
+                         MPP :    215      215      215   
+                         RHO :    854      854      854   
+                        TGFB :    602      602      602   
+                       ABCA1 :    270      270      270   
+                         ACO :    880      880      880   
+                        MUSK :    592      592      592   
+                        MC1R :    659      659      659   
+
+
+  - HKA  program by Jody Hey  updated and compiled August 30, 2001 
