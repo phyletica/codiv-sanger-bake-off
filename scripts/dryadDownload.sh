@@ -18,5 +18,10 @@ while read item
 		
 		cd $TEMP_DIR/$author
         	wget $link
+		
+		for file in `ls`
+			do
+				unzip $file
+			done
 
 	done<$DRYAD
