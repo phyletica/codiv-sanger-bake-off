@@ -1,0 +1,12 @@
+Papadopolou-et-al	config/alignment	https://datadryad.org/stash/downloads/file_stream/91038
+Papadopolou-et-al	config/alignment	https://datadryad.org/stash/downloads/file_stream/91034
+Papadopolou-et-al	info	https://datadryad.org/stash/downloads/file_stream/91035
+Paz-et-al	config/alignment	https://datadryad.org/stash/downloads/file_stream/9747 
+Paz-et-al	info	https://datadryad.org/stash/downloads/file_stream/9748
+Page-et-al	config/alignment	https://datadryad.org/stash/downloads/file_stream/46190  
+Hung-et-al	config/alignment	https://datadryad.org/stash/downloads/file_stream/73493
+Hung-et-al	config/alignment	https://datadryad.org/stash/downloads/file_stream/73494
+Rincon-Sandoval-et-al	config/alignment	https://datadryad.org/stash/downloads/file_stream/17836
+Rincon-Sandoval-et-al	info	https://datadryad.org/stash/downloads/file_stream/17837
+Myers-et-al	config/alignment	https://datadryad.org/stash/downloads/file_stream/21919
+Myers-et-al	info	https://datadryad.org/stash/downloads/21920
