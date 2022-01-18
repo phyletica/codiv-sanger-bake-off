@@ -11,17 +11,12 @@ while read item
 	do 
 		author=`echo "$item" | awk -v FS="\t" '{ print $1}'`
 	 
-		#echo $author
 		mkdir -p $TEMP_DIR/$author
 		link=`echo "$item" | awk -v FS="\t" '{print $3}'`
-		#echo $link
 		
 		cd $TEMP_DIR/$author
-        	wget $link
+        	wget -O archive $link
+            unzip archive
 		
-		for file in `ls`
-			do
-				unzip $file
-			done
 
 	done<$DRYAD
