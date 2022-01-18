@@ -1,1 +1,0 @@
-m1 = ../../dpp-batch.masterIn.fromIM_R18spp_mt21.48Z1.2exo0.66.cfg

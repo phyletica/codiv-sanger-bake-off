@@ -1,0 +1,36 @@
+This repository contains data and trees associated with the article:
+
+Rincon-Sandoval M, Betancur-R R, Maldonado-Ocampo J.A.
+Comparative Phylogeography of Trans-Andean Freshwater Fishes Based on Genome-Wide Nuclear 
+and Mitochondrial Markers
+
+The file library_samples_otophysi.csv contains sample information including: locality, 
+associated specimen and tissues number, and data availability information.
+
+The file target_capture.csv contains target capture information showing total length of 
+the alignments by individuals, number of loci and locus length.
+
+The file mitogenomes.csv contains mitogenome information by individuals with the 
+respective sequence length in base pairs.
+
+Additionally, there are four directories, containing data and trees
+
+1. Master Reference: contains a fasta file with the master references of Danio rerio
+
+2. Alignments: contains two nexus files with the concatenated datasets including 
+   partitions for exon loci and mitochondrial DNA.
+   
+3. BPP: contains information about 70 random loci utilized in each analysis and seven 
+   libraries (a library by species) containing information about every random analysis
+   
+4. SNPs: contains three libraries
+   SNAPP contains SNPs alignment in fasta file and a xml file by species
+   STRUCTURE contains structure project data and a joblist file by species 
+   SVD contains nexus files of unlinked SNPs with the taxpartitions 
+   
+5. Trees: contains three libraries 
+   BI contains bayesian trees inferred from mitogenomic DNA
+   PCF contains species trees inferred with *BEAST and SNAPP used as input data for
+   PCF analyses
+   RAxML contains maximum likelihood trees inferred from concatenated nuclear loci and
+   mitogenomic DNA.
