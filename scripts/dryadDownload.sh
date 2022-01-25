@@ -16,23 +16,12 @@ while read item
 	do 
 		AUTHOR=`echo "$item" | awk -v FS="\t" '{ print $1}'`
 	 
-<<<<<<< HEAD
-		mkdir -p $TEMP_DIR/$author
-		link=`echo "$item" | awk -v FS="\t" '{print $3}'`
-		
-		cd $TEMP_DIR/$author
-        	wget -O archive $link
-            unzip archive
-=======
-		# Name subdirectory after author key
-		mkdir -p $TEMP_DIR/$AUTHOR
-
-		# Assign the DOI link as a variable
+		mkdir -p $DATA_DIR/$AUTHOR
 		LINK=`echo "$item" | awk -v FS="\t" '{print $3}'`
 		
 		cd $DATA_DIR/$AUTHOR
-        	wget $LINK
->>>>>>> be5a0b1fe5313c009ecb2be2de1eda38122500eb
+        	wget -O archive $LINK
+            unzip archive
 		
 
-	done<$DRYAD
+	done<$DRYAD_LIST
