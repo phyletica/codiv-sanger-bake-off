@@ -1,0 +1,40 @@
+
+event_model_prior:
+    dirichlet_process:
+        parameters:
+            concentrations:
+                value:
+                estimate:
+                
+event_time_prior:
+    exponential_distribution:
+
+global_comparison_settings:
+    ploidy: 1 
+    equal_population_sizes: false
+
+comparisons:
+- comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/Only6Soiltaxa/Dailhel2_Cox1.nex"
+- comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/Only6Soiltaxa/Dailhel2_Mp20.nex"
+- comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/Only6Soiltaxa/Dailquadr2_Cox1.nex"
+- comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/Only6Soiltaxa/Dailquadr2_Mp20.nex"
+- comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/Only6Soiltaxa/EutSoilNoD2_Cox1.nex"
+- comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/Only6Soiltaxa/EutSoilNoD2_Mp20.nex"
+- comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/Only6Soiltaxa/Graecopachys2_Cox1.nex"
+- comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/Only6Soiltaxa/Graecopachys2_Mp20.nex"
+- comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/Only6Soiltaxa/Pimelia2_Cox1.nex"
+- comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/Only6Soiltaxa/Pimelia2_Mp20.nex"
+- comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/Only6Soiltaxa/Stenosis2_Cox1.nex"
+- comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/Only6Soiltaxa/Stenosis2_Mp20.nex"
