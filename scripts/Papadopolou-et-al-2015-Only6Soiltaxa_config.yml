@@ -1,0 +1,76 @@
+event_model_prior:
+        dirichlet_process:
+                parameters:
+                        concentrations:
+                                value: 27.15
+                                estimate: true
+                                prior:
+                                        gamma distribution:
+                                                shape: 1.5
+                                                scale: 18.1
+
+event_time_prior:
+        exponential_distribution:
+                mean: 10
+
+global_comparison_settings:
+        ploidy: 1
+        equal_population_sizes: false
+        constant_sites_removed: false
+        population_name_delimiter: "_"
+        population_name_is_prefix: true
+        genotypes_are_diploid: false
+
+comparisons:
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/Ammobius2_Cox1.nex"
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/Ammobius2_Mp20.nex"
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/Dailhel2_Cox1.nex"
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/Dailhel2_Mp20.nex"
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/Dailquadr2_Cox1.nex"
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/Dailquadr2_Mp20.nex"
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/Dichomma2_Cox1.nex"
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/Dichomma2_Mp20.nex"
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/Erodius2_Cox1.nex"
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/Erodius2_Mp20.nex"
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/EutSand2_Cox1.nex"
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/EutSand2_Mp20.nex"
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/EutSoilNoD2_Cox1.nex"
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/EutSoilNoD2_Mp20.nex"
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/Graecopachys2_Cox1.nex" 
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/Graecopachys2_Mp20.nex" 
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/Micrositus2_Cox1.nex" 
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/Micrositus2_Mp20.nex"
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/Pimelia2_Cox1.nex"
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/Pimelia2_Mp20.nex"
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/Stenosis2_Cox1.nex"
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/Stenosis2_Mp20.nex"
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/Tentyria2_Cox1.nex"
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/Tentyria2_Mp20.nex"
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/Zophosis2_Cox1.nex"
+-comparison:
+    path: "/home/tcm0036/codiv-sanger-bake-off/scripts/dryadData/Papadopolou-et-al/ecoevolity_input_files/all13taxa/Zophosis2_Mp20.nex"
