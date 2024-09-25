@@ -1,0 +1,88 @@
+========================================================================
+                              Pycoevolity                               
+                   Summarizing evolutionary coevality                   
+
+        A Python package for analyzing the output of Ecoevolity         
+
+           Version 0.2.11 (main 3bea920: 2024-09-25 13:06:17)           
+
+             License: GNU General Public License Version 3              
+========================================================================
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.uLRtF5lurw /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/Papadopoulou-Knowles-2015/hABC_dppmsbayes_InputFiles/All13taxa/13taxa_dppbayes.cfg
+	Number of taxa:  57
+	Number of loci:  2
+	Number of sites: 1218
+	Number of triallelic sites found:   5
+	Number of triallelic sites removed: 5
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.uLRtF5lurw /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/Papadopoulou-Knowles-2015/hABC_dppmsbayes_InputFiles/All13taxa/13taxa_dppbayes.cfg
+	Number of taxa:  36
+	Number of loci:  2
+	Number of sites: 1214
+	Number of triallelic sites found:   6
+	Number of triallelic sites removed: 6
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.uLRtF5lurw /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/Papadopoulou-Knowles-2015/hABC_dppmsbayes_InputFiles/All13taxa/13taxa_dppbayes.cfg
+	Number of taxa:  42
+	Number of loci:  2
+	Number of sites: 1217
+	Number of triallelic sites found:   3
+	Number of triallelic sites removed: 3
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.uLRtF5lurw /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/Papadopoulou-Knowles-2015/hABC_dppmsbayes_InputFiles/All13taxa/13taxa_dppbayes.cfg
+	Number of taxa:  112
+	Number of loci:  2
+	Number of sites: 1217
+	Number of triallelic sites found:   1
+	Number of triallelic sites removed: 1
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.uLRtF5lurw /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/Papadopoulou-Knowles-2015/hABC_dppmsbayes_InputFiles/All13taxa/13taxa_dppbayes.cfg
+	Number of taxa:  121
+	Number of loci:  2
+	Number of sites: 1228
+	Number of triallelic sites found:   0
+	Number of triallelic sites removed: 0
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.uLRtF5lurw /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/Papadopoulou-Knowles-2015/hABC_dppmsbayes_InputFiles/All13taxa/13taxa_dppbayes.cfg
+	Number of taxa:  53
+	Number of loci:  2
+	Number of sites: 1164
+	Number of triallelic sites found:   0
+	Number of triallelic sites removed: 0
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.uLRtF5lurw /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/Papadopoulou-Knowles-2015/hABC_dppmsbayes_InputFiles/All13taxa/13taxa_dppbayes.cfg
+	Number of taxa:  59
+	Number of loci:  2
+	Number of sites: 1161
+	Number of triallelic sites found:   3
+	Number of triallelic sites removed: 3
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.uLRtF5lurw /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/Papadopoulou-Knowles-2015/hABC_dppmsbayes_InputFiles/All13taxa/13taxa_dppbayes.cfg
+	Number of taxa:  64
+	Number of loci:  2
+	Number of sites: 1214
+	Number of triallelic sites found:   13
+	Number of triallelic sites removed: 13
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.uLRtF5lurw /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/Papadopoulou-Knowles-2015/hABC_dppmsbayes_InputFiles/All13taxa/13taxa_dppbayes.cfg
+	Number of taxa:  82
+	Number of loci:  2
+	Number of sites: 1214
+	Number of triallelic sites found:   3
+	Number of triallelic sites removed: 3
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.uLRtF5lurw /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/Papadopoulou-Knowles-2015/hABC_dppmsbayes_InputFiles/All13taxa/13taxa_dppbayes.cfg
+	Number of taxa:  46
+	Number of loci:  2
+	Number of sites: 1219
+	Number of triallelic sites found:   3
+	Number of triallelic sites removed: 3
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.uLRtF5lurw /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/Papadopoulou-Knowles-2015/hABC_dppmsbayes_InputFiles/All13taxa/13taxa_dppbayes.cfg
+	Number of taxa:  44
+	Number of loci:  2
+	Number of sites: 1208
+	Number of triallelic sites found:   11
+	Number of triallelic sites removed: 11
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.uLRtF5lurw /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/Papadopoulou-Knowles-2015/hABC_dppmsbayes_InputFiles/All13taxa/13taxa_dppbayes.cfg
+	Number of taxa:  43
+	Number of loci:  2
+	Number of sites: 1219
+	Number of triallelic sites found:   0
+	Number of triallelic sites removed: 0
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.uLRtF5lurw /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/Papadopoulou-Knowles-2015/hABC_dppmsbayes_InputFiles/All13taxa/13taxa_dppbayes.cfg
+	Number of taxa:  87
+	Number of loci:  2
+	Number of sites: 1217
+	Number of triallelic sites found:   1
+	Number of triallelic sites removed: 1

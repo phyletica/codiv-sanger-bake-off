@@ -1,0 +1,23 @@
+---
+markers_are_dominant: false
+population_labels:
+    - comparison8pop1
+    - comparison8pop2
+allele_count_patterns:
+    - [[5,5], [0,6]]
+    - [[0,5], [0,6]]
+    - [[0,6], [0,6]]
+    - [[1,6], [0,6]]
+    - [[2,6], [0,6]]
+    - [[0,6], [1,6]]
+    - [[0,6], [6,6]]
+    - [[0,5], [0,5]]
+pattern_weights:
+    - 1
+    - 2
+    - 1054
+    - 1
+    - 1
+    - 1
+    - 6
+    - 1

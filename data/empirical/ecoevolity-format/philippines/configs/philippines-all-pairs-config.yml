@@ -1,0 +1,90 @@
+---
+event_model_prior:
+    dirichlet_process:
+        parameters:
+            concentration:
+                estimate: true
+                prior:
+                    gamma_distribution:
+                        shape: 1.5
+                        scale: 18.099702
+
+event_time_prior:
+    gamma_distribution:
+        shape: 1.0
+        scale: 0.05
+
+global_comparison_settings:
+    ploidy: 1
+    genotypes_are_diploid: false
+    markers_are_dominant: false
+    constant_sites_removed: false
+    population_name_delimiter: " "
+    population_name_is_prefix: false
+    equal_population_sizes: false
+    parameters:
+        freq_1:
+            value: 0.5
+            estimate: false
+        mutation_rate:
+            value: 1.0
+            estimate: false
+        root_relative_population_size:
+            value: 1.0
+            estimate: true
+            prior:
+                gamma_distribution:
+                    shape: 100.0
+                    scale: 0.01
+        population_size:
+            estimate: true
+            prior:
+                gamma_distribution:
+                    shape: 1.0
+                    scale: 0.00125
+
+comparisons:
+- comparison:
+    path: "../data/Crocidura.beatus.Leyte_Samar.yml"
+- comparison:
+    path: "../data/Crocidura.negrina-panayensis.Negros_Panay.yml"
+- comparison:
+    path: "../data/Cynopterus.brachyotis.Biliran_Mindanao.yml"
+- comparison:
+    path: "../data/Cynopterus.brachyotis.Negros_Panay.yml"
+- comparison:
+    path: "../data/Cyrtodactylus.gubaot-sumuroi.Leyte_Samar.yml"
+- comparison:
+    path: "../data/Cyrtodactylus.annulatus.Bohol_Mindanao.yml"
+- comparison:
+    path: "../data/Cyrtodactylus.philippinicus.Negros_Panay.yml"
+- comparison:
+    path: "../data/Dendrolaphis.marenae.Negros_Panay.yml"
+- comparison:
+    path: "../data/Gekko.mindorensis.Negros_Panay.yml"
+- comparison:
+    path: "../data/Haplonycteris.fischeri.Biliran_Mindanao.yml"
+- comparison:
+    path: "../data/Haplonycteris.fischeri.Negros_Panay.yml"
+- comparison:
+    path: "../data/Hipposideros.obscurus.Leyte_Mindanao.yml"
+- comparison:
+    path: "../data/Hipposideros.pygmaeus.Bohol_Mindanao.yml"
+- comparison:
+    path: "../data/Limnonectes.leytensis.Bohol_Mindanao.yml"
+- comparison:
+    path: "../data/Limnonectes.magnus.Bohol_Mindanao.yml"
+- comparison:
+    path: "../data/Macroglossus.minimus.Biliran_Mindanao.yml"
+- comparison:
+    path: "../data/Macroglossus.minimus.Negros_Panay.yml"
+- comparison:
+    path: "../data/Ptenochirus.jagori.Leyte_Mindanao.yml"
+- comparison:
+    path: "../data/Ptenochirus.jagori.Negros_Panay.yml"
+- comparison:
+    path: "../data/Ptenochirus.minor.Biliran_Mindanao.yml"
+- comparison:
+    path: "../data/Insulasaurus.arborens.Negros_Panay.yml"
+- comparison:
+    path: "../data/Pinoyscincus.jagori.Mindanao_Samar.yml"

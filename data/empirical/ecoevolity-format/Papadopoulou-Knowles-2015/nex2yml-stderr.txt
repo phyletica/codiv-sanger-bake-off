@@ -1,0 +1,174 @@
+======================================================================
+                               nex2yml
+        Converting nexus alignments to YAML allele count files
+
+                               Part of:
+                              Ecoevolity
+      Version 0.3.2 (testing c128046: 2020-09-15T22:35:02-05:00)
+======================================================================
+
+Config path: /tmp/tmp.uLRtF5lurw/mediterranean-all-pairs-config.yml
+Parsing config file...
+Configuring comparisons...
+
+----------------------------------------------------------------------
+Summary of data from 13 comparisons:
+    Summary of data from '/tmp/tmp.uLRtF5lurw/Ammobius2.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 1215
+        Number of variable sites: 89
+        Number of patterns: 27
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison1pop1 (22)
+            comparison1pop2 (18)
+    Summary of data from '/tmp/tmp.uLRtF5lurw/Dailhel2.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 1214
+        Number of variable sites: 49
+        Number of patterns: 15
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison2pop1 (14)
+            comparison2pop2 (8)
+    Summary of data from '/tmp/tmp.uLRtF5lurw/Dailquadr2.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 1216
+        Number of variable sites: 79
+        Number of patterns: 29
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison3pop1 (8)
+            comparison3pop2 (19)
+    Summary of data from '/tmp/tmp.uLRtF5lurw/Dichomma2.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 1217
+        Number of variable sites: 45
+        Number of patterns: 26
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison4pop1 (34)
+            comparison4pop2 (30)
+    Summary of data from '/tmp/tmp.uLRtF5lurw/Erodius2.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 1228
+        Number of variable sites: 49
+        Number of patterns: 55
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison5pop1 (34)
+            comparison5pop2 (48)
+    Summary of data from '/tmp/tmp.uLRtF5lurw/EutSand2.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 1164
+        Number of variable sites: 23
+        Number of patterns: 13
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison6pop1 (10)
+            comparison6pop2 (20)
+    Summary of data from '/tmp/tmp.uLRtF5lurw/EutSoilNoD2.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 1161
+        Number of variable sites: 80
+        Number of patterns: 29
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison7pop1 (11)
+            comparison7pop2 (24)
+    Summary of data from '/tmp/tmp.uLRtF5lurw/Graecopachys2.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 1212
+        Number of variable sites: 117
+        Number of patterns: 42
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison8pop1 (20)
+            comparison8pop2 (36)
+    Summary of data from '/tmp/tmp.uLRtF5lurw/Micrositus2.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 1214
+        Number of variable sites: 57
+        Number of patterns: 22
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison9pop1 (26)
+            comparison9pop2 (24)
+    Summary of data from '/tmp/tmp.uLRtF5lurw/Pimelia2.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 1218
+        Number of variable sites: 83
+        Number of patterns: 19
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison10pop1 (16)
+            comparison10pop2 (12)
+    Summary of data from '/tmp/tmp.uLRtF5lurw/Stenosis2.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 1207
+        Number of variable sites: 111
+        Number of patterns: 33
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison11pop1 (16)
+            comparison11pop2 (10)
+    Summary of data from '/tmp/tmp.uLRtF5lurw/Tentyria2.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 1219
+        Number of variable sites: 34
+        Number of patterns: 22
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison12pop1 (15)
+            comparison12pop2 (8)
+    Summary of data from '/tmp/tmp.uLRtF5lurw/Zophosis2.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 1217
+        Number of variable sites: 36
+        Number of patterns: 16
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison13pop1 (26)
+            comparison13pop2 (28)
+----------------------------------------------------------------------
+
+Writing YAML files of allele count patterns...
+    Writing '/tmp/tmp.uLRtF5lurw/Ammobius2.nex.yml'
+    Writing '/tmp/tmp.uLRtF5lurw/Dailhel2.nex.yml'
+    Writing '/tmp/tmp.uLRtF5lurw/Dailquadr2.nex.yml'
+    Writing '/tmp/tmp.uLRtF5lurw/Dichomma2.nex.yml'
+    Writing '/tmp/tmp.uLRtF5lurw/Erodius2.nex.yml'
+    Writing '/tmp/tmp.uLRtF5lurw/EutSand2.nex.yml'
+    Writing '/tmp/tmp.uLRtF5lurw/EutSoilNoD2.nex.yml'
+    Writing '/tmp/tmp.uLRtF5lurw/Graecopachys2.nex.yml'
+    Writing '/tmp/tmp.uLRtF5lurw/Micrositus2.nex.yml'
+    Writing '/tmp/tmp.uLRtF5lurw/Pimelia2.nex.yml'
+    Writing '/tmp/tmp.uLRtF5lurw/Stenosis2.nex.yml'
+    Writing '/tmp/tmp.uLRtF5lurw/Tentyria2.nex.yml'
+    Writing '/tmp/tmp.uLRtF5lurw/Zophosis2.nex.yml'

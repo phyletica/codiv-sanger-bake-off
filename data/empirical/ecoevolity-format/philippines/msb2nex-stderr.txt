@@ -1,0 +1,142 @@
+========================================================================
+                              Pycoevolity                               
+                   Summarizing evolutionary coevality                   
+
+        A Python package for analyzing the output of Ecoevolity         
+
+           Version 0.2.11 (main 3bea920: 2024-09-25 13:06:17)           
+
+             License: GNU General Public License Version 3              
+========================================================================
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.VvpmzhV7EM /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/philippines/configs/philippines-dpp.cfg
+	Number of taxa:  23
+	Number of loci:  1
+	Number of sites: 2037
+	Number of triallelic sites found:   0
+	Number of triallelic sites removed: 0
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.VvpmzhV7EM /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/philippines/configs/philippines-dpp.cfg
+	Number of taxa:  18
+	Number of loci:  1
+	Number of sites: 2037
+	Number of triallelic sites found:   0
+	Number of triallelic sites removed: 0
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.VvpmzhV7EM /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/philippines/configs/philippines-dpp.cfg
+	Number of taxa:  28
+	Number of loci:  1
+	Number of sites: 599
+	Number of triallelic sites found:   1
+	Number of triallelic sites removed: 1
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.VvpmzhV7EM /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/philippines/configs/philippines-dpp.cfg
+	Number of taxa:  22
+	Number of loci:  1
+	Number of sites: 599
+	Number of triallelic sites found:   1
+	Number of triallelic sites removed: 1
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.VvpmzhV7EM /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/philippines/configs/philippines-dpp.cfg
+	Number of taxa:  35
+	Number of loci:  1
+	Number of sites: 1415
+	Number of triallelic sites found:   5
+	Number of triallelic sites removed: 5
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.VvpmzhV7EM /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/philippines/configs/philippines-dpp.cfg
+	Number of taxa:  17
+	Number of loci:  1
+	Number of sites: 1416
+	Number of triallelic sites found:   4
+	Number of triallelic sites removed: 4
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.VvpmzhV7EM /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/philippines/configs/philippines-dpp.cfg
+	Number of taxa:  20
+	Number of loci:  1
+	Number of sites: 1410
+	Number of triallelic sites found:   10
+	Number of triallelic sites removed: 10
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.VvpmzhV7EM /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/philippines/configs/philippines-dpp.cfg
+	Number of taxa:  12
+	Number of loci:  1
+	Number of sites: 1067
+	Number of triallelic sites found:   0
+	Number of triallelic sites removed: 0
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.VvpmzhV7EM /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/philippines/configs/philippines-dpp.cfg
+	Number of taxa:  19
+	Number of loci:  1
+	Number of sites: 1400
+	Number of triallelic sites found:   8
+	Number of triallelic sites removed: 8
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.VvpmzhV7EM /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/philippines/configs/philippines-dpp.cfg
+	Number of taxa:  37
+	Number of loci:  1
+	Number of sites: 564
+	Number of triallelic sites found:   0
+	Number of triallelic sites removed: 0
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.VvpmzhV7EM /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/philippines/configs/philippines-dpp.cfg
+	Number of taxa:  30
+	Number of loci:  1
+	Number of sites: 562
+	Number of triallelic sites found:   2
+	Number of triallelic sites removed: 2
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.VvpmzhV7EM /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/philippines/configs/philippines-dpp.cfg
+	Number of taxa:  28
+	Number of loci:  1
+	Number of sites: 1044
+	Number of triallelic sites found:   0
+	Number of triallelic sites removed: 0
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.VvpmzhV7EM /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/philippines/configs/philippines-dpp.cfg
+	Number of taxa:  15
+	Number of loci:  1
+	Number of sites: 1044
+	Number of triallelic sites found:   0
+	Number of triallelic sites removed: 0
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.VvpmzhV7EM /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/philippines/configs/philippines-dpp.cfg
+	Number of taxa:  6
+	Number of loci:  1
+	Number of sites: 2433
+	Number of triallelic sites found:   0
+	Number of triallelic sites removed: 0
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.VvpmzhV7EM /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/philippines/configs/philippines-dpp.cfg
+	Number of taxa:  5
+	Number of loci:  1
+	Number of sites: 2433
+	Number of triallelic sites found:   0
+	Number of triallelic sites removed: 0
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.VvpmzhV7EM /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/philippines/configs/philippines-dpp.cfg
+	Number of taxa:  23
+	Number of loci:  1
+	Number of sites: 576
+	Number of triallelic sites found:   0
+	Number of triallelic sites removed: 0
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.VvpmzhV7EM /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/philippines/configs/philippines-dpp.cfg
+	Number of taxa:  18
+	Number of loci:  1
+	Number of sites: 576
+	Number of triallelic sites found:   0
+	Number of triallelic sites removed: 0
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.VvpmzhV7EM /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/philippines/configs/philippines-dpp.cfg
+	Number of taxa:  11
+	Number of loci:  1
+	Number of sites: 681
+	Number of triallelic sites found:   0
+	Number of triallelic sites removed: 0
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.VvpmzhV7EM /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/philippines/configs/philippines-dpp.cfg
+	Number of taxa:  16
+	Number of loci:  1
+	Number of sites: 681
+	Number of triallelic sites found:   0
+	Number of triallelic sites removed: 0
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.VvpmzhV7EM /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/philippines/configs/philippines-dpp.cfg
+	Number of taxa:  39
+	Number of loci:  1
+	Number of sites: 681
+	Number of triallelic sites found:   0
+	Number of triallelic sites removed: 0
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.VvpmzhV7EM /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/philippines/configs/philippines-dpp.cfg
+	Number of taxa:  32
+	Number of loci:  1
+	Number of sites: 1024
+	Number of triallelic sites found:   11
+	Number of triallelic sites removed: 11
+Command: /home/jamie/Dropbox/projects/codiv-sanger-bake-off/pyenv/bin/msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing --output-dir /tmp/tmp.VvpmzhV7EM /home/jamie/Dropbox/projects/codiv-sanger-bake-off/data/empirical/msbayes-format/philippines/configs/philippines-dpp.cfg
+	Number of taxa:  16
+	Number of loci:  1
+	Number of sites: 1033
+	Number of triallelic sites found:   2
+	Number of triallelic sites removed: 2

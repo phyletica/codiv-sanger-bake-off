@@ -1,0 +1,58 @@
+---
+event_model_prior:
+    dirichlet_process:
+        parameters:
+            concentration:
+                estimate: true
+                prior:
+                    gamma_distribution:
+                        shape: 1.5
+                        scale: 18.1
+
+event_time_prior:
+    gamma_distribution:
+        shape: 1.0
+        scale: 0.05
+
+global_comparison_settings:
+    ploidy: 1
+    genotypes_are_diploid: false
+    markers_are_dominant: false
+    constant_sites_removed: false
+    population_name_delimiter: " "
+    population_name_is_prefix: false
+    equal_population_sizes: false
+    parameters:
+        freq_1:
+            value: 0.5
+            estimate: false
+        mutation_rate:
+            value: 1.0
+            estimate: false
+        root_relative_population_size:
+            value: 1.0
+            estimate: true
+            prior:
+                gamma_distribution:
+                    shape: 100.0
+                    scale: 0.01
+        population_size:
+            estimate: true
+            prior:
+                gamma_distribution:
+                    shape: 1.0
+                    scale: 0.00125
+
+comparisons:
+- comparison:
+    path: "../data/Dailhel2.yml"
+- comparison:
+    path: "../data/Dailquadr2.yml"
+- comparison:
+    path: "../data/EutSoilNoD2.yml"
+- comparison:
+    path: "../data/Graecopachys2.yml"
+- comparison:
+    path: "../data/Pimelia2.yml"
+- comparison:
+    path: "../data/Stenosis2.yml"

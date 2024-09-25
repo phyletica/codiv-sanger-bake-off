@@ -1,0 +1,282 @@
+======================================================================
+                               nex2yml
+        Converting nexus alignments to YAML allele count files
+
+                               Part of:
+                              Ecoevolity
+      Version 0.3.2 (testing c128046: 2020-09-15T22:35:02-05:00)
+======================================================================
+
+Config path: /tmp/tmp.VvpmzhV7EM/philippines-all-pairs-config.yml
+Parsing config file...
+Configuring comparisons...
+
+----------------------------------------------------------------------
+Summary of data from 22 comparisons:
+    Summary of data from '/tmp/tmp.VvpmzhV7EM/Crocidura.beatus.Leyte_Samar.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 2037
+        Number of variable sites: 92
+        Number of patterns: 16
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison1pop2 (11)
+            comparison1pop1 (12)
+    Summary of data from '/tmp/tmp.VvpmzhV7EM/Crocidura.negrina-panayensis.Negros_Panay.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 2037
+        Number of variable sites: 76
+        Number of patterns: 10
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison2pop1 (12)
+            comparison2pop2 (6)
+    Summary of data from '/tmp/tmp.VvpmzhV7EM/Cynopterus.brachyotis.Biliran_Mindanao.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 599
+        Number of variable sites: 34
+        Number of patterns: 10
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison3pop1 (8)
+            comparison3pop2 (20)
+    Summary of data from '/tmp/tmp.VvpmzhV7EM/Cynopterus.brachyotis.Negros_Panay.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 599
+        Number of variable sites: 27
+        Number of patterns: 5
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison4pop2 (14)
+            comparison4pop1 (8)
+    Summary of data from '/tmp/tmp.VvpmzhV7EM/Cyrtodactylus.gubaot-sumuroi.Leyte_Samar.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 1412
+        Number of variable sites: 163
+        Number of patterns: 20
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison5pop1 (29)
+            comparison5pop2 (6)
+    Summary of data from '/tmp/tmp.VvpmzhV7EM/Cyrtodactylus.annulatus.Bohol_Mindanao.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 1416
+        Number of variable sites: 116
+        Number of patterns: 17
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison6pop2 (14)
+            comparison6pop1 (3)
+    Summary of data from '/tmp/tmp.VvpmzhV7EM/Cyrtodactylus.philippinicus.Negros_Panay.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 1404
+        Number of variable sites: 182
+        Number of patterns: 27
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison7pop2 (14)
+            comparison7pop1 (6)
+    Summary of data from '/tmp/tmp.VvpmzhV7EM/Dendrolaphis.marenae.Negros_Panay.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 1067
+        Number of variable sites: 10
+        Number of patterns: 8
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison8pop1 (6)
+            comparison8pop2 (6)
+    Summary of data from '/tmp/tmp.VvpmzhV7EM/Gekko.mindorensis.Negros_Panay.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 1392
+        Number of variable sites: 108
+        Number of patterns: 26
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison9pop2 (11)
+            comparison9pop1 (8)
+    Summary of data from '/tmp/tmp.VvpmzhV7EM/Haplonycteris.fischeri.Biliran_Mindanao.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 564
+        Number of variable sites: 46
+        Number of patterns: 12
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison10pop1 (8)
+            comparison10pop2 (29)
+    Summary of data from '/tmp/tmp.VvpmzhV7EM/Haplonycteris.fischeri.Negros_Panay.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 562
+        Number of variable sites: 31
+        Number of patterns: 12
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison11pop2 (21)
+            comparison11pop1 (9)
+    Summary of data from '/tmp/tmp.VvpmzhV7EM/Hipposideros.obscurus.Leyte_Mindanao.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 1040
+        Number of variable sites: 54
+        Number of patterns: 16
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison12pop2 (19)
+            comparison12pop1 (9)
+    Summary of data from '/tmp/tmp.VvpmzhV7EM/Hipposideros.pygmaeus.Bohol_Mindanao.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 1044
+        Number of variable sites: 60
+        Number of patterns: 8
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison13pop2 (3)
+            comparison13pop1 (12)
+    Summary of data from '/tmp/tmp.VvpmzhV7EM/Limnonectes.leytensis.Bohol_Mindanao.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 2416
+        Number of variable sites: 110
+        Number of patterns: 12
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison14pop1 (2)
+            comparison14pop2 (4)
+    Summary of data from '/tmp/tmp.VvpmzhV7EM/Limnonectes.magnus.Bohol_Mindanao.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 2424
+        Number of variable sites: 50
+        Number of patterns: 8
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison15pop2 (2)
+            comparison15pop1 (3)
+    Summary of data from '/tmp/tmp.VvpmzhV7EM/Macroglossus.minimus.Biliran_Mindanao.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 576
+        Number of variable sites: 25
+        Number of patterns: 10
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison16pop1 (4)
+            comparison16pop2 (19)
+    Summary of data from '/tmp/tmp.VvpmzhV7EM/Macroglossus.minimus.Negros_Panay.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 576
+        Number of variable sites: 33
+        Number of patterns: 11
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison17pop1 (8)
+            comparison17pop2 (10)
+    Summary of data from '/tmp/tmp.VvpmzhV7EM/Ptenochirus.jagori.Leyte_Mindanao.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 681
+        Number of variable sites: 27
+        Number of patterns: 6
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison18pop1 (7)
+            comparison18pop2 (4)
+    Summary of data from '/tmp/tmp.VvpmzhV7EM/Ptenochirus.jagori.Negros_Panay.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 681
+        Number of variable sites: 25
+        Number of patterns: 10
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison19pop2 (8)
+            comparison19pop1 (8)
+    Summary of data from '/tmp/tmp.VvpmzhV7EM/Ptenochirus.minor.Biliran_Mindanao.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 681
+        Number of variable sites: 48
+        Number of patterns: 20
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison20pop1 (9)
+            comparison20pop2 (30)
+    Summary of data from '/tmp/tmp.VvpmzhV7EM/Insulasaurus.arborens.Negros_Panay.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 1024
+        Number of variable sites: 116
+        Number of patterns: 38
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison21pop2 (10)
+            comparison21pop1 (22)
+    Summary of data from '/tmp/tmp.VvpmzhV7EM/Pinoyscincus.jagori.Mindanao_Samar.nex':
+        Genotypes: haploid
+        Markers are dominant? false
+        Number of populations: 2
+        Number of sites: 1020
+        Number of variable sites: 40
+        Number of patterns: 18
+        Patterns folded? true
+        Population label (max # of alleles sampled):
+            comparison22pop2 (8)
+            comparison22pop1 (8)
+----------------------------------------------------------------------
+
+Writing YAML files of allele count patterns...
+    Writing '/tmp/tmp.VvpmzhV7EM/Crocidura.beatus.Leyte_Samar.nex.yml'
+    Writing '/tmp/tmp.VvpmzhV7EM/Crocidura.negrina-panayensis.Negros_Panay.nex.yml'
+    Writing '/tmp/tmp.VvpmzhV7EM/Cynopterus.brachyotis.Biliran_Mindanao.nex.yml'
+    Writing '/tmp/tmp.VvpmzhV7EM/Cynopterus.brachyotis.Negros_Panay.nex.yml'
+    Writing '/tmp/tmp.VvpmzhV7EM/Cyrtodactylus.gubaot-sumuroi.Leyte_Samar.nex.yml'
+    Writing '/tmp/tmp.VvpmzhV7EM/Cyrtodactylus.annulatus.Bohol_Mindanao.nex.yml'
+    Writing '/tmp/tmp.VvpmzhV7EM/Cyrtodactylus.philippinicus.Negros_Panay.nex.yml'
+    Writing '/tmp/tmp.VvpmzhV7EM/Dendrolaphis.marenae.Negros_Panay.nex.yml'
+    Writing '/tmp/tmp.VvpmzhV7EM/Gekko.mindorensis.Negros_Panay.nex.yml'
+    Writing '/tmp/tmp.VvpmzhV7EM/Haplonycteris.fischeri.Biliran_Mindanao.nex.yml'
+    Writing '/tmp/tmp.VvpmzhV7EM/Haplonycteris.fischeri.Negros_Panay.nex.yml'
+    Writing '/tmp/tmp.VvpmzhV7EM/Hipposideros.obscurus.Leyte_Mindanao.nex.yml'
+    Writing '/tmp/tmp.VvpmzhV7EM/Hipposideros.pygmaeus.Bohol_Mindanao.nex.yml'
+    Writing '/tmp/tmp.VvpmzhV7EM/Limnonectes.leytensis.Bohol_Mindanao.nex.yml'
+    Writing '/tmp/tmp.VvpmzhV7EM/Limnonectes.magnus.Bohol_Mindanao.nex.yml'
+    Writing '/tmp/tmp.VvpmzhV7EM/Macroglossus.minimus.Biliran_Mindanao.nex.yml'
+    Writing '/tmp/tmp.VvpmzhV7EM/Macroglossus.minimus.Negros_Panay.nex.yml'
+    Writing '/tmp/tmp.VvpmzhV7EM/Ptenochirus.jagori.Leyte_Mindanao.nex.yml'
+    Writing '/tmp/tmp.VvpmzhV7EM/Ptenochirus.jagori.Negros_Panay.nex.yml'
+    Writing '/tmp/tmp.VvpmzhV7EM/Ptenochirus.minor.Biliran_Mindanao.nex.yml'
+    Writing '/tmp/tmp.VvpmzhV7EM/Insulasaurus.arborens.Negros_Panay.nex.yml'
+    Writing '/tmp/tmp.VvpmzhV7EM/Pinoyscincus.jagori.Mindanao_Samar.nex.yml'
