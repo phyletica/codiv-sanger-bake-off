@@ -45,6 +45,7 @@ tmp_cfg_path="${tmp_dir}/mediterranean-all-pairs-config.yml"
 
 msb2nex_stderr_path="${output_dir}/msb2nex-stderr.txt"
 nex2yml_stderr_path="${output_dir}/nex2yml-stderr.txt"
+pop_label_path="${output_dir}/population-labels.sh"
 
 # Convert msbayes config and fasta files to a ecoevolity config and nexus files
 msb2nex --charsets --remove-triallelic-sites --recode-ambig-states-as-missing \
@@ -63,6 +64,19 @@ do
     yml_out_path="${data_out_dir}/$yml_out_name"
     cp "$yml_path" "$yml_out_path"
 done
+
+# Create a mapping of the labels created by msb2nex to the population labels in
+# original fasta files
+echo "labels='\\" > "$pop_label_path"
+for s in $(grep --no-filename "^ *[A-Za-z0-9_-]*pop[12]$" "$tmp_dir"/*.nex)
+do
+    sp=${s%%_*}
+    l=${s##*_}
+    x=${s#*_}
+    p=${x%%_*}
+    echo "-l \"$l\" \"$sp $p\""
+done | uniq >> "$pop_label_path"
+echo "'" >> "$pop_label_path"
 
 # Create ecoevolity yaml config with correct directory paths to yaml allele
 # count files
