@@ -5,9 +5,8 @@ set -e
 run=2
 config_prefix="philippines-negros-panay-pairs"
 
-# Get path to directory of this script
-script_dir="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-project_dir="$( dirname "$( dirname "$script_dir" )" )"
+# Get path to project directory
+project_dir="$( cd ../.. && pwd )"
 
 # Load modules
 echo "Loading modules..."
