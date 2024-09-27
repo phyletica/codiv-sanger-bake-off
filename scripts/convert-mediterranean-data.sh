@@ -75,6 +75,7 @@ do
     x=${s#*_}
     p=${x%%_*}
     echo "-l \"$l\" \"$sp $p\""
+    echo "-l \"root-${l}\" \"$sp ancestor\""
 done | uniq >> "$pop_label_path"
 echo "'" >> "$pop_label_path"
 

@@ -78,6 +78,7 @@ do
     x3=${x2%_*}
     g=${x3##*_}
     echo "-l \"$l\" \"$g $e $i\""
+    echo "-l \"root-${l}\" \"$g $e ancestor\""
 done | uniq >> "$pop_label_path"
 echo "'" >> "$pop_label_path"
 
