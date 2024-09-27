@@ -1,0 +1,12 @@
+========================================================================
+                              Pycoevolity                               
+                   Summarizing evolutionary coevality                   
+
+        A Python package for analyzing the output of Ecoevolity         
+
+           Version 0.2.11 (main 72f2db7: 2024-09-27 17:59:52)           
+
+             License: GNU General Public License Version 3              
+========================================================================
+Continuous parameter with lowest mean ESS: pop_size_comparison1pop2
+Burnin value that maximized ESS of pop_size_comparison1pop2: 1 samples (ESS = 1638.33)
