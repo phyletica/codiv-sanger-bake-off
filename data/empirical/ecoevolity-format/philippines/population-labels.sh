@@ -1,4 +1,4 @@
-labels='\
+labels='
 -l "comparison1pop2" "Crocidura beatus Samar"
 -l "comparison1pop1" "Crocidura beatus Leyte"
 -l "comparison2pop1" "Crocidura negrina Negros"

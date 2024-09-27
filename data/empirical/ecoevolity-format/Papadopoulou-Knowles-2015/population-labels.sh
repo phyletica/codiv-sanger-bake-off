@@ -1,4 +1,4 @@
-labels='\
+labels='
 -l "comparison1pop1" "Ammobius2 pop0"
 -l "comparison1pop2" "Ammobius2 pop1"
 -l "comparison2pop1" "Dailhel2 pop0"

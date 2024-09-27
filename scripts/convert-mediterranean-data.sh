@@ -67,7 +67,7 @@ done
 
 # Create a mapping of the labels created by msb2nex to the population labels in
 # original fasta files
-echo "labels='\\" > "$pop_label_path"
+echo "labels='" > "$pop_label_path"
 for s in $(grep --no-filename "^ *[A-Za-z0-9_-]*pop[12]$" "$tmp_dir"/*.nex)
 do
     sp=${s%%_*}
