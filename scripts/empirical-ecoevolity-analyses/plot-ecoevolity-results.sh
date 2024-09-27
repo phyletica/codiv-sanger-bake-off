@@ -85,9 +85,9 @@ size_ylabel="Population"
 
 bf_font_size=2.0
 
-size_base_font=9.0
+size_base_font=8.0
 
-plot_width=6.0
+plot_width=9.0
 
 config_prefixes=( "mediterranean-all-pairs" "mediterranean-soil-pairs" "philippines-all-pairs" "philippines-negros-panay-pairs" )
 
