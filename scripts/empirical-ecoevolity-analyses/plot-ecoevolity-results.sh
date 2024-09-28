@@ -1,8 +1,13 @@
 #!/bin/bash
 
 function run_summary_tools () {
+    time_plot_width="$plot_width"
+    if [[ $ecoevolity_config_prefix == phil* ]]
+    then
+        time_plot_width="$phil_time_plot_width"
+    fi
     gzip -d -k run-?-${ecoevolity_config_prefix}-config-state-run-1.log.gz
-    pyco-sumtimes -f -w "$plot_width" --violin -y "$time_ylabel" -b $burnin "${label_array[@]}" -p "${plot_dir}/pyco-sumtimes-${ecoevolity_config_prefix}-" run-?-${ecoevolity_config_prefix}-config-state-run-1.log
+    pyco-sumtimes -f -w "$time_plot_width" --violin -y "$time_ylabel" -b $burnin "${label_array[@]}" -p "${plot_dir}/pyco-sumtimes-${ecoevolity_config_prefix}-" run-?-${ecoevolity_config_prefix}-config-state-run-1.log
     pyco-sumsizes -f -w "$plot_width" --violin --base-font-size $size_base_font -y "$size_ylabel" -b $burnin "${label_array[@]}" -p "${plot_dir}/pyco-sumsizes-${ecoevolity_config_prefix}-" run-?-${ecoevolity_config_prefix}-config-state-run-1.log
     if [ -e "${plot_dir}/sumcoevolity-${ecoevolity_config_prefix}-sumcoevolity-results-nevents.txt" ]
     then
@@ -12,7 +17,11 @@ function run_summary_tools () {
     then
         rm "${plot_dir}/sumcoevolity-${ecoevolity_config_prefix}-sumcoevolity-results-model.txt"
     fi
-    "$sumco_exe_path" -b $burnin -n 1000000 -p "${plot_dir}/sumcoevolity-${ecoevolity_config_prefix}-" -c "${config_dir}/${ecoevolity_config_prefix}-config.yml" run-?-${ecoevolity_config_prefix}-config-state-run-1.log
+    if [ -z "$sumco_seed" ]
+    then
+        sumco_seed=7
+    fi
+    "$sumco_exe_path" --seed "$sumco_seed" -b $burnin -n 1000000 -p "${plot_dir}/sumcoevolity-${ecoevolity_config_prefix}-" -c "${config_dir}/${ecoevolity_config_prefix}-config.yml" run-?-${ecoevolity_config_prefix}-config-state-run-1.log
     pyco-sumevents -f -w "$plot_width" --bf-font-size $bf_font_size -p "${plot_dir}/pyco-sumevents-${ecoevolity_config_prefix}-" --no-legend "${plot_dir}/sumcoevolity-${ecoevolity_config_prefix}-sumcoevolity-results-nevents.txt"
     rm run-?-${ecoevolity_config_prefix}-config-state-run-1.log
 }
@@ -73,6 +82,7 @@ source "${project_dir}/pyenv/bin/activate"
 ecoevolity_output_dir="${project_dir}/empirical-ecoevolity-output"
 ecoevolity_data_dir="${project_dir}/data/empirical/ecoevolity-format"
 sumco_exe_path="${project_dir}/bin/sumcoevolity"
+sumco_seed=7
 
 plot_base_dir="${project_dir}/results/empirical-plots"
 if [ ! -d "$plot_base_dir" ]
@@ -88,6 +98,7 @@ bf_font_size=2.0
 size_base_font=8.0
 
 plot_width=9.0
+phil_time_plot_width=12.0
 
 config_prefixes=( "mediterranean-all-pairs" "mediterranean-soil-pairs" "philippines-all-pairs" "philippines-negros-panay-pairs" )
 
