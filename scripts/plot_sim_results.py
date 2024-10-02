@@ -338,14 +338,22 @@ def plot_ess_versus_error(
             ax.set_yticks([])
 
     # show tick labels only for lower-left plot 
+    # all_axes = fig.get_axes()
+    # for ax in all_axes:
+    #     if ax.is_last_row() and ax.is_first_col():
+    #         continue
+    #     xtick_labels = ["" for item in ax.get_xticklabels()]
+    #     ytick_labels = ["" for item in ax.get_yticklabels()]
+    #     ax.set_xticklabels(xtick_labels)
+    #     ax.set_yticklabels(ytick_labels)
     all_axes = fig.get_axes()
     for ax in all_axes:
-        if ax.is_last_row() and ax.is_first_col():
-            continue
-        xtick_labels = ["" for item in ax.get_xticklabels()]
-        ytick_labels = ["" for item in ax.get_yticklabels()]
-        ax.set_xticklabels(xtick_labels)
-        ax.set_yticklabels(ytick_labels)
+        if not ax.is_last_row():
+            xtick_labels = ["" for item in ax.get_xticklabels()]
+            ax.set_xticklabels(xtick_labels)
+        if not ax.is_first_col():
+            ytick_labels = ["" for item in ax.get_yticklabels()]
+            ax.set_yticklabels(ytick_labels)
 
     # avoid doubled spines
     all_axes = fig.get_axes()
@@ -446,14 +454,22 @@ def plot_ess_versus_error(
             ax.set_yticks([])
 
     # show tick labels only for lower-left plot 
+    # all_axes = fig.get_axes()
+    # for ax in all_axes:
+    #     if ax.is_last_row() and ax.is_first_col():
+    #         continue
+    #     xtick_labels = ["" for item in ax.get_xticklabels()]
+    #     ytick_labels = ["" for item in ax.get_yticklabels()]
+    #     ax.set_xticklabels(xtick_labels)
+    #     ax.set_yticklabels(ytick_labels)
     all_axes = fig.get_axes()
     for ax in all_axes:
-        if ax.is_last_row() and ax.is_first_col():
-            continue
-        xtick_labels = ["" for item in ax.get_xticklabels()]
-        ytick_labels = ["" for item in ax.get_yticklabels()]
-        ax.set_xticklabels(xtick_labels)
-        ax.set_yticklabels(ytick_labels)
+        if not ax.is_last_row():
+            xtick_labels = ["" for item in ax.get_xticklabels()]
+            ax.set_xticklabels(xtick_labels)
+        if not ax.is_first_col():
+            ytick_labels = ["" for item in ax.get_yticklabels()]
+            ax.set_yticklabels(ytick_labels)
 
     # avoid doubled spines
     all_axes = fig.get_axes()
@@ -511,7 +527,8 @@ def generate_violin_plots(
         force_shared_spines = True,
         show_means = True,
         show_sample_sizes = False,
-        plot_file_prefix = None):
+        plot_file_prefix = None,
+        show_legend = True):
     if force_shared_spines:
         force_shared_y_range = True
     num_comparisons = len(results_grid)
@@ -574,8 +591,8 @@ def generate_violin_plots(
                 showmeans = False,
                 showextrema = False,
                 showmedians = False,
-                points = 100,
-                bw_method = None,
+                # points = 100,
+                # bw_method = None,
                 )
 
         using_colors = False
@@ -591,11 +608,20 @@ def generate_violin_plots(
         means = []
         ci_lower = []
         ci_upper = []
+        q1 = []
+        q3 = []
         for sample in values:
             summary = pycoevolity.stats.get_summary(sample)
             means.append(summary["mean"])
             ci_lower.append(summary["qi_95"][0])
             ci_upper.append(summary["qi_95"][1])
+            q1.append(pycoevolity.stats.quantile(sample, 0.25))
+            q3.append(pycoevolity.stats.quantile(sample, 0.75))
+        ax.vlines(positions, q1, q3,
+                colors = "black",
+                linestyle = "solid",
+                linewidth = 8,
+                zorder = 1)
         ax.vlines(positions, ci_lower, ci_upper,
                 colors = "black",
                 linestyle = "solid",
@@ -708,7 +734,7 @@ def generate_violin_plots(
             for tick in ax.get_xticklabels():
                 tick.set_rotation(x_tick_rotation)
 
-    if using_colors:
+    if using_colors and show_legend:
         fig.legend(comparison_colors,
                 labels = comparison_labels,
                 loc = "upper center",
@@ -941,12 +967,12 @@ def generate_scatter_plots(
     # show tick labels only for lower-left plot 
     all_axes = fig.get_axes()
     for ax in all_axes:
-        if ax.is_last_row() and ax.is_first_col():
-            continue
-        xtick_labels = ["" for item in ax.get_xticklabels()]
-        ytick_labels = ["" for item in ax.get_yticklabels()]
-        ax.set_xticklabels(xtick_labels)
-        ax.set_yticklabels(ytick_labels)
+        if not ax.is_last_row():
+            xtick_labels = ["" for item in ax.get_xticklabels()]
+            ax.set_xticklabels(xtick_labels)
+        if not ax.is_first_col():
+            ytick_labels = ["" for item in ax.get_yticklabels()]
+            ax.set_yticklabels(ytick_labels)
 
     # avoid doubled spines
     all_axes = fig.get_axes()
@@ -1278,14 +1304,22 @@ def generate_histograms(
             ax.set_yticks([])
 
     # show tick labels only for lower-left plot 
+    # all_axes = fig.get_axes()
+    # for ax in all_axes:
+    #     if ax.is_last_row() and ax.is_first_col():
+    #         continue
+    #     xtick_labels = ["" for item in ax.get_xticklabels()]
+    #     ytick_labels = ["" for item in ax.get_yticklabels()]
+    #     ax.set_xticklabels(xtick_labels)
+    #     ax.set_yticklabels(ytick_labels)
     all_axes = fig.get_axes()
     for ax in all_axes:
-        if ax.is_last_row() and ax.is_first_col():
-            continue
-        xtick_labels = ["" for item in ax.get_xticklabels()]
-        ytick_labels = ["" for item in ax.get_yticklabels()]
-        ax.set_xticklabels(xtick_labels)
-        ax.set_yticklabels(ytick_labels)
+        if not ax.is_last_row():
+            xtick_labels = ["" for item in ax.get_xticklabels()]
+            ax.set_xticklabels(xtick_labels)
+        if not ax.is_first_col():
+            ytick_labels = ["" for item in ax.get_yticklabels()]
+            ax.set_yticklabels(ytick_labels)
 
     # avoid doubled spines
     all_axes = fig.get_axes()
@@ -1441,6 +1475,8 @@ def generate_model_plots(
                         nevents_indices,
                         x_tick_labels
                         )
+                annot_x_loc = 0.02
+                annot_horizontal_alignment = "left"
                 if histogram_correct_values:
                     correct_val = histogram_correct_values[row_index][column_index]
                     correct_line, = ax.plot(
@@ -1452,6 +1488,27 @@ def generate_model_plots(
                             linewidth = 1.0,
                             marker = '',
                             zorder = 200)
+                    if correct_val == 1:
+                        annot_x_loc = 0.98
+                        annot_horizontal_alignment = "right"
+                ax.text(annot_x_loc, 0.99,
+                        "\\scriptsize$p(\\hat{{k}} = k) = {0:.3f}$".format(
+                                p_correct),
+                        horizontalalignment = annot_horizontal_alignment,
+                        verticalalignment = "top",
+                        transform = ax.transAxes)
+                ax.text(annot_x_loc, 0.93,
+                        "\\scriptsize$\\widetilde{{p(k|\\mathbf{{D}})}} = {0:.3f}$".format(
+                                median_true_nevents_prob),
+                        horizontalalignment = annot_horizontal_alignment,
+                        verticalalignment = "top",
+                        transform = ax.transAxes)
+                ax.text(annot_x_loc, 0.87,
+                        "\\scriptsize$p(k \\in \\textrm{{\\sffamily CS}}) = {0:.3f}$".format(
+                                p_nevents_within_95_cred),
+                        horizontalalignment = annot_horizontal_alignment,
+                        verticalalignment = "top",
+                        transform = ax.transAxes)
             else:
                 ax.imshow(true_map_nevents,
                         origin = 'lower',
@@ -1467,25 +1524,24 @@ def generate_model_plots(
                                 horizontalalignment = "center",
                                 verticalalignment = "center",
                                 size = number_font_size)
-
-            ax.text(0.98, 0.02,
-                    "\\scriptsize$p(k \\in \\textrm{{\\sffamily CS}}) = {0:.3f}$".format(
-                            p_nevents_within_95_cred),
-                    horizontalalignment = "right",
-                    verticalalignment = "bottom",
-                    transform = ax.transAxes)
-            ax.text(0.02, 0.98,
-                    "\\scriptsize$p(\\hat{{k}} = k) = {0:.3f}$".format(
-                            p_correct),
-                    horizontalalignment = "left",
-                    verticalalignment = "top",
-                    transform = ax.transAxes)
-            ax.text(0.98, 0.98,
-                    "\\scriptsize$\\widetilde{{p(k|\\mathbf{{D}})}} = {0:.3f}$".format(
-                            median_true_nevents_prob),
-                    horizontalalignment = "right",
-                    verticalalignment = "top",
-                    transform = ax.transAxes)
+                ax.text(0.99, 0.02,
+                        "\\scriptsize$p(k \\in \\textrm{{\\sffamily CS}}) = {0:.3f}$".format(
+                                p_nevents_within_95_cred),
+                        horizontalalignment = "right",
+                        verticalalignment = "bottom",
+                        transform = ax.transAxes)
+                ax.text(0.02, 0.98,
+                        "\\scriptsize$p(\\hat{{k}} = k) = {0:.3f}$".format(
+                                p_correct),
+                        horizontalalignment = "left",
+                        verticalalignment = "top",
+                        transform = ax.transAxes)
+                ax.text(0.99, 0.98,
+                        "\\scriptsize$\\widetilde{{p(k|\\mathbf{{D}})}} = {0:.3f}$".format(
+                                median_true_nevents_prob),
+                        horizontalalignment = "right",
+                        verticalalignment = "top",
+                        transform = ax.transAxes)
             if column_labels and (row_index == 0):
                 col_header = column_labels[column_index]
                 ax.text(0.5, 1.015,
@@ -1503,9 +1559,11 @@ def generate_model_plots(
                         transform = ax.transAxes)
 
     all_axes = fig.get_axes()
+    safe_to_hardcode_y_tick_labels = False
     if plot_as_histogram:
         for ax in all_axes:
             ax.set_ylim(0.0, 1.0)
+            safe_to_hardcode_y_tick_labels = True
 
     # show only the outside ticks
     for ax in all_axes:
@@ -1521,20 +1579,30 @@ def generate_model_plots(
         if not plot_as_histogram:
             ax.xaxis.set_ticks(range(number_of_comparisons))
             ax.yaxis.set_ticks(range(number_of_comparisons))
-        if ax.is_last_row() and ax.is_first_col():
+        if ax.is_last_row():
             if not plot_as_histogram:
                 xtick_labels = [item for item in ax.get_xticklabels()]
                 for i in range(len(xtick_labels)):
                     xtick_labels[i].set_text(str(i + 1))
+                ax.set_xticklabels(xtick_labels)
+        else:
+            xtick_labels = ["" for item in ax.get_xticklabels()]
+            ax.set_xticklabels(xtick_labels)
+
+        if ax.is_first_col():
+            if not plot_as_histogram:
                 ytick_labels = [item for item in ax.get_yticklabels()]
                 for i in range(len(ytick_labels)):
                     ytick_labels[i].set_text(str(i + 1))
-                ax.set_xticklabels(xtick_labels)
                 ax.set_yticklabels(ytick_labels)
+            else:
+                if not ax.is_last_row() and safe_to_hardcode_y_tick_labels:
+                    ytick_labels = [item for item in ax.get_yticklabels()]
+                    if len(ytick_labels) == 6:
+                        ytick_labels = ["", "0.2", "0.4", "0.6", "0.8", "1.0"]
+                        ax.set_yticklabels(ytick_labels)
         else:
-            xtick_labels = ["" for item in ax.get_xticklabels()]
             ytick_labels = ["" for item in ax.get_yticklabels()]
-            ax.set_xticklabels(xtick_labels)
             ax.set_yticklabels(ytick_labels)
 
     # avoid doubled spines
@@ -1753,6 +1821,7 @@ def parse_results(paths):
 
 
 def main_cli(argv = sys.argv):
+    plt.style.use('tableau-colorblind10')
     try:
         os.makedirs(project_util.PLOT_DIR)
     except OSError as e:
@@ -1766,8 +1835,8 @@ def main_cli(argv = sys.argv):
     min_ess = 200
     highlight_color = "red"
 
-    eco_color = "C1"
-    abc_color = "C2"
+    eco_color = "C0"
+    abc_color = "C1"
 
     independent_sim_names = (
             "fixed-independent-pairs-05-sites-00500-locus-500",
@@ -1996,10 +2065,10 @@ def main_cli(argv = sys.argv):
                 column_labels = column_labels,
                 plot_width = 2.0,
                 plot_height = 2.4,
-                pad_left = 0.1,
+                pad_left = 0.06,
                 pad_right = 0.98,
                 pad_bottom = 0.12,
-                pad_top = 0.77,
+                pad_top = 0.92,
                 y_label = "Mean model distance",
                 y_label_size = 14.0,
                 x_tick_rotation = None,
@@ -2007,7 +2076,8 @@ def main_cli(argv = sys.argv):
                 force_shared_spines = True,
                 show_means = True,
                 show_sample_sizes = True,
-                plot_file_prefix = sim_label)
+                plot_file_prefix = sim_label,
+                show_legend = False)
 
         generate_histograms(
                 parameters = [
