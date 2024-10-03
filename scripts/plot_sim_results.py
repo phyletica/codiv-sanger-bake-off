@@ -14,6 +14,7 @@ _LOG = logging.getLogger(os.path.basename(__file__))
 import pycoevolity
 import project_util
 
+import scipy.stats as st
 import matplotlib as mpl
 
 # Use TrueType (42) fonts rather than Type 3 fonts
@@ -47,6 +48,63 @@ mpl.rcParams.update(tex_font_settings)
 
 import matplotlib.pyplot as plt
 from matplotlib import gridspec
+
+def mwu(values1, values2):
+    res = st.mannwhitneyu(
+        values1,
+        values2,
+    )
+    mwu_stat = res.statistic
+    mwu_pval = res.pvalue
+    num_comps = len(values1) * len(values2)
+    mwu_auc = mwu_stat / num_comps
+    if mwu_auc < 0.5:
+        mwu_auc = 1.0 - mwu_auc
+    return mwu_stat, mwu_auc, mwu_pval
+
+def append_sum_of_mean_errors_column(
+    results_dict,
+    parameter_prefix = "root_height",
+):
+    mean_key_prefix = f"mean_{parameter_prefix}_"
+    true_key_prefix = f"true_{parameter_prefix}_"
+    mean_keys = []
+    true_keys = []
+    mean_key_suffixes = []
+    true_key_suffixes = []
+    for k in results_dict.keys():
+        if k.startswith(mean_key_prefix):
+            assert k not in mean_keys
+            mean_keys.append(k)
+            suffix = k.split('_')[-1]
+            assert suffix not in mean_key_suffixes
+            mean_key_suffixes.append(suffix)
+        if k.startswith(true_key_prefix):
+            if k.endswith("rank"):
+                continue
+            assert k not in true_keys
+            true_keys.append(k)
+            suffix = k.split('_')[-1]
+            assert suffix not in true_key_suffixes
+            true_key_suffixes.append(suffix)
+    assert len(mean_keys) == len(true_keys)
+    assert len(mean_keys) == len (mean_key_suffixes)
+    assert mean_key_suffixes == true_key_suffixes
+
+    n = len(results_dict[mean_keys[0]])
+    sum_of_mean_errors = []
+    for i in range(n):
+        error_sum = 0.0
+        for suffix in mean_key_suffixes:
+            true_val = results_dict[f"true_{parameter_prefix}_{suffix}"][i]
+            mean_val = results_dict[f"mean_{parameter_prefix}_{suffix}"][i]
+            error = math.fabs(float(true_val) - float(mean_val))
+            error_sum += error
+        sum_of_mean_errors.append(error_sum)
+    assert len(sum_of_mean_errors) == n
+    res_key = f"sum_of_mean_errors_{parameter_prefix}"
+    assert res_key not in results_dict
+    results_dict[res_key] = sum_of_mean_errors
 
 def get_nevents_probs(
         results_paths,
@@ -526,13 +584,17 @@ def generate_violin_plots(
         force_shared_y_range = True,
         force_shared_spines = True,
         show_means = True,
+        mean_decimals = 2,
         show_sample_sizes = False,
+        show_mwu = False,
         plot_file_prefix = None,
         show_legend = True):
     if force_shared_spines:
         force_shared_y_range = True
     num_comparisons = len(results_grid)
     assert len(comparison_labels) == num_comparisons
+    if num_comparisons != 2:
+        show_mwu = False
     num_plots = len(results_grid[0])
     if column_labels:
         assert len(column_labels) == num_plots
@@ -688,9 +750,28 @@ def generate_violin_plots(
                 ax.text(i + 1, y_mean,
                         "\\scriptsize {mean:,.{ndigits}f}".format(
                             mean = means[i],
-                            ndigits = 2),
+                            ndigits = mean_decimals),
                         horizontalalignment = "center",
                         verticalalignment = "top")
+
+        if show_mwu:
+            mwu_stat, mwu_auc, mwu_pval = mwu(values[0], values[1])
+            y_min, y_max = ax.get_ylim()
+            y_pos = y_min + ((y_max - y_min) * 0.93)
+            ax.text(1.5, y_pos,
+                    "\\scriptsize PoS = {x:,.{ndigits}f}".format(
+                        x = mwu_auc,
+                        ndigits = 3),
+                    horizontalalignment = "center",
+                    verticalalignment = "top")
+            y_pos = y_min + ((y_max - y_min) * 0.87)
+            p_str = f"{mwu_pval:,.3f}"
+            if mwu_pval < 0.001:
+                p_str = f"{mwu_pval:,.1g}"
+            ax.text(1.5, y_pos,
+                    f"\\scriptsize \\textit{{p}} = {p_str}",
+                    horizontalalignment = "center",
+                    verticalalignment = "top")
 
     if force_shared_spines:
         # show only the outside ticks
@@ -1918,6 +1999,10 @@ def main_cli(argv = sys.argv):
     ]
 
     for sim_label, results_grid in results.items():
+        for results_grid_row in results_grid:
+            for results_dict in results_grid_row:
+                append_sum_of_mean_errors_column(results_dict, "root_height")
+                append_sum_of_mean_errors_column(results_dict, "pop_size_root")
         parameter_symbol = "t"
         generate_scatter_plots(
                 parameters = [
@@ -2076,7 +2161,56 @@ def main_cli(argv = sys.argv):
                 force_shared_spines = True,
                 show_means = True,
                 show_sample_sizes = True,
+                show_mwu = True,
                 plot_file_prefix = sim_label,
+                show_legend = False)
+
+        generate_violin_plots(
+                parameters = ["sum_of_mean_errors_root_height"],
+                results_grid = results_grid,
+                comparison_labels = ["ecoevolity", "dpp-msbayes"],
+                comparison_colors = [eco_color, abc_color],
+                column_labels = column_labels,
+                plot_width = 2.0,
+                plot_height = 2.4,
+                pad_left = 0.08,
+                pad_right = 0.98,
+                pad_bottom = 0.12,
+                pad_top = 0.92,
+                y_label = "Divergence time error",
+                y_label_size = 14.0,
+                x_tick_rotation = None,
+                force_shared_y_range = True,
+                force_shared_spines = True,
+                show_means = True,
+                mean_decimals = 4,
+                show_sample_sizes = True,
+                show_mwu = True,
+                plot_file_prefix = f"{sim_label}-div-time-error",
+                show_legend = False)
+
+        generate_violin_plots(
+                parameters = ["sum_of_mean_errors_pop_size_root"],
+                results_grid = results_grid,
+                comparison_labels = ["ecoevolity", "dpp-msbayes"],
+                comparison_colors = [eco_color, abc_color],
+                column_labels = column_labels,
+                plot_width = 2.0,
+                plot_height = 2.4,
+                pad_left = 0.1,
+                pad_right = 0.98,
+                pad_bottom = 0.12,
+                pad_top = 0.92,
+                y_label = "Ancestral pop size error",
+                y_label_size = 14.0,
+                x_tick_rotation = None,
+                force_shared_y_range = True,
+                force_shared_spines = True,
+                show_means = True,
+                mean_decimals = 5,
+                show_sample_sizes = True,
+                show_mwu = True,
+                plot_file_prefix = f"{sim_label}-ancestral-pop-size-error",
                 show_legend = False)
 
         generate_histograms(
@@ -2196,17 +2330,17 @@ def main_cli(argv = sys.argv):
                 pad_top = 0.91,
                 plot_file_prefix = sim_label + "-psrf-div-time")
 
-        plot_ess_versus_error(
-                parameters = [
-                        "root_height_c1sp1",
-                        "root_height_c2sp1",
-                        "root_height_c3sp1",
-                        ],
-                results_grid = results_grid[:1],
-                column_labels = column_labels,
-                row_labels = None,
-                parameter_label = "divergence time",
-                plot_file_prefix = sim_label + "-div-time")
+        # plot_ess_versus_error(
+        #         parameters = [
+        #                 "root_height_c1sp1",
+        #                 "root_height_c2sp1",
+        #                 "root_height_c3sp1",
+        #                 ],
+        #         results_grid = results_grid[:1],
+        #         column_labels = column_labels,
+        #         row_labels = None,
+        #         parameter_label = "divergence time",
+        #         plot_file_prefix = sim_label + "-div-time")
 
     # plot_nevents_estimated_vs_true_probs(
     #         nevents = 1,
