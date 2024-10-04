@@ -1,0 +1,34 @@
+\documentclass[border=10pt,varwidth=30cm]{standalone}
+\usepackage{graphicx,capt-of}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage[cm]{sfmath}
+\usepackage[T1]{fontenc}
+\usepackage{xspace}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\newcounter{subfloat}
+\renewcommand{\thesubfloat}{\Alph{subfloat}}
+\newcommand{\insertlabel}{%
+    \huge%
+    \stepcounter{subfloat}%
+    \textbf{\thesubfloat}}
+
+\begin{document}
+
+\begin{figure}
+    \setlength{\tabcolsep}{3pt} % Default value: 6pt
+    % \renewcommand{\arraystretch}{1.5} % Default value: 1
+    \centering
+    \begin{tabular}{@{}cc@{}}
+        \includegraphics[width=0.5\textwidth]{../free-root-pop-size-scatter-cropped.pdf}
+        & \multirow{1}{*}[15.5em]{\begin{sideways}\Large Dirichlet process\end{sideways}} \\
+        \includegraphics[width=0.5\textwidth]{../independent-root-pop-size-scatter-cropped.pdf}
+        & \multirow{1}{*}[14.4em]{\begin{sideways}\Large Independent\end{sideways}} \\
+        \includegraphics[width=0.5\textwidth]{../simultaneous-root-pop-size-scatter-cropped.pdf}
+        & \multirow{1}{*}[14.7em]{\begin{sideways}\Large Simultaneous\end{sideways}} \\
+    \end{tabular}
+\end{figure}
+
+\end{document}
