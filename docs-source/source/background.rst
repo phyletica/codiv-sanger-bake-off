@@ -42,7 +42,7 @@ The background information below will assume some knowledge of
 the types of comparative phylogeographic models implemented in
 |eco|_.
 The |eco|_ documentation provides a
-`brief and gentle introduction to such models here <http://phyletica.org/ecoevolity/background.html>`_.
+`brief and gentle introduction to such models here <https://phyletica.org/ecoevolity/ecoevolity/background.html>`_.
 For more details, please refer to
 :cite:`Oaks2018ecoevolity,Oaks2018paic,Oaks2019codemog`.
 

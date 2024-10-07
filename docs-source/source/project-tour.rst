@@ -80,7 +80,7 @@ Here's an overview of the contents of the |project_repo|_
     section.
 
     For more details about |eco|_ config files, please see
-    `the ecoevolity documentation <http://phyletica.org/ecoevolity/yaml-config.html>`_.
+    `the ecoevolity documentation <https://phyletica.org/ecoevolity/ecoevolity/yaml-config.html>`_.
 
 ``modules-to-load.sh`` file
     This file contains the shell commands to load the modules on AU's Hopper
