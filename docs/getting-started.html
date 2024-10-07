@@ -1,18 +1,20 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Getting started &#8212; Codivergence bake-off 0.1.0 documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -83,12 +85,12 @@
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
 
 
 
@@ -105,14 +107,14 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="getting-started">
-<span id="id1"></span><h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+  <section id="getting-started">
+<span id="id1"></span><h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this heading">¶</a></h1>
 <p>If you haven’t already, you should familiarize yourself with the
 <a class="reference internal" href="prerequisites.html#prerequisites"><span class="std std-ref">Before starting</span></a> and <a class="reference internal" href="background.html#background"><span class="std std-ref">Background</span></a> sections of documentation.
 If you are a <a class="reference external" href="http://phyletica.org">Phyletica Lab</a> member, make sure you have done everything in the
 <a class="reference internal" href="prerequisites.html#setting-up"><span class="std std-ref">Getting set up</span></a> section.</p>
-<div class="section" id="cloning-the-project-repo">
-<span id="clone-project"></span><h2>Cloning the project repo<a class="headerlink" href="#cloning-the-project-repo" title="Permalink to this headline">¶</a></h2>
+<section id="cloning-the-project-repo">
+<span id="clone-project"></span><h2>Cloning the project repo<a class="headerlink" href="#cloning-the-project-repo" title="Permalink to this heading">¶</a></h2>
 <p>Open up a terminal and navigate to where you want to work on this project.
 For <a class="reference external" href="http://phyletica.org">Phyletica Lab</a>, this means logging in to Hopper:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">YOUR</span><span class="o">-</span><span class="n">AU</span><span class="o">-</span><span class="n">USERNAME</span><span class="nd">@hopper</span><span class="o">.</span><span class="n">auburn</span><span class="o">.</span><span class="n">edu</span>
@@ -142,9 +144,9 @@ Go ahead and <code class="docutils literal notranslate"><span class="pre">cd</sp
 </div>
 <p>To get oriented to the contents of the project repository, please checkout the
 <a class="reference internal" href="project-tour.html#tour"><span class="std std-ref">Project Tour</span></a> section of the documentation.</p>
-</div>
-<div class="section" id="setting-up-the-project">
-<span id="setup-project"></span><h2>Setting up the project<a class="headerlink" href="#setting-up-the-project" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="setting-up-the-project">
+<span id="setup-project"></span><h2>Setting up the project<a class="headerlink" href="#setting-up-the-project" title="Permalink to this heading">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Run the following command to make sure you don’t have an active
@@ -162,7 +164,7 @@ which is located at the base of the project directory:</p>
 <p class="admonition-title">Note</p>
 <p>You may get an error message during the setup process that looks
 something like:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ERROR</span><span class="p">:</span> <span class="n">pycoevolity</span> <span class="mf">0.2</span><span class="o">.</span><span class="mi">6</span> <span class="n">requires</span> <span class="n">munkres</span><span class="o">&lt;=</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">12</span><span class="p">,</span> <span class="n">but</span> <span class="n">you</span><span class="s1">&#39;ll have munkres 1.1.4 which is incompatible.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ERROR</span><span class="p">:</span> <span class="n">pycoevolity</span> <span class="mf">0.2.6</span> <span class="n">requires</span> <span class="n">munkres</span><span class="o">&lt;=</span><span class="mf">1.0.12</span><span class="p">,</span> <span class="n">but</span> <span class="n">you</span><span class="s1">&#39;ll have munkres 1.1.4 which is incompatible.</span>
 </pre></div>
 </div>
 <p>This is nothing to worry about. Pycoevolity requires different versions of
@@ -193,7 +195,7 @@ able to activate it:</p>
 
         <span class="n">A</span> <span class="n">Python</span> <span class="n">package</span> <span class="k">for</span> <span class="n">analyzing</span> <span class="n">the</span> <span class="n">output</span> <span class="n">of</span> <span class="n">Ecoevolity</span>
 
-           <span class="n">Version</span> <span class="mf">0.2</span><span class="o">.</span><span class="mi">6</span> <span class="p">(</span><span class="n">main</span> <span class="mi">738</span><span class="n">ab1e</span><span class="p">:</span> <span class="mi">2020</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">12</span> <span class="mi">16</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">23</span><span class="p">)</span>
+           <span class="n">Version</span> <span class="mf">0.2.6</span> <span class="p">(</span><span class="n">main</span> <span class="mi">738</span><span class="n">ab1e</span><span class="p">:</span> <span class="mi">2020</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">12</span> <span class="mi">16</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">23</span><span class="p">)</span>
 
              <span class="n">License</span><span class="p">:</span> <span class="n">GNU</span> <span class="n">General</span> <span class="n">Public</span> <span class="n">License</span> <span class="n">Version</span> <span class="mi">3</span>
 <span class="o">========================================================================</span>
@@ -216,7 +218,7 @@ the project):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">======================================================================</span>
                               <span class="n">Ecoevolity</span>
                   <span class="n">Estimating</span> <span class="n">evolutionary</span> <span class="n">coevality</span>
-      <span class="n">Version</span> <span class="mf">0.3</span><span class="o">.</span><span class="mi">2</span> <span class="p">(</span><span class="n">testing</span> <span class="n">c128046</span><span class="p">:</span> <span class="mi">2020</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">15</span><span class="n">T22</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">02</span><span class="o">-</span><span class="mi">05</span><span class="p">:</span><span class="mi">00</span><span class="p">)</span>
+      <span class="n">Version</span> <span class="mf">0.3.2</span> <span class="p">(</span><span class="n">testing</span> <span class="n">c128046</span><span class="p">:</span> <span class="mi">2020</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">15</span><span class="n">T22</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">02</span><span class="o">-</span><span class="mi">05</span><span class="p">:</span><span class="mi">00</span><span class="p">)</span>
 <span class="o">======================================================================</span>
 
 <span class="n">Usage</span><span class="p">:</span> <span class="n">ecoevolity</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="n">YAML</span><span class="o">-</span><span class="n">CONFIG</span><span class="o">-</span><span class="n">FILE</span>
@@ -241,8 +243,8 @@ where you think you are on the file system and don’t blow away anything you
 didn’t intend to.</p>
 </div>
 <p>Congrats! You are all set and ready to begin working on the project.</p>
-<div class="section" id="why-all-the-trouble">
-<h3>Why all the trouble?<a class="headerlink" href="#why-all-the-trouble" title="Permalink to this headline">¶</a></h3>
+<section id="why-all-the-trouble">
+<h3>Why all the trouble?<a class="headerlink" href="#why-all-the-trouble" title="Permalink to this heading">¶</a></h3>
 <p>If the setup process seemed onerous, you might be wondering, “why all the
 trouble?” Well, the goal is to maximize transparency and reproducibility.
 Everyone reaching this point should have the <em>exact</em> same version of <a class="reference external" href="http://phyletica.org/ecoevolity">ecoevolity</a>
@@ -253,9 +255,9 @@ This helps ensure that all of the details of the project are open, clear, and
 can be repeated.</p>
 <p>Next, let’s go to the <a class="reference internal" href="sim-analyses.html#sim-analyses"><span class="std std-ref">Simulation-based analyses</span></a> section to get started
 with analyses!</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
           </div>

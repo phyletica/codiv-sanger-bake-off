@@ -5,7 +5,7 @@ The ecoevolity configs
 ######################
 
 .. note:: For a detailed treatment of |eco|_ config files, please see
-    `the config-file section of the ecoevolity documentation <http://phyletica.org/ecoevolity/yaml-config.html>`_.
+    `the config-file section of the ecoevolity documentation <https://phyletica.org/ecoevolity/ecoevolity/yaml-config.html>`_.
 
 The |eco|_ configuration files in the ``configs`` directory specify:
 
