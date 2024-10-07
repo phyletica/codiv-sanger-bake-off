@@ -72,7 +72,7 @@ same time:
 If we want to evaluate the probability of such a model of co-divergence,
 we also need to consider other possible explanations (i.e., models).
 For example, perhaps all of these populations were founded by over-water
-dispersal events, in which case there is not obvious prediction
+dispersal events, in which case there is no obvious prediction
 that these events would be temporally clustered.
 Rather we might expect the dispersal events to have occurred at different times
 for each species.
