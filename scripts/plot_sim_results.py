@@ -2397,6 +2397,26 @@ def main_cli(argv = sys.argv):
                 pad_bottom = 0.22,
                 pad_top = 0.91,
                 plot_file_prefix = sim_label + "-psrf-div-time")
+        generate_histograms(
+                parameters = [
+                        "psrf_pop_size_root_c1sp1",
+                        "psrf_pop_size_root_c2sp1",
+                        "psrf_pop_size_root_c3sp1",
+                        ],
+                results_grid = results_grid[:1],
+                column_labels = column_labels,
+                row_labels = None,
+                parameter_label = "PSRF of ancestral population size",
+                parameter_discrete = False,
+                range_key = "range",
+                number_of_digits = 3,
+                plot_width = 2.0,
+                plot_height = 2.3,
+                pad_left = 0.09,
+                pad_right = 0.995,
+                pad_bottom = 0.22,
+                pad_top = 0.91,
+                plot_file_prefix = sim_label + "-psrf-root-pop-size")
 
         # plot_ess_versus_error(
         #         parameters = [
