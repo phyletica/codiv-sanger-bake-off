@@ -23,6 +23,10 @@ function run_summary_tools () {
     fi
     "$sumco_exe_path" --seed "$sumco_seed" -b $burnin -n 1000000 -p "${plot_dir}/sumcoevolity-${ecoevolity_config_prefix}-" -c "${config_dir}/${ecoevolity_config_prefix}-config.yml" run-?-${ecoevolity_config_prefix}-config-state-run-1.log
     pyco-sumevents -f -w "$plot_width" --bf-font-size $bf_font_size -p "${plot_dir}/pyco-sumevents-${ecoevolity_config_prefix}-" --no-legend "${plot_dir}/sumcoevolity-${ecoevolity_config_prefix}-sumcoevolity-results-nevents.txt"
+    if [ -e "${plot_dir}/dpp-msbayes-results-nevents.txt" ]
+    then
+        pyco-sumevents -f -w "$plot_width" --bf-font-size $bf_font_size -p "${plot_dir}/pyco-sumevents-dpp-msbayes-results-" --no-legend "${plot_dir}/dpp-msbayes-results-nevents.txt"
+    fi
     rm run-?-${ecoevolity_config_prefix}-config-state-run-1.log
 }
 
