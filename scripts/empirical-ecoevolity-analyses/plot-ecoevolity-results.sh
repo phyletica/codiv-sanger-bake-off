@@ -26,6 +26,7 @@ function run_summary_tools () {
     if [ -e "${plot_dir}/dpp-msbayes-results-nevents.txt" ]
     then
         pyco-sumevents -f -w "$plot_width" --bf-font-size $bf_font_size -p "${plot_dir}/pyco-sumevents-dpp-msbayes-results-" --no-legend "${plot_dir}/dpp-msbayes-results-nevents.txt"
+        pyco-multi-sumevents -f -w "$plot_width" -p "${plot_dir}/pyco-sumevents-results-comparison-" --paths "${plot_dir}/sumcoevolity-${ecoevolity_config_prefix}-sumcoevolity-results-nevents.txt" "${plot_dir}/dpp-msbayes-results-nevents.txt" --labels ecoevolity dpp-msbayes --colors C0 C1 --prior-label prior
     fi
     rm run-?-${ecoevolity_config_prefix}-config-state-run-1.log
 }
@@ -97,7 +98,7 @@ fi
 time_ylabel="Population"
 size_ylabel="Population"
 
-bf_font_size=2.0
+bf_font_size=8.0
 
 size_base_font=8.0
 
